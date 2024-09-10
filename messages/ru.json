@@ -1,0 +1,11 @@
+{
+	"Header": {
+		"Navbar": {
+			"main": "Главная",
+			"about": "О нас",
+			"services": "Услуги",
+			"contacts": "Контакты"
+		},
+		"Button": "Позвонить"
+	}
+}

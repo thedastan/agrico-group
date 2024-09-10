@@ -1,0 +1,11 @@
+{
+	"Header": {
+		"Navbar": {
+			"main": "بيت",
+			"about": "معلومات عنا",
+			"services": "خدمات",
+			"contacts": "اتصالات"
+		},
+		"Button": "يتصل"
+	}
+}

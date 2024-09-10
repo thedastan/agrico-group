@@ -1,4 +1,17 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+import createNextIntlPlugin from 'next-intl/plugin'
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin()
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+	images: {
+		domains: ['agrico.pythonanywhere.com']
+	}
+	// webpack: config => {
+	// 	config.resolve.alias.canvas = false
+
+	// 	return config
+	// }
+}
+
+export default withNextIntl(nextConfig)
