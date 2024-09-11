@@ -3,10 +3,10 @@ import { ChakraProps, Text } from '@chakra-ui/react'
 interface Props extends ChakraProps {
 	children: string
 }
-const TitleComponent = ({
+const GiantText = ({
 	children,
-	fontSize = { md: '56px', base: '36px' },
-	lineHeight = { md: '67.2px', base: '43.2px' },
+	fontSize = { md: '80px', base: '36px' },
+	lineHeight = { md: '112px', base: '43.2px' },
 	color = '#212121',
 	...props
 }: Props) => {
@@ -18,10 +18,11 @@ const TitleComponent = ({
 			fontWeight='700'
 			lineHeight={lineHeight}
 			fontSize={fontSize}
+			textTransform='uppercase'
 		>
 			{children}
 		</Text>
 	)
 }
 
-export default TitleComponent
+export default GiantText

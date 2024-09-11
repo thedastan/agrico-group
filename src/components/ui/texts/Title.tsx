@@ -6,9 +6,9 @@ interface Props extends ChakraProps {
 const Title = ({
 	children,
 	fontWeight = '700',
-	fontSize = '22px',
-	lineHeight = '27.61px',
-	color = '#000000',
+	fontSize = '18px',
+	lineHeight = '24.3px',
+	color = '#0C0E0F',
 	...props
 }: Props) => {
 	return (

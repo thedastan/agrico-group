@@ -6,14 +6,17 @@ class DASHBOARD {
 	HOME = (locale: IntlType) => {
 		return this.root + locale
 	}
-	ACTORS = (locale: IntlType) => {
-		return `${this.root + locale}/cast-actors`
+	EXPORT_IMPORT = (locale: IntlType) => {
+		return `${this.root + locale}/export-import`
 	}
-	BACKSTAGE = (locale: IntlType) => {
-		return `${this.root + locale}/backstage`
+	TOURISM = (locale: IntlType) => {
+		return `${this.root + locale}/tourism`
 	}
-	FILM_STILLS = (locale: IntlType) => {
-		return `${this.root + locale}/film-stills`
+	INVESTMENTS = (locale: IntlType) => {
+		return `${this.root + locale}/investments`
+	}
+	PRODUCTION = (locale: IntlType) => {
+		return `${this.root + locale}/production`
 	}
 }
 export const DASHBOARD_PAGES = new DASHBOARD()

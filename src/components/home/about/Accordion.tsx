@@ -10,6 +10,7 @@ import {
 	Text
 } from '@chakra-ui/react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { HiOutlineMinus } from 'react-icons/hi'
 
@@ -17,9 +18,12 @@ import TitleComponent from '@/components/ui/texts/TitleComponent'
 
 import { inter } from '@/constants/fonts/fonts'
 
+import useTypedLocale from '@/hooks/useLocale'
+
 import { about_accordion } from './data'
 
 const AccordionComponent = () => {
+	const localActive = useTypedLocale()
 	return (
 		<Accordion
 			allowToggle
@@ -97,7 +101,19 @@ const AccordionComponent = () => {
 											</Text>
 										)}
 										{isExpanded ? (
-											<HiOutlineMinus fontSize='24px' />
+											<Flex
+												flexDirection='column'
+												alignItems='end'
+												justifyContent='space-between'
+												h='100%'
+												gap='40px'
+											>
+												<HiOutlineMinus fontSize='24px' />
+
+												<Link href={el.path(localActive)}>
+													<Text>{`Больше >`}</Text>
+												</Link>
+											</Flex>
 										) : (
 											<AiOutlinePlus fontSize='24px' />
 										)}
