@@ -1,6 +1,11 @@
 import { Box, Container } from '@chakra-ui/react'
 import { Metadata } from 'next'
 
+import About from '@/components/production/about'
+import Guarantee from '@/components/production/guarantee'
+import ProductionHero from '@/components/production/hero'
+import OurOffers from '@/components/production/offers'
+
 import { NO_INDEX_PAGE } from '@/constants/seo/seo.constants'
 
 import {
@@ -16,7 +21,14 @@ export const metadata: Metadata = {
 export default function ProductionPage() {
 	return (
 		<Box pt={{ md: HEADER_HEIGHT, base: MINI_HEADER_HEIGHT }}>
-			<Container maxW={CONTAINER_WIDTH}>Швейное Производство</Container>
+			<Container maxW={CONTAINER_WIDTH}>
+				<ProductionHero />
+				<OurOffers />
+			</Container>
+			<Guarantee />
+			<Container maxW={CONTAINER_WIDTH}>
+				<About />
+			</Container>
 		</Box>
 	)
 }

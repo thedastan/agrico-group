@@ -2,8 +2,8 @@ export const PHONE_NUMBER = '+996705045005'
 
 export const WHATSAPP_NUMBER = PHONE_NUMBER
 
-export const EMAIL_ADDRESS = 'kurakfilmkg@gmail.com'
-export const INSTAGRAM = 'kurakfilmkg'
+export const EMAIL_ADDRESS = 'agrico@gmail.com'
+export const INSTAGRAM = 'agrico'
 
 export const LOCATION = 'Бишкек, Улица Ибраимова, 64/2'
 
