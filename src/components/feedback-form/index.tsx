@@ -11,7 +11,7 @@ const FeedbackForm = () => {
 			bg='#FFFFFF'
 			rounded='16px'
 			border='8px solid #212121'
-			minW='393px'
+			minW={{ sm: '393px', base: '100%' }}
 		>
 			<form>
 				<Stack spacing='6px'>

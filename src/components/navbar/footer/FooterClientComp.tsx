@@ -14,7 +14,11 @@ import Link from 'next/link'
 import FeedbackForm from '@/components/feedback-form'
 import BgLines from '@/components/ui/other/BgLines'
 
-import { MOTION_WEB_LINK } from '@/constants/admin'
+import {
+	EMAIL_ADDRESS_LINK,
+	MOTION_WEB_LINK,
+	PHONE_NUMBER
+} from '@/constants/admin'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
@@ -26,34 +30,44 @@ interface FooterClientCompProps {
 const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 	return (
 		<Box
-			mt='200px'
+			mt={{ md: '200px', base: '0' }}
 			id='contact'
 		>
-			<Flex mb='-220px'>
+			<Flex
+				mb='-220px'
+				alignItems={{ md: 'start', base: 'end' }}
+			>
 				<Box
 					bg='#FFFDF6'
-					maxW={{ xl: '90px', base: '8px' }}
+					maxW={{ xl: '90px', base: '16px' }}
+					minW='16px'
 					w='100%'
 					h='216px'
+					borderBottomRightRadius={{ md: '0', base: '26px' }}
+					mb={{ md: '0', base: '200px' }}
 				/>
 				<Container
 					maxW={CONTAINER_WIDTH}
 					px='0'
 				>
-					<Flex justifyContent='space-between'>
+					<Flex
+						justifyContent='space-between'
+						flexDirection={{ md: 'row', base: 'column' }}
+					>
 						<Box
-							bg='#FFFDF6'
+							bg={{ md: '#FFFDF6', base: 'transparent' }}
 							borderBottomRightRadius='26px'
 							maxW='100%'
 							w='100%'
 							h='216px'
 							position='relative'
+							mb='160px'
 						>
 							<Box
 								textTransform='uppercase'
-								fontWeight='900'
-								lineHeight='67.2px'
-								fontSize='56px'
+								fontWeight={{ xl: '900', base: '700' }}
+								lineHeight={{ xl: '67.2px', md: '44px', base: '28.8px' }}
+								fontSize={{ xl: '56px', md: '40px', base: '24px' }}
 								w='100%'
 								position='absolute'
 								bottom='-137px'
@@ -68,7 +82,7 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 								</Text>
 								<Text
 									as='h1'
-									color='#FFFFFF'
+									color={{ md: '#FFFFFF', base: '#212121' }}
 								>
 									<Highlight
 										query='свяжемся'
@@ -85,9 +99,11 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 				<Box
 					bg='#FFFDF6'
 					borderBottomLeftRadius='26px'
-					maxW={{ xl: '90px', base: '8px' }}
+					maxW={{ xl: '90px', base: '16px' }}
+					minW='16px'
 					w='100%'
 					h='216px'
+					mb={{ md: '0', base: '200px' }}
 				/>
 			</Flex>
 			<Box bg='#212121'>
@@ -96,7 +112,7 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 					position='relative'
 				>
 					<Box
-						pt='339px'
+						pt={{ md: '339px', base: '280px' }}
 						position='relative'
 						zIndex='1'
 					>
@@ -111,11 +127,14 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 								fontWeight='400'
 							>
 								<Link href=''>г. Бишкек, ул. Манаса, д. 45</Link>
-								<Link href=''>info@agreco.kg</Link>
-								<Link href=''>+996 (312) 123-456</Link>
+								<Link href={EMAIL_ADDRESS_LINK}>info@agreco.kg</Link>
+								<Link href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</Link>
 							</Stack>
 
-							<Flex gap='48px'>
+							<Flex
+								gap='48px'
+								display={{ md: 'flex', base: 'none' }}
+							>
 								{header_nav.map((el, idx) => (
 									<Link
 										href={el.path}
@@ -139,12 +158,13 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 						<Flex
 							mt='44px'
 							h='76px'
-							justifyContent='space-between'
+							justifyContent={{ md: 'space-between', base: 'center' }}
+							flexDirection={{ md: 'row', base: 'column' }}
 							alignItems='center'
 							textTransform='uppercase'
 							color='#737372'
-							fontSize='14px'
-							lineHeight='25.2px'
+							fontSize={{ md: '14px', base: '10px' }}
+							lineHeight={{ md: '25.2px', base: '18px' }}
 							fontWeight='400'
 							borderTop='1px solid  #FFFFFF'
 							rounded='30px'
