@@ -7,10 +7,14 @@ import HeroImage from '@/assets/img/production-hero.png'
 
 const ProductionHero = () => {
 	return (
-		<Box pt='6'>
+		<Box pt={{ md: '6', base: '60px' }}>
+			<GiantText display={{ md: 'none', base: 'block' }}>
+				Швейное Производство
+			</GiantText>
 			<Box
 				w='100%'
-				h='421px'
+				mt={{ md: '0', base: '10' }}
+				h={{ md: '421px', base: '338px' }}
 				rounded='20px'
 				overflow='hidden'
 			>
@@ -22,17 +26,25 @@ const ProductionHero = () => {
 			</Box>
 
 			<Flex
-				mt='6'
+				mt={{ md: '6', base: '60px' }}
 				justifyContent='space-between'
 				alignItems='end'
 				gap='151px'
+				w={{ sm: 'auto', base: '100%' }}
 			>
-				<GiantText maxW='70%'>Швейное Производство</GiantText>
+				<GiantText
+					display={{ md: 'block', base: 'none' }}
+					maxW='70%'
+				>
+					Швейное Производство
+				</GiantText>
 				<Flex
+					justifyContent={{ sm: 'start', base: 'space-between' }}
 					pb={{ md: '25px', base: '0' }}
 					pr={{ xl: '57px', base: '0' }}
 					color='#212121'
-					gap='70px'
+					gap={{ md: '70px', base: '4' }}
+					w={{ sm: 'auto', base: '100%' }}
 				>
 					<Box w='155px'>
 						<Flex alignItems='end'>
@@ -81,6 +93,7 @@ const ProductionHero = () => {
 				</Flex>
 			</Flex>
 			<Divider
+				display={{ md: 'block', base: 'none' }}
 				mt='31px'
 				h='1px'
 				bg='#828282'

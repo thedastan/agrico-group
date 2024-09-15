@@ -23,7 +23,7 @@ const OurOffers = () => {
 		}
 	]
 	return (
-		<Box mt={{ md: '120px', base: '40px' }}>
+		<Box mt={{ md: '120px', base: '150px' }}>
 			<TitleComponent maxW='601px'>Что мы предлагаем</TitleComponent>
 
 			<SimpleGrid

@@ -83,6 +83,7 @@ const InputComponent = ({
 				<Textarea
 					onChange={handleChangeTextarea}
 					value={value}
+					defaultValue={value}
 					name={name}
 					placeholder={placeholder}
 					variant='none'

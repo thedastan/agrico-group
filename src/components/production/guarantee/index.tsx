@@ -12,7 +12,7 @@ const Guarantee = () => {
 		<Container
 			maxW={CONTAINER_WIDTH}
 			px={{ md: '4', base: '0' }}
-			mt='50px'
+			mt={{ md: '50px', base: '120px' }}
 		>
 			<Box
 				position='relative'
@@ -49,7 +49,7 @@ const Guarantee = () => {
 					</Description>
 
 					<DefButton
-						maxW='186px'
+						maxW={{ md: '186px', base: '100%' }}
 						mt='64px'
 						isArrowDown={true}
 					>

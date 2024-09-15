@@ -1,3 +1,5 @@
+'use client'
+
 import { Box, Button, ChakraProps } from '@chakra-ui/react'
 import { RiArrowRightDownLine, RiArrowRightUpLine } from 'react-icons/ri'
 
@@ -19,9 +21,18 @@ const DefButton = ({
 	isArrowDown,
 	...props
 }: DefButtonProps) => {
+	const fn = () => {
+		if (type !== 'submit' && !onClick) {
+			const tagLink = document.createElement('a')
+			tagLink.setAttribute('href', '#contact')
+			tagLink.click()
+		} else {
+			onClick && onClick()
+		}
+	}
 	return (
 		<Button
-			onClick={onClick}
+			onClick={fn}
 			type={type}
 			variant='none'
 			w='100%'

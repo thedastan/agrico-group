@@ -7,8 +7,8 @@ interface Props extends ChakraProps {
 const Description = ({
 	children,
 	fontWeight = '400',
-	fontSize = '22px',
-	lineHeight = '35.2px',
+	fontSize = { md: '22px', base: '20px' },
+	lineHeight = { md: '35.2px', base: '32px' },
 	color = '#212121',
 	...props
 }: Props) => {

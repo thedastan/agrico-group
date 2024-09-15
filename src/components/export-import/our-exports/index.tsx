@@ -23,11 +23,11 @@ const OurExports = () => {
 		}
 	]
 	return (
-		<Box mt='102px'>
+		<Box mt='100px'>
 			<TitleComponent maxW='601px'>Что мы экспортируем</TitleComponent>
 
 			<SimpleGrid
-				mt='40px'
+				mt={{ md: '40px', base: '50px' }}
 				columns={{ lg: 4, md: 2, base: 1 }}
 				spacing={{ xl: '40px', md: '25px', base: '45px' }}
 			>

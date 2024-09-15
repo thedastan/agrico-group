@@ -11,72 +11,81 @@ const about = ['Надежность', 'Партнерство', 'Качеств
 
 const AboutUs = () => {
 	return (
-		<Container
-			maxW={CONTAINER_WIDTH}
-			mt={{ md: '146px', base: '120px' }}
-		>
-			<Flex gap='100px'>
-				<Box>
-					<TitleComponent>О нас</TitleComponent>
-
-					<Wrap
-						spacing='2'
-						mt='6'
-					>
-						{about.map((item, idx) => (
-							<Flex
-								key={idx}
-								py='3'
-								px='23px'
-								border='1px solid #212121'
-								rounded='32px'
-								fontWeight='500'
-								fontSize='16px'
-								lineHeight='19.2px'
-								color='#212121'
-							>
-								{item}
-							</Flex>
-						))}
-					</Wrap>
-				</Box>
-				<Box
-					maxW={{ md: '60%', base: '100%' }}
-					w='100%'
+		<Box id='about'>
+			<Container
+				maxW={CONTAINER_WIDTH}
+				mt={{ md: '146px', base: '120px' }}
+			>
+				<Flex
+					gap={{ lg: '100px', base: '80px' }}
+					flexDirection={{ md: 'row', base: 'column' }}
 				>
-					<TitleComponent
-						textTransform='uppercase'
-						fontSize='32px'
-						lineHeight='38.4px'
-					>
-						Agrico Group
-					</TitleComponent>
-					<Text
-						fontSize='22px'
-						lineHeight='35.2px'
-						color='#212121'
-						mt='6'
-					>
-						Ведущая компания Кыргызстана, специализирующаяся на экспорте и
-						импорте товаров, инвестиционных возможностях и текстильной
-						промышленности. Мы стремимся быть мостом между Кыргызстаном и
-						мировым рынком, предоставляя высококачественные услуги нашим
-						клиентам и партнерам.
-					</Text>
+					<Box>
+						<TitleComponent>О нас</TitleComponent>
 
-					<DefButton
-						mt='32px'
-						h='54px'
-						isDark={true}
-						maxW='251px'
+						<Wrap
+							spacing='2'
+							mt={{ md: '6', base: '30px' }}
+						>
+							{about.map((item, idx) => (
+								<Flex
+									key={idx}
+									py='3'
+									px='23px'
+									border='1px solid #212121'
+									rounded='32px'
+									fontWeight='500'
+									fontSize='16px'
+									lineHeight='19.2px'
+									color='#212121'
+								>
+									{item}
+								</Flex>
+							))}
+						</Wrap>
+					</Box>
+					<Box
+						maxW={{ md: '60%', base: '100%' }}
+						w='100%'
 					>
-						Связаться с нами
-					</DefButton>
-				</Box>
-			</Flex>
+						<TitleComponent
+							textTransform='uppercase'
+							fontSize='32px'
+							lineHeight='38.4px'
+						>
+							Agrico Group
+						</TitleComponent>
+						<Text
+							fontSize='22px'
+							lineHeight='35.2px'
+							color='#212121'
+							mt={{ md: '6', base: '30px' }}
+						>
+							Ведущая компания Кыргызстана, специализирующаяся на экспорте и
+							импорте товаров, инвестиционных возможностях и текстильной
+							промышленности. Мы стремимся быть мостом между Кыргызстаном и
+							мировым рынком, предоставляя высококачественные услуги нашим
+							клиентам и партнерам.
+						</Text>
 
-			<AccordionComponent />
-		</Container>
+						<DefButton
+							mt={{ md: '32px', base: '40px' }}
+							h='54px'
+							isDark={true}
+							maxW={{ sm: '251px', base: '100%' }}
+						>
+							Связаться с нами
+						</DefButton>
+					</Box>
+				</Flex>
+			</Container>
+			<Container
+				maxW={CONTAINER_WIDTH}
+				px={{ md: '4', base: '0' }}
+			>
+				<AccordionComponent />
+			</Container>
+		</Box>
 	)
 }
 

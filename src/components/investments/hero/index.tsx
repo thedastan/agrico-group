@@ -16,16 +16,24 @@ const InvestHero = () => {
 		<Box pt={{ md: '95px', base: '65px' }}>
 			<Container maxW={CONTAINER_WIDTH}>
 				<Flex
-					gap='6'
+					gap={{ md: '6', base: '60px' }}
 					justifyContent='space-between'
+					flexDirection={{ lg: 'row', base: 'column' }}
 				>
 					<GiantText
+						display={{ md: 'block', base: 'none' }}
 						maxW='633px'
 						lineHeight={{ md: '112px', base: '43.2px' }}
 						color='#273F2B'
 					>
 						Инвестиции в Кыргызстан
 					</GiantText>
+					<TitleComponent
+						display={{ md: 'none', base: 'block' }}
+						color='#273F2B'
+					>
+						Инвестиции в Кыргызстан
+					</TitleComponent>
 					<Box maxW='560px'>
 						<Description>
 							Инвестируйте в будущее Кыргызстана с Agrico Group. Возможности в
@@ -76,8 +84,8 @@ const InvestHero = () => {
 				</Flex>
 
 				<Flex
-					mt='11px'
-					gap={{ md: '6', base: '60px' }}
+					mt={{ md: '11px', base: '60px' }}
+					gap={{ md: '6', base: '0' }}
 					justifyContent='space-between'
 					flexDirection={{ md: 'row', base: 'column-reverse' }}
 				>
@@ -115,7 +123,6 @@ const InvestHero = () => {
 					>
 						<Box
 							mt={{ md: '100px', base: '0' }}
-							display={{ md: 'block', base: 'none' }}
 							rounded='11px'
 							overflow='hidden'
 							w='100%'

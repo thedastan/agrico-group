@@ -1,9 +1,12 @@
 'use client'
 
-import { Button, Container, Flex, Text } from '@chakra-ui/react'
+import { Button, Container, Flex, IconButton, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { LuPhone } from 'react-icons/lu'
+
+import { PHONE_NUMBER } from '@/constants/admin'
 
 import {
 	CONTAINER_WIDTH,
@@ -16,6 +19,7 @@ import useTypedLocale from '@/hooks/useLocale'
 
 import { IHeaderNav } from '../data'
 
+import BurgerMenu from './BurgerMenu'
 import LanguageSelect from './LanguageSelect'
 import NavbarSelect from './NavbarSelect'
 
@@ -48,9 +52,15 @@ const HeaderClientComp = ({
 					justifyContent='space-between'
 					alignItems='center'
 				>
-					<Flex gap='35px'>
+					<Flex
+						gap='35px'
+						display={{ md: 'flex', base: 'none' }}
+					>
 						{header_nav.map((el, idx) => (
-							<Link href={el.path}>
+							<Link
+								href={el.path}
+								key={idx}
+							>
 								<Text
 									key={idx}
 									fontSize='14px'
@@ -67,11 +77,12 @@ const HeaderClientComp = ({
 					</Flex>
 
 					<Flex
-						maxW='55%'
+						maxW={{ md: '55%', base: '100%' }}
 						w='100%'
 						justifyContent='space-between'
 						alignItems='center'
 					>
+						<BurgerMenu header_nav={header_nav} />
 						<Link href={DASHBOARD_PAGES.HOME(localActive)}>
 							<Image
 								src={'/logo.svg'}
@@ -80,20 +91,39 @@ const HeaderClientComp = ({
 								height={49}
 							/>
 						</Link>
-						<Button
-							variant='none'
-							border='1px solid #FFFFFF'
-							color='#FFFFFF'
-							lineHeight='19.2px'
-							fontSize='16px'
-							fontWeight='500'
-							h='39px'
-							w='149px'
-							rounded='8px'
-							bg='transparent'
-						>
-							{call_button}
-						</Button>
+						<Link href={`tel:${PHONE_NUMBER}`}>
+							<Button
+								display={{ md: 'flex', base: 'none' }}
+								variant='none'
+								border='1px solid #FFFFFF'
+								color='#FFFFFF'
+								lineHeight='19.2px'
+								fontSize='16px'
+								fontWeight='500'
+								h='39px'
+								w='149px'
+								rounded='8px'
+								bg='transparent'
+							>
+								{call_button}
+							</Button>
+							<IconButton
+								aria-label='button'
+								display={{ md: 'none', base: 'flex' }}
+								variant='none'
+								border='1px solid #F2F2F4'
+								color='#FFFFFF'
+								lineHeight='19.2px'
+								fontSize='18px'
+								fontWeight='500'
+								h='40px'
+								w='40px'
+								rounded='50%'
+								bg='transparent'
+							>
+								<LuPhone />
+							</IconButton>
+						</Link>
 					</Flex>
 				</Flex>
 			</Container>

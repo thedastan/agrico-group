@@ -31,20 +31,28 @@ export default function RestSlide() {
 				px={{ md: '15px', base: '0' }}
 				alignItems='center'
 				py={{ md: '3', base: '0' }}
-				bg='#26402B'
+				bg={{ md: '#26402B', base: '100%' }}
 				rounded='48px'
-				justifyContent='space-around'
-				// gap='47px'
-				w='691px'
+				justifyContent={{ md: 'space-around', base: 'sta' }}
+				gap={{ md: '4px', base: '8px 10px' }}
+				w={{ md: '691px', base: '100%' }}
+				flexWrap={{ md: 'nowrap', base: 'wrap' }}
 			>
 				{tabs.map((tab, idx) => (
 					<Box
 						key={idx}
 						onClick={() => setIndex(idx)}
-						color={activeIndex === idx ? '#26402B' : '#FFFFFF'}
-						bg={activeIndex === idx ? '#FFFFFF' : 'transparent'}
+						color={{
+							md: activeIndex === idx ? '#26402B' : '#FFFFFF',
+							base: activeIndex === idx ? '#FFFFFF' : '#000000'
+						}}
+						bg={{
+							md: activeIndex === idx ? '#FFFFFF' : 'transparent',
+							base: activeIndex === idx ? '#212121' : 'transparent'
+						}}
 						rounded='36px'
-						padding={activeIndex === idx ? '16px 24px' : '0'}
+						border={{ md: 'none', base: '1px solid #212121' }}
+						padding={'16px 24px'}
 						cursor='pointer'
 						transition='.2s'
 						whiteSpace='nowrap'

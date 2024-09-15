@@ -50,12 +50,12 @@ const MainHero = () => {
 			<Box bg='#2B2B2B'>
 				<Container maxW={CONTAINER_WIDTH}>
 					<Box
-						h='772px'
+						minH={{ md: '772px', base: '411px' }}
 						position='relative'
 						pt={{ md: HEADER_HEIGHT, base: MINI_HEADER_HEIGHT }}
 					>
 						<Flex
-							mt='159px'
+							mt={{ md: '159px', base: '79px' }}
 							position='relative'
 							zIndex='1'
 							gap='65px'
@@ -63,20 +63,20 @@ const MainHero = () => {
 							<Box>
 								<Text
 									fontWeight='500'
-									lineHeight='21.6px'
-									fontSize='18px'
+									lineHeight={{ md: '21.6px', base: '16px' }}
+									fontSize={{ md: '18px', base: '14px' }}
 									color='#FFFFFF'
-									letterSpacing='8.6px'
+									letterSpacing={{ md: '8.6px', base: '5px' }}
 								>
 									новые возможности
 								</Text>
 								<Heading
 									mt='2'
 									textTransform='uppercase'
-									fontSize='80px'
-									lineHeight='96px'
+									fontSize={{ md: '80px', base: '36px' }}
+									lineHeight={{ md: '96px', base: '43.2px' }}
 									color='#FFFFFF'
-									fontWeight='400'
+									fontWeight={{ md: '400', base: '700' }}
 									maxW='90%'
 								>
 									<Highlight
@@ -87,41 +87,12 @@ const MainHero = () => {
 									</Highlight>
 								</Heading>
 							</Box>
-							<Box w='392px'>
-								<AvatarGroup
-									max={3}
-									spacing='-30px'
-									// styleConfig={{ zIndex: '0' }}
-								>
-									{avatars.map((el, idx) => (
-										<Avatar
-											zIndex={idx}
-											key={idx}
-											name={el.name}
-											src={el.image}
-											border='2px solid #273F2B'
-											width='48px'
-											height='48px'
-										/>
-									))}
-								</AvatarGroup>
 
-								<Text
-									mt='32px'
-									fontSize='18px'
-									color='#FFFFFF'
-									lineHeight='28.8px'
-									letterSpacing='-1px'
-								>
-									Качество, доверие и инновации для вашего успеха
-								</Text>
-								<DefButton
-									mt='46px'
-									maxW={{ md: '213px', base: '100%' }}
-									isArrowDown={true}
-								>
-									Наши услуги
-								</DefButton>
+							<Box
+								maxW='392px'
+								display={{ md: 'block', base: 'none' }}
+							>
+								<RightSide />
 							</Box>
 						</Flex>
 
@@ -132,14 +103,14 @@ const MainHero = () => {
 			<Flex
 				alignItems='end'
 				justifyContent='space-between'
-				mt='-190px'
+				mt={{ md: '-190px', base: '-110px' }}
 			>
 				<Box
 					bg='#FFFDF6'
 					borderTopRightRadius='56px'
 					maxW={{ xl: '90px', base: '8px' }}
 					w='100%'
-					h='326px'
+					h={{ md: '326px', base: '166px' }}
 				/>
 				<Container
 					maxW={CONTAINER_WIDTH}
@@ -148,7 +119,7 @@ const MainHero = () => {
 				>
 					<Box
 						w='100%'
-						h='460px'
+						h={{ md: '460px', base: '256px' }}
 						rounded='12px'
 						border='8px solid #212121'
 						overflow='hidden'
@@ -165,9 +136,70 @@ const MainHero = () => {
 					borderTopLeftRadius='56px'
 					maxW={{ xl: '90px', base: '8px' }}
 					w='100%'
-					h='326px'
+					h={{ md: '326px', base: '166px' }}
 				/>
 			</Flex>
+			<Box
+				display={{ md: 'none', base: 'block' }}
+				px='4'
+				mt='30px'
+			>
+				<RightSide />
+			</Box>
+		</Box>
+	)
+}
+
+function RightSide() {
+	return (
+		<Box w='100%'>
+			<Flex
+				gap='10px'
+				alignItems='center'
+			>
+				<AvatarGroup
+					max={3}
+					spacing='-30px'
+					// styleConfig={{ zIndex: '0' }}
+				>
+					{avatars.map((el, idx) => (
+						<Avatar
+							zIndex={idx}
+							key={idx}
+							name={el.name}
+							src={el.image}
+							border='2px solid #273F2B'
+							width='48px'
+							height='48px'
+						/>
+					))}
+				</AvatarGroup>
+				<Text
+					// maxW='126px'
+					color={{ md: '#E8C547', base: '#2B2B2B' }}
+					fontSize={{ md: '12px', base: '15px' }}
+					lineHeight={{ md: '14.4px', base: '18px' }}
+				>
+					партнеров в различных странах
+				</Text>
+			</Flex>
+
+			<Text
+				mt={{ md: '32px', base: '26px' }}
+				fontSize='18px'
+				color={{ md: '#FFFFFF', base: '#2B2B2B' }}
+				lineHeight='28.8px'
+				letterSpacing={{ md: '-1px', base: '.3px' }}
+			>
+				Качество, доверие и инновации для вашего успеха
+			</Text>
+			<DefButton
+				mt={{ md: '46px', base: '52px' }}
+				maxW={{ sm: '213px', base: '100%' }}
+				isArrowDown={true}
+			>
+				Наши услуги
+			</DefButton>
 		</Box>
 	)
 }

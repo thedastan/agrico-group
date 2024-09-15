@@ -34,7 +34,7 @@ const NatureSlide = () => {
 	return (
 		<Box mt={{ md: '263px', base: '100px' }}>
 			<TitleComponent
-				textAlign='center'
+				textAlign={{ md: 'center', base: 'start' }}
 				px='4'
 			>
 				Что посмотреть
@@ -42,7 +42,7 @@ const NatureSlide = () => {
 			<Container
 				maxW={CONTAINER_WIDTH}
 				px={{ lg: '4', base: '0' }}
-				mt='50px'
+				mt={{ md: '50px', base: '30px' }}
 			>
 				<Flex
 					overflow={{ lg: 'hidden', base: 'auto' }}
@@ -50,7 +50,7 @@ const NatureSlide = () => {
 					w='100%'
 				>
 					<Flex
-						gap='6'
+						gap={{ md: '6', base: '5' }}
 						alignItems='start'
 						justifyContent='space-between'
 						px={{ lg: '0', base: '4' }}

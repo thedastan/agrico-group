@@ -34,9 +34,9 @@ const LanguageSelect = () => {
 					alignItems='center'
 					cursor='pointer'
 					gap='9px'
-					fontSize='14px'
-					lineHeight='14px'
-					fontWeight='400'
+					fontSize={{ md: '14px', base: '24px' }}
+					lineHeight={{ md: '14px', base: '24px' }}
+					fontWeight={{ md: '400', base: '500' }}
 					color='#FFFFFF'
 				>
 					{current_locale?.short_name}

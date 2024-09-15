@@ -22,14 +22,17 @@ const ActiveRest = () => {
 				<Flex
 					justifyContent='space-between'
 					alignItems='start'
-					flexDirection={{ md: 'row', base: 'column' }}
+					flexDirection={{ lg: 'row', base: 'column' }}
 					gap='40px'
-					px={{ md: '0', base: '4' }}
 				>
 					<Box
 						pt={{ md: '15px', base: '33px' }}
+						pb={{ md: '0', base: '17px' }}
 						bg={{ md: 'transparent', base: '#F2F5EB' }}
 						maxW={{ md: '523px', base: '100%' }}
+						rounded='22px'
+						px='4'
+						w='100%'
 					>
 						<Box
 							px='6'

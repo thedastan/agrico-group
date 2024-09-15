@@ -43,9 +43,9 @@ const TrustedPartner = () => {
 				</Flex>
 
 				<Flex
-					mt='60px'
+					mt={{ md: '60px', base: '55px' }}
 					justifyContent='center'
-					gap='83px'
+					gap={{ md: '83px', base: '40px' }}
 					alignItems='start'
 					flexWrap='wrap'
 				>

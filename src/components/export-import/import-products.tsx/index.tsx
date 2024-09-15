@@ -16,6 +16,7 @@ const ImportProducts = () => {
 		<Flex
 			mt={{ md: '218px', base: '120px' }}
 			gap={{ lg: '50px', md: '30px', base: '20px' }}
+			flexDirection={{ md: 'row', base: 'column' }}
 		>
 			<Box>
 				<TitleComponent maxW='495px'>Импортируемые товары</TitleComponent>
@@ -44,9 +45,12 @@ const ImportProducts = () => {
 						key={idx}
 						onClick={() => setIndex(idx)}
 						border='1px solid #0000001F'
-						bg={activeIndex === idx ? '#F2F5EB' : 'transparent'}
-						py='21px'
-						px='6'
+						bg={{
+							md: activeIndex === idx ? '#F2F5EB' : 'transparent',
+							base: '#F2F5EB'
+						}}
+						py={{ sm: '21px', base: '10px' }}
+						px={{ sm: '6', base: '10px' }}
 						rounded='16px'
 						cursor='pointer'
 					>
@@ -67,6 +71,21 @@ const ImportProducts = () => {
 						>
 							{el.desc}
 						</Text>
+
+						<Box
+							display={{ md: 'none', base: 'block' }}
+							h='253px'
+							w='100%'
+							overflow='hidden'
+							rounded='12px'
+							mt='10px'
+						>
+							<Image
+								src={el.image}
+								alt='Image'
+								className='full-image'
+							/>
+						</Box>
 					</Box>
 				))}
 			</Stack>

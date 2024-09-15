@@ -1,6 +1,7 @@
 import { Box, Container, Flex, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 
+import Description from '@/components/ui/texts/Description'
 import GiantText from '@/components/ui/texts/GiantText'
 import Title from '@/components/ui/texts/Title'
 
@@ -32,7 +33,10 @@ const TourismHero = () => {
 					gap='30px'
 				>
 					<GiantText maxW='621px'>Туризм в Кыргызстане</GiantText>
-					<Box maxW='499px'>
+					<Box
+						maxW='499px'
+						display={{ md: 'block', base: 'none' }}
+					>
 						<Title
 							color='#000000'
 							fontSize='30px'
@@ -40,33 +44,27 @@ const TourismHero = () => {
 						>
 							О Кыргызстане
 						</Title>
-						<Text
-							mt='6'
-							fontSize='22px'
-							lineHeight='35.2px'
-							fontWeight='400'
-							color='#212121'
-						>
+						<Description mt='6'>
 							Кыргызстан – это страна величественных гор, древних культур и
 							гостеприимного народа. Предлагает путешественникам уникальные
 							впечатления, знакомства с кочевой культурой.
-						</Text>
+						</Description>
 					</Box>
 				</Flex>
 
 				<Flex
-					mt='97px'
-					h='460px'
-					padding='40px'
+					mt={{ md: '97px', base: '60px' }}
+					h={{ md: '460px', base: 'auto' }}
+					padding={{ md: '40px', base: '0' }}
 					alignItems='start'
-					bg='#2B2B2B'
-					rounded='30px'
+					bg={{ md: '#2B2B2B', base: 'transparent' }}
+					rounded={{ md: '30px', base: '32px' }}
 					justifyContent='space-between'
 					gap='4'
 				>
 					<Box
 						w='758px'
-						h='503px'
+						h={{ md: '503px', base: '263px' }}
 						overflow='hidden'
 						// rounded='20px'
 					>
@@ -78,6 +76,7 @@ const TourismHero = () => {
 						/>
 					</Box>
 					<Text
+						display={{ md: 'block', base: 'none' }}
 						mt='102px'
 						color='#FFFFFF'
 						fontSize='40px'
@@ -88,6 +87,26 @@ const TourismHero = () => {
 						Здесь природа осталась в своем первозданном виде
 					</Text>
 				</Flex>
+				<Box
+					mt='60px'
+					display={{ md: 'none', base: 'block' }}
+				>
+					<Title
+						color='#000000'
+						fontSize='30px'
+						lineHeight='36px'
+					>
+						О Кыргызстане
+					</Title>
+					<Description
+						mt='6'
+						fontSize='22px'
+					>
+						Кыргызстан – это страна величественных гор, древних культур и
+						гостеприимного народа. Предлагает путешественникам уникальные
+						впечатления, знакомства с кочевой культурой.
+					</Description>
+				</Box>
 			</Container>
 		</Box>
 	)

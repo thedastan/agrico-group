@@ -12,7 +12,9 @@ const Agriculture = () => {
 	return (
 		<Box mt={{ md: '140px', base: '118px' }}>
 			<Container maxW={CONTAINER_WIDTH}>
-				<TitleComponent textAlign='center'>Сельское хозяйство</TitleComponent>
+				<TitleComponent textAlign={{ md: 'center', base: 'start' }}>
+					Сельское хозяйство
+				</TitleComponent>
 
 				<Flex
 					mt={{ md: '70px', base: '30px' }}
@@ -20,7 +22,11 @@ const Agriculture = () => {
 					justifyContent='space-between'
 					flexDirection={{ md: 'row', base: 'column' }}
 				>
-					<Box maxW='295px'>
+					<Flex
+						flexDirection={{ md: 'column', base: 'column-reverse' }}
+						maxW={{ md: '295px', base: '100%' }}
+						gap='6'
+					>
 						<Text
 							fontWeight='700'
 							lineHeight='36px'
@@ -30,7 +36,6 @@ const Agriculture = () => {
 							Экологически чистые продукты
 						</Text>
 						<Text
-							mt='6'
 							fontWeight='400'
 							lineHeight='28.8px'
 							fontSize='18px'
@@ -39,7 +44,7 @@ const Agriculture = () => {
 							Сельское хозяйство – одна из ключевых отраслей экономики
 							Кыргызстана, предлагающая уникальные возможности для инвесторов.
 						</Text>
-					</Box>
+					</Flex>
 					<Box
 						maxW='900px'
 						w='100%'
@@ -58,7 +63,7 @@ const Agriculture = () => {
 					mt={{ md: '70px', base: '60px' }}
 					gap='20px'
 					justifyContent='space-between'
-					flexDirection={{ md: 'row', base: 'column-reverse' }}
+					flexDirection={{ md: 'row', base: 'column' }}
 				>
 					<Box
 						maxW='900px'
@@ -73,24 +78,25 @@ const Agriculture = () => {
 							className='full-image'
 						/>
 					</Box>
-					<Box maxW='295px'>
+					<Box maxW={{ md: '295px', base: '100%' }}>
 						<Text
 							fontWeight='700'
 							lineHeight='36px'
 							fontSize='30px'
 							color='#000000'
 						>
-							Экологически чистые продукты
+							Благоприятный климат
 						</Text>
 						<Text
-							mt='6'
+							mt={{ md: '6', base: '5' }}
 							fontWeight='400'
 							lineHeight='28.8px'
 							fontSize='18px'
 							color='#212121'
 						>
-							Сельское хозяйство – одна из ключевых отраслей экономики
-							Кыргызстана, предлагающая уникальные возможности для инвесторов.
+							Agreco Group поможет вам открыть новые перспективы в этом секторе,
+							обеспечив доступ к экологически чистым продуктам, востребованным
+							на международных рынках.
 						</Text>
 					</Box>
 				</Flex>

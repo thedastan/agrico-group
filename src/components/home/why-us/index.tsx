@@ -26,10 +26,10 @@ const statics = [
 const WhyUs = () => {
 	return (
 		<Box
-			mt='200px'
+			mt={{ md: '200px', base: '120px' }}
 			bg='#F2F5EB'
-			pt='68px'
-			pb='50px'
+			pt={{ md: '68px', base: '50px' }}
+			pb={{ md: '50px', base: '31px' }}
 		>
 			<Container maxW={CONTAINER_WIDTH}>
 				<Flex
@@ -43,41 +43,67 @@ const WhyUs = () => {
 							Многолетний опыт работы на международных рынках
 						</Description>
 					</Box>
-
-					<Flex gap='48px'>
-						{statics.map((el, idx) => (
-							<Box
-								key={idx}
-								color='#212121'
-							>
-								<Text
-									fontWeight='500'
-									fontSize='40px'
-									lineHeight='48px'
-								>
-									{el.num}
-								</Text>
-								<Text
-									mt='9px'
-									fontWeight='400'
-									fontSize='16px'
-									lineHeight='19.2px'
-								>
-									{el.desc}
-								</Text>
-							</Box>
-						))}
-					</Flex>
+					<Box display={{ md: 'block', base: 'none' }}>
+						<Statics />
+					</Box>
 				</Flex>
-				<Box mt='25px'>
+			</Container>
+			<Container
+				maxW={CONTAINER_WIDTH}
+				px={{ md: '4', base: '0' }}
+				mt='25px'
+			>
+				<Box
+					h={{ md: '420px', base: '456px' }}
+					w='100%'
+				>
 					<Image
 						src={MapImage}
 						alt='Map'
-						// className='full-image'
+						className='full-image'
 					/>
 				</Box>
 			</Container>
+			<Box
+				display={{ md: 'none', base: 'block' }}
+				px='4'
+			>
+				<Statics />
+			</Box>
 		</Box>
+	)
+}
+
+function Statics() {
+	return (
+		<Flex
+			gap={{ md: '48px', base: '14px' }}
+			flexWrap={{ md: 'nowrap', base: 'wrap' }}
+		>
+			{statics.map((el, idx) => (
+				<Box
+					key={idx}
+					color='#212121'
+					maxW={{ sm: '30%', base: '128px' }}
+				>
+					<Text
+						fontWeight='500'
+						fontSize='40px'
+						lineHeight='48px'
+					>
+						{el.num}
+					</Text>
+					<Text
+						mt='9px'
+						fontWeight='400'
+						fontSize='16px'
+						lineHeight='19.2px'
+					>
+						{el.desc}
+					</Text>
+				</Box>
+			))}
+		</Flex>
 	)
 }
 

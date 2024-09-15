@@ -14,7 +14,9 @@ const About = () => {
 	const [activeIndex, setIndex] = useState(0)
 	return (
 		<Box mt={{ md: '218px', base: '120px' }}>
-			<TitleComponent textAlign='center'>Почему выбирают нас</TitleComponent>
+			<TitleComponent textAlign={{ md: 'center', base: 'start' }}>
+				Почему выбирают нас
+			</TitleComponent>
 
 			<Flex
 				gap={{ lg: '50px', md: '30px', base: '20px' }}
@@ -30,14 +32,17 @@ const About = () => {
 							key={idx}
 							onClick={() => setIndex(idx)}
 							border='1px solid #0000001F'
-							bg={activeIndex === idx ? '#F2F5EB' : 'transparent'}
-							py='21px'
-							px='6'
+							bg={{
+								md: activeIndex === idx ? '#F2F5EB' : 'transparent',
+								base: '#F2F5EB'
+							}}
+							py={{ md: '21px', base: '3' }}
+							px={{ md: '6', base: '3' }}
 							rounded='16px'
 							cursor='pointer'
 						>
 							<Text
-								fontWeight='600'
+								fontWeight={{ md: '600', base: '700' }}
 								fontSize='18px'
 								lineHeight='31.72px'
 								color='#0C0E0F'
@@ -53,6 +58,19 @@ const About = () => {
 							>
 								{el.desc}
 							</Text>
+							<Box
+								mt='10px'
+								display={{ md: 'none', base: 'block' }}
+								h='259px'
+								overflow='hidden'
+								rounded='12px'
+							>
+								<Image
+									src={el.image}
+									alt='Image'
+									className='full-image'
+								/>
+							</Box>
 						</Box>
 					))}
 				</Stack>

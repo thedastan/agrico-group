@@ -13,6 +13,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { HiOutlineMinus } from 'react-icons/hi'
+import { RiArrowRightUpLine } from 'react-icons/ri'
 
 import TitleComponent from '@/components/ui/texts/TitleComponent'
 
@@ -27,9 +28,9 @@ const AccordionComponent = () => {
 	return (
 		<Accordion
 			allowToggle
-			mt='170px'
+			mt={{ md: '170px', base: '130px' }}
 			gap='0'
-			className='services'
+			id='services'
 		>
 			{about_accordion.map((el, idx) => (
 				<AccordionItem
@@ -37,7 +38,7 @@ const AccordionComponent = () => {
 					borderBottom='none'
 					borderTop='1px solid #000000'
 					rounded='30px'
-					px='22px'
+					px={{ md: '22px', base: '0' }}
 					className={inter.className}
 				>
 					{({ isExpanded }) => (
@@ -46,7 +47,7 @@ const AccordionComponent = () => {
 								_hover={{ bg: 'transparent' }}
 								as={Box}
 								flex='1'
-								pt='40px'
+								pt={{ md: '40px', base: '28px' }}
 								cursor='pointer'
 							>
 								<Flex
@@ -55,36 +56,64 @@ const AccordionComponent = () => {
 									w='100%'
 								>
 									<TitleComponent
-										w='284px'
+										w={{ md: '284px', base: '100%' }}
 										fontSize='32px'
 										lineHeight='38.4px'
 									>
 										{el.title}
 									</TitleComponent>
 
-									{!isExpanded ? (
-										<Text
-											textAlign='start'
-											fontSize='32px'
-											lineHeight='38.4px'
-											color='#888888'
-										>
-											{el.description}
-										</Text>
-									) : (
-										<Box
-											w='341px'
-											h='220px'
-											rounded='8px'
-											overflow='hidden'
-										>
-											<Image
-												src={el.image}
-												alt='Image'
-												className='full-image'
-											/>
-										</Box>
-									)}
+									<Box display={{ md: 'block', base: 'none' }}>
+										{!isExpanded ? (
+											<Text
+												textAlign='start'
+												fontSize='32px'
+												lineHeight='38.4px'
+												color='#888888'
+											>
+												{el.description}
+											</Text>
+										) : (
+											<Box position='relative'>
+												<Box
+													w='341px'
+													h='220px'
+													rounded='8px'
+													overflow='hidden'
+												>
+													<Image
+														src={el.image}
+														alt='Image'
+														className='full-image'
+													/>
+												</Box>
+												<Box
+													position='absolute'
+													right='-11%'
+													bottom='5'
+													bg='#FFFDF6'
+													padding='2'
+													rounded='50%'
+												>
+													<Link href={el.path(localActive)}>
+														<Flex
+															justifyContent='center'
+															align='center'
+															bg='#212121'
+															w='52px'
+															h='52px'
+															rounded='50%'
+														>
+															<RiArrowRightUpLine
+																color='#E8C547'
+																fontSize='24px'
+															/>
+														</Flex>
+													</Link>
+												</Box>
+											</Box>
+										)}
+									</Box>
 									<Flex
 										alignItems='center'
 										h='100%'
@@ -92,6 +121,7 @@ const AccordionComponent = () => {
 									>
 										{isExpanded && (
 											<Text
+												display={{ md: 'block', base: 'none' }}
 												maxW='194px'
 												fontSize='20px'
 												lineHeight='24px'
@@ -109,10 +139,6 @@ const AccordionComponent = () => {
 												gap='40px'
 											>
 												<HiOutlineMinus fontSize='24px' />
-
-												<Link href={el.path(localActive)}>
-													<Text>{`Больше >`}</Text>
-												</Link>
 											</Flex>
 										) : (
 											<AiOutlinePlus fontSize='24px' />
@@ -120,7 +146,63 @@ const AccordionComponent = () => {
 									</Flex>
 								</Flex>
 							</AccordionButton>
-							<AccordionPanel></AccordionPanel>
+							<AccordionPanel px='4'>
+								<Box
+									display={{ md: 'none', base: 'block' }}
+									mt='3'
+								>
+									<Box
+										position='relative'
+										maxW='381px'
+									>
+										<Box
+											w='100%'
+											h='220px'
+											rounded='8px'
+											overflow='hidden'
+										>
+											<Image
+												src={el.image}
+												alt='Image'
+												className='full-image'
+											/>
+										</Box>
+										<Box
+											position='absolute'
+											right='-6%'
+											bottom='5'
+											bg='#FFFDF6'
+											padding='2'
+											rounded='50%'
+										>
+											<Link href={el.path(localActive)}>
+												<Flex
+													justifyContent='center'
+													align='center'
+													bg='#212121'
+													w='52px'
+													h='52px'
+													rounded='50%'
+												>
+													<RiArrowRightUpLine
+														color='#E8C547'
+														fontSize='24px'
+													/>
+												</Flex>
+											</Link>
+										</Box>
+									</Box>
+									<Text
+										mt='5'
+										textAlign='start'
+										fontSize='20px'
+										lineHeight='24px'
+										color='#212121'
+									>
+										{el.description}
+									</Text>
+								</Box>
+							</AccordionPanel>
 						</>
 					)}
 				</AccordionItem>
