@@ -1,5 +1,6 @@
 User-agent: *
-Disallow: /
+
+Allow: /
 Allow: /en/export-import
 Allow: /en/investments
 Allow: /en/production
