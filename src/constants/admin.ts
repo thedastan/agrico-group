@@ -3,7 +3,7 @@ export const PHONE_NUMBER = '+996221210007'
 export const WHATSAPP_NUMBER = PHONE_NUMBER
 
 export const EMAIL_ADDRESS = 'info@agrico-group.org'
-export const INSTAGRAM = 'agrico'
+export const INSTAGRAM = 'agrico_group'
 
 export const LOCATION = 'Бишкек, Улица Раззакова 32'
 
