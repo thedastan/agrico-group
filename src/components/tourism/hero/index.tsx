@@ -1,5 +1,6 @@
-import { Box, Container, Flex, Text } from '@chakra-ui/react'
+import { Box, Button, Container, Flex, Text } from '@chakra-ui/react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import Description from '@/components/ui/texts/Description'
 import GiantText from '@/components/ui/texts/GiantText'
@@ -15,42 +16,68 @@ const TourismHero = () => {
 		<Box mt={{ md: '105px', base: '79px' }}>
 			<Container maxW={CONTAINER_WIDTH}>
 				<Box
-					w='50px'
-					h='50px'
-					overflow='hidden'
-					rounded='50%'
+					display='flex'
+					justifyContent='center'
+					flexDirection='column'
+					alignItems='center'
+					gap={10}
 				>
-					<Image
-						src={JamalTour}
-						alt='Tour-Logo'
-						className='full-image'
-					/>
-				</Box>
-				<Flex
-					mt='5'
-					justifyContent='space-between'
-					alignItems='start'
-					gap='30px'
-				>
-					<GiantText maxW='650px'>Туризм в Кыргызстане</GiantText>
 					<Box
-						maxW='499px'
-						display={{ md: 'block', base: 'none' }}
+						w='200px'
+						alignItems='center'
+						justifyContent='center'
+
+						// h='200px'
+						// overflow='hidden'
+						// rounded='50%'
+						// mt={-8}
 					>
-						<Title
-							color='#000000'
-							fontSize='30px'
-							lineHeight='36px'
-						>
-							О Кыргызстане
-						</Title>
-						<Description mt='6'>
-							Кыргызстан – это страна величественных гор, древних культур и
-							гостеприимного народа. Предлагает путешественникам уникальные
-							впечатления, знакомства с кочевой культурой.
-						</Description>
+						<Image
+							width={400}
+							src={JamalTour}
+							alt='Tour-Logo'
+							className='full-image'
+						/>
+						<Link href='https://www.instagram.com/jamal_travel_kg'>
+							<Button
+								w='100%'
+								mt={6}
+								h='50px'
+								bg='#2B2B2B'
+								color='white'
+								fontSize={18}
+								// ml={12}
+							>
+								Instagram
+							</Button>
+						</Link>
 					</Box>
-				</Flex>
+					<Flex
+						mt='5'
+						justifyContent='space-between'
+						alignItems='center'
+						gap='100px'
+					>
+						<GiantText maxW='650px'>Туризм в Кыргызстане</GiantText>
+						<Box
+							maxW='499px'
+							display={{ md: 'block', base: 'none' }}
+						>
+							<Title
+								color='#000000'
+								fontSize='30px'
+								lineHeight='36px'
+							>
+								О Кыргызстане
+							</Title>
+							<Description mt='6'>
+								Кыргызстан – это страна величественных гор, древних культур и
+								гостеприимного народа. Предлагает путешественникам уникальные
+								впечатления, знакомства с кочевой культурой.
+							</Description>
+						</Box>
+					</Flex>
+				</Box>
 
 				<Flex
 					mt={{ md: '97px', base: '60px' }}

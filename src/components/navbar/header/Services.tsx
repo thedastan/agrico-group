@@ -41,7 +41,7 @@ const Services = () => {
 					fontWeight={{ md: '400', base: '500' }}
 					color='#FFFFFF'
 				>
-					Услуги
+					Сектор
 					<IoChevronDown />
 				</Flex>
 			</MenuButton>
@@ -50,10 +50,11 @@ const Services = () => {
 				rounded='12px'
 				bg='#FFFFFF'
 				boxShadow='0px 8px 24px -6px #00000029'
-				padding='4px 4px 4px 9px'
+				padding='15px 15px'
 				className={inter.className}
 				display='flex'
 				flexDirection='column'
+				gap={6}
 			>
 				{about_accordion.map((el, idx) => (
 					<Link href={el.path(localActive)}>{el.title}</Link>

@@ -21,6 +21,7 @@ import { EMAIL_ADDRESS_LINK, PHONE_NUMBER } from '@/constants/admin'
 import { IHeaderNav } from '../data'
 
 import LanguageSelect from './LanguageSelect'
+import Services from './Services'
 
 interface BurgerMenuProps {
 	header_nav: IHeaderNav[]
@@ -114,6 +115,7 @@ const BurgerMenu = ({ header_nav }: BurgerMenuProps) => {
 												</Text>
 											</Link>
 										))}
+										<Services />
 										<LanguageSelect />
 									</Stack>
 								</Box>

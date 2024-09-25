@@ -83,12 +83,12 @@ export default function RestSlide() {
 			>
 				<TabPanels
 					display='flex'
-					justifyContent={{ md: 'center', base: 'center' }}
+					justifyContent='center'
 					alignItems='center'
 				>
 					<TabPanel
-						w={550}
-						h={320}
+						w={{ md: 550, base: '100%' }}
+						// h={{ md: 550, base: 400 }}
 					>
 						<Image
 							className='toursa'
@@ -98,19 +98,19 @@ export default function RestSlide() {
 						/>
 					</TabPanel>
 					<TabPanel
-						w={550}
-						h={320}
+						w={{ md: 550, base: '100%' }}
+						// h={{ md: 550, base: 400 }}
 					>
 						<Image
 							className='toursa'
-							// style={{ width: '285px' }}
+							// style={{ maxWidth: '500px' }}
 							src={SlideImage2}
 							alt='img'
 						/>
 					</TabPanel>
 					<TabPanel
-						w={550}
-						h={320}
+						w={{ md: 550, base: '100%' }}
+						// h={{ md: 550, base: 400 }}
 					>
 						<Image
 							className='toursa'
@@ -120,19 +120,8 @@ export default function RestSlide() {
 						/>
 					</TabPanel>
 					<TabPanel
-						w={550}
-						h={320}
-					>
-						<Image
-							className='toursa'
-							// style={{ maxWidth: '500px' }}
-							src={SlideImage4}
-							alt='img'
-						/>
-					</TabPanel>
-					<TabPanel
-						w={550}
-						h={320}
+						w={{ md: 550, base: '100%' }}
+						// h={{ md: 550, base: 400 }}
 					>
 						<Image
 							className='toursa'
@@ -146,52 +135,72 @@ export default function RestSlide() {
 				<TabList>
 					<Box
 						display='flex'
+						flexWrap='wrap'
 						// flexDirection='column'
 						borderRadius={40}
-						bg={'#26402B'}
+						bg={{ md: '#26402B', base: 'white' }}
 						p={4}
-						mt={-8}
-						gap={2}
+						mt={{ md: -8, base: 2 }}
+						gap={{ md: 2, base: 4 }}
 					>
 						<Tab
-							w={{ md: 200, base: 100 }}
-							h={{ md: 50, base: 30 }}
+							objectFit='cover'
+							overflow='hidden'
+							w={{ md: 200, base: 200 }}
 							borderRadius={30}
 							p={{ md: 2, base: 1 }}
-							color='white'
-							_selected={{ color: '#26402B', bg: '#F4F5F6' }}
+							border={{ md: 'solid 0px black', base: 'solid 1px black' }}
+							color={{ md: 'white', base: 'black' }}
+							_selected={{
+								color: { md: '#26402B', base: 'white' },
+								bg: { md: '#F4F5F6', base: 'black' }
+							}}
 						>
 							Григорьевское ущелье
 						</Tab>
 
 						<Tab
-							w={{ md: 130, base: 100 }}
-							h={{ md: 50, base: 30 }}
+							objectFit='cover'
+							overflow='hidden'
+							w={{ md: 200, base: 100 }}
 							borderRadius={30}
-							p={1}
-							color='white'
-							_selected={{ color: '#26402B', bg: '#F4F5F6' }}
+							p={{ md: 2, base: 1 }}
+							border={{ md: 'solid 0px black', base: 'solid 1px black' }}
+							color={{ md: 'white', base: 'black' }}
+							_selected={{
+								color: { md: '#26402B', base: 'white' },
+								bg: { md: '#F4F5F6', base: 'black' }
+							}}
 						>
 							Кырчын
 						</Tab>
-
 						<Tab
+							objectFit='cover'
+							overflow='hidden'
 							w={{ md: 130, base: 100 }}
-							h={{ md: 50, base: 30 }}
+							border={{ md: 'solid 0px black', base: 'solid 1px black' }}
 							borderRadius={30}
-							p={1}
-							color='white'
-							_selected={{ color: '#26402B', bg: '#F4F5F6' }}
+							p={{ md: 2, base: 1 }}
+							color={{ md: 'white', base: 'black' }}
+							_selected={{
+								color: { md: '#26402B', base: 'white' },
+								bg: { md: '#F4F5F6', base: 'black' }
+							}}
 						>
 							Джети-Огуз
 						</Tab>
 						<Tab
+							objectFit='cover'
+							overflow='hidden'
 							w={{ md: 130, base: 100 }}
-							h={{ md: 50, base: 30 }}
 							borderRadius={30}
-							p={1}
-							color='white'
-							_selected={{ color: '#26402B', bg: '#F4F5F6' }}
+							border={{ md: 'solid 0px black', base: 'solid 1px black' }}
+							p={{ md: 2, base: 1 }}
+							color={{ md: 'white', base: 'black' }}
+							_selected={{
+								color: { md: '#26402B', base: 'white' },
+								bg: { md: '#F4F5F6', base: 'black' }
+							}}
 						>
 							Каракол
 						</Tab>

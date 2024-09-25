@@ -10,7 +10,9 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
 
+import HeroImage1 from '@/assets/img/hero_image.jpeg'
 import HeroImage from '@/assets/img/main-hero.png'
+import HeroImage2 from '@/assets/img/maxresdefault.jpg'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
@@ -58,7 +60,7 @@ const ImgSlider = () => {
 						colorScheme='#F8F8F8'
 						position='absolute'
 						left='10px'
-						top='50%'
+						top='45%'
 						transform='translateY(-50%)'
 						color='#D4D4D4'
 						border='solid 1px #D4D4D4'
@@ -77,7 +79,7 @@ const ImgSlider = () => {
 						colorScheme='#F8F8F8'
 						position='absolute'
 						right='10px'
-						top='50%'
+						top='45%'
 						transform='translateY(-50%)'
 						color='#D4D4D4'
 						border='solid 1px #D4D4D4'
@@ -120,7 +122,7 @@ const ImgSlider = () => {
 							data-aos='zoom-in'
 						>
 							<Image
-								src={HeroImage}
+								src={HeroImage1}
 								alt='Image'
 								className='full-image'
 							/>
@@ -134,7 +136,7 @@ const ImgSlider = () => {
 							data-aos='zoom-in'
 						>
 							<Image
-								src={HeroImage}
+								src={HeroImage2}
 								alt='Image'
 								className='full-image'
 							/>
