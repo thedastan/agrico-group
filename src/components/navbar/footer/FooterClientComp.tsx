@@ -17,7 +17,7 @@ import BgLines from '@/components/ui/other/BgLines'
 import {
 	EMAIL_ADDRESS_LINK,
 	MOTION_WEB_LINK, EMAIL_ADDRESS,
-	PHONE_NUMBER,LOCATION_LINK,
+	PHONE_NUMBER, LOCATION_LINK, LOCATION
 } from '@/constants/admin'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
