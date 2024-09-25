@@ -59,6 +59,7 @@ const MainHero = () => {
 	// 		once: true
 	// 	})
 	// }, [])
+	const t = useTranslations('MainHero')
 
 	return (
 		<Box>
@@ -84,7 +85,7 @@ const MainHero = () => {
 									color='#FFFFFF'
 									letterSpacing={{ md: '8.6px', base: '5px' }}
 								>
-									новые возможности
+									{t('text')}
 								</Text>
 								<Heading
 									mt='2'
@@ -99,7 +100,7 @@ const MainHero = () => {
 										query='Agrico Group'
 										styles={{ color: '#7BBA39' }}
 									>
-										Agrico Group – ВМЕСТЕ К УСПЕХУ
+										{t('title')}
 									</Highlight>
 								</Heading>
 							</Box>

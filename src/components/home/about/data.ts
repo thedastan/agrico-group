@@ -13,7 +13,9 @@ export const about_accordion = [
 		title: 'Импорт и Экспорт',
 		description: 'Cтабильные и надежные поставки',
 		image: ImportExportImg,
-		path: DASHBOARD_PAGES.EXPORT_IMPORT
+		path: DASHBOARD_PAGES.EXPORT_IMPORT,
+		locale: EnumIntl.ENGLISH,
+		short_name: 'Eng'
 	},
 	{
 		title: 'Инвестиции',

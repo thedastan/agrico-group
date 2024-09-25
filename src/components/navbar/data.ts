@@ -26,10 +26,7 @@ export function useHeaderNav(): IHeaderNav[] {
 			name: t('about'),
 			path: '#about'
 		},
-		{
-			name: t('services'),
-			path: '#services'
-		},
+
 		{
 			name: t('contacts'),
 			path: '#contact'
