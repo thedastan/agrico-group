@@ -1,0 +1,17 @@
+User-agent: *
+
+Allow: /
+Allow: /en/export-import
+Allow: /en/investments
+Allow: /en/production
+Allow: /en/tourism
+Allow: /ru/export-import
+Allow: /ru/investments
+Allow: /ru/production
+Allow: /ru/tourism
+Allow: /ar/export-import
+Allow: /ar/investments
+Allow: /ar/production
+Allow: /ar/tourism
+
+Sitemap: https://agrico-group.org/sitemap.xml

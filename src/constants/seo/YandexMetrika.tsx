@@ -46,7 +46,7 @@ const YandexMetrika = () => {
 		<noscript>
 			<div>
 				<img
-					src='https://mc.yandex.ru/watch/97951921'
+					src='https://mc.yandex.ru/watch/98411053'
 					style={{ position: 'absolute', left: '-9999px' }}
 					alt=''
 				/>
