@@ -1,4 +1,19 @@
-import { Box, Container, Flex, SimpleGrid, Stack, Text } from '@chakra-ui/react'
+import {
+	Box,
+	Button,
+	Container,
+	Flex,
+	List,
+	ListItem,
+	SimpleGrid,
+	Stack,
+	Tab,
+	TabList,
+	TabPanel,
+	TabPanels,
+	Tabs,
+	Text
+} from '@chakra-ui/react'
 import Image from 'next/image'
 import { IoMdCheckmark } from 'react-icons/io'
 
@@ -124,6 +139,149 @@ const TourProgram = () => {
 						</Stack>
 					</Box>
 				</Flex>
+
+				{/* <Flex
+					flexDirection={{ md: 'row', base: 'column-reverse' }}
+					// justifyContent='center'
+					alignItems={{ md: 'start', base: 'center' }}
+					// bg='white'
+					borderRadius={10}
+					// p={10}
+					gap={12}
+					mt={20}
+				>
+					<Box>
+						<Tabs
+							display='flex'
+							flexDirection={{ md: 'row', base: 'column-reverse' }}
+							alignItems='center'
+							//
+						>
+							<TabPanels
+								display='flex'
+								justifyContent={{ md: 'start', base: 'center' }}
+								alignItems='center'
+							>
+								<TabPanel>
+									<Image
+										className='tours1'
+										style={{ width: '500px', height: '500px' }}
+										src={ProgramImage1}
+										alt='img'
+									/>
+								</TabPanel>
+								<TabPanel>
+									<Image
+										className='tours2'
+										style={{ width: '500px', height: '500px' }}
+										src={ProgramImage2}
+										alt='img'
+									/>
+								</TabPanel>
+								<TabPanel>
+									<Image
+										className='tours3'
+										style={{ width: '500px', height: '500px' }}
+										src={ProgramImage3}
+										alt='img'
+									/>
+								</TabPanel>
+							</TabPanels>
+
+							<TabList>
+								<Box
+									display='flex'
+									flexDirection={{ md: 'column', base: 'row' }}
+								>
+									<Tab
+										w={{ md: 170, base: 100 }}
+										h={{ md: 170, base: 100 }}
+										// p={{ md: 2, base: 1 }}
+										// _selected={{ color: 'black', bg: '#F4F5F6' }}
+									>
+										<Image
+											src={ProgramImage1}
+											alt='img'
+										/>
+									</Tab>
+
+									<Tab
+										w={{ md: 170, base: 100 }}
+										h={{ md: 170, base: 100 }}
+										// p={0}
+										// _selected={{ color: 'black', bg: '#F4F5F6' }}
+									>
+										<Image
+											src={ProgramImage2}
+											alt='img'
+										/>
+									</Tab>
+
+									<Tab
+										w={{ md: 170, base: 100 }}
+										h={{ md: 170, base: 100 }}
+										// p={1}
+										// _selected={{ color: 'black', bg: '#F4F5F6' }}
+									>
+										<Image
+											src={ProgramImage3}
+											alt='img'
+										/>
+									</Tab>
+								</Box>
+							</TabList>
+						</Tabs>
+					</Box>
+
+					<Box>
+						<Text
+							className={inter.className}
+							as='h1'
+							fontWeight='700'
+							fontSize='32.51px'
+							color='#26422B'
+							lineHeight='43.54px'
+						>
+							Программа тура
+						</Text>
+						<Text
+							mt='26px'
+							as='h1'
+							fontWeight='900'
+							fontSize='32px'
+							color='#7BBA39'
+							lineHeight='32px'
+						>
+							$1650
+						</Text>
+						<Stack
+							spacing='3'
+							mt='23px'
+						>
+							{program.map((pr, idx) => (
+								<Flex
+									key={idx}
+									alignItems='center'
+									gap='18px'
+								>
+									<IoMdCheckmark
+										color='#273F2B'
+										fontSize='18px'
+									/>
+									<Text
+										className={inter.className}
+										fontWeight='400'
+										fontSize='16px'
+										color='#12141D'
+										lineHeight='26px'
+									>
+										{pr}
+									</Text>
+								</Flex>
+							))}
+						</Stack>
+					</Box>
+				</Flex> */}
 			</Container>
 		</Box>
 	)

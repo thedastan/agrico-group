@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import GiantText from '@/components/ui/texts/GiantText'
 
+import HeroImageMobile from '@/assets/img/product-hero-mobail.png'
 import HeroImage from '@/assets/img/production-hero.png'
 
 const ProductionHero = () => {
@@ -14,15 +15,25 @@ const ProductionHero = () => {
 			<Box
 				w='100%'
 				mt={{ md: '0', base: '10' }}
-				h={{ md: '421px', base: '338px' }}
+				// h={{ md: '421px', base: '338px' }}
 				rounded='20px'
 				overflow='hidden'
 			>
-				<Image
-					src={HeroImage}
-					alt='Image'
-					className='full-image'
-				/>
+				<Box display={{ md: 'flex', base: 'none' }}>
+					<Image
+						src={HeroImage}
+						alt='Image'
+						className='full-image'
+					/>
+				</Box>
+
+				<Box display={{ md: 'none', base: 'block' }}>
+					<Image
+						src={HeroImageMobile}
+						alt='Image'
+						className='full-image'
+					/>
+				</Box>
 			</Box>
 
 			<Flex

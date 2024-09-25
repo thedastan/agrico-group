@@ -41,6 +41,7 @@ const ExportHero = () => {
 				<DefButton
 					maxW={{ sm: '213px', base: '100%' }}
 					mb='25px'
+					bg='#7BBA39'
 				>
 					Наши услуги
 				</DefButton>

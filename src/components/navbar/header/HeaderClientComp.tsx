@@ -22,6 +22,7 @@ import { IHeaderNav } from '../data'
 import BurgerMenu from './BurgerMenu'
 import LanguageSelect from './LanguageSelect'
 import NavbarSelect from './NavbarSelect'
+import Services from './Services'
 
 interface HeaderClientCompProps {
 	header_nav: IHeaderNav[]
@@ -55,6 +56,7 @@ const HeaderClientComp = ({
 					<Flex
 						gap='35px'
 						display={{ md: 'flex', base: 'none' }}
+						alignItems='center'
 					>
 						{header_nav.map((el, idx) => (
 							<Link
@@ -73,6 +75,7 @@ const HeaderClientComp = ({
 								</Text>
 							</Link>
 						))}
+						<Services />
 						<LanguageSelect />
 					</Flex>
 

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Description from '@/components/ui/texts/Description'
 import TitleComponent from '@/components/ui/texts/TitleComponent'
 
-import MapImage from '@/assets/img/map.svg'
+import MapImage from '@/assets/img/map 1.png'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
@@ -54,13 +54,16 @@ const WhyUs = () => {
 				mt='25px'
 			>
 				<Box
+					display='flex'
 					h={{ md: '420px', base: '456px' }}
 					w='100%'
+					overflowX='auto'
 				>
 					<Image
 						src={MapImage}
 						alt='Map'
 						className='full-image'
+						style={{ width: 'auto', height: '100%', minWidth: '1200px' }} // Задаем minWidth для предотвращения сжатия
 					/>
 				</Box>
 			</Container>
@@ -78,17 +81,18 @@ function Statics() {
 	return (
 		<Flex
 			gap={{ md: '48px', base: '14px' }}
-			flexWrap={{ md: 'nowrap', base: 'wrap' }}
+			// flexWrap={{ md: 'nowrap', base: 'wrap' }}
 		>
 			{statics.map((el, idx) => (
 				<Box
 					key={idx}
 					color='#212121'
 					maxW={{ sm: '30%', base: '128px' }}
+					p={2}
 				>
 					<Text
 						fontWeight='500'
-						fontSize='40px'
+						fontSize='36px'
 						lineHeight='48px'
 					>
 						{el.num}
@@ -96,7 +100,7 @@ function Statics() {
 					<Text
 						mt='9px'
 						fontWeight='400'
-						fontSize='16px'
+						fontSize='14px'
 						lineHeight='19.2px'
 					>
 						{el.desc}

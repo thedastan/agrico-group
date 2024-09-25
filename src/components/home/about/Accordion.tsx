@@ -56,7 +56,7 @@ const AccordionComponent = () => {
 									w='100%'
 								>
 									<TitleComponent
-										w={{ md: '284px', base: '100%' }}
+										w={{ md: '300px', base: '100%' }}
 										fontSize='32px'
 										lineHeight='38.4px'
 									>
@@ -105,7 +105,7 @@ const AccordionComponent = () => {
 															rounded='50%'
 														>
 															<RiArrowRightUpLine
-																color='#E8C547'
+																color='#7BBA39'
 																fontSize='24px'
 															/>
 														</Flex>
@@ -185,7 +185,7 @@ const AccordionComponent = () => {
 													rounded='50%'
 												>
 													<RiArrowRightUpLine
-														color='#E8C547'
+														color='#7BBA39'
 														fontSize='24px'
 													/>
 												</Flex>

@@ -58,7 +58,7 @@ const TrustedPartner = () => {
 							<Text
 								fontSize='40px'
 								lineHeight='48px'
-								color='#E8C547'
+								color='#7BBA39'
 								fontWeight='700'
 							>
 								{el.num}

@@ -53,7 +53,7 @@ const DefButton = ({
 			{children}
 			<Box
 				fontSize='24px'
-				color={isDark ? '#E8C547' : '#212121'}
+				color={isDark ? '#7BBA39' : '#212121'}
 			>
 				{!!isArrowDown ? <RiArrowRightDownLine /> : <RiArrowRightUpLine />}
 			</Box>

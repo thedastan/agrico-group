@@ -32,7 +32,7 @@ const TourismHero = () => {
 					alignItems='start'
 					gap='30px'
 				>
-					<GiantText maxW='621px'>Туризм в Кыргызстане</GiantText>
+					<GiantText maxW='650px'>Туризм в Кыргызстане</GiantText>
 					<Box
 						maxW='499px'
 						display={{ md: 'block', base: 'none' }}

@@ -1,3 +1,4 @@
+// 'use client'
 import {
 	Avatar,
 	AvatarGroup,
@@ -8,7 +9,11 @@ import {
 	Highlight,
 	Text
 } from '@chakra-ui/react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+import { useEffect } from 'react'
 
 import DefButton from '@/components/ui/buttons/DefButton'
 import BgLines from '@/components/ui/other/BgLines'
@@ -20,6 +25,9 @@ import {
 	HEADER_HEIGHT,
 	MINI_HEADER_HEIGHT
 } from '@/config/_variables.config'
+
+import '../../../styles/globals.scss'
+import ImgSlider from '../imgslider/ImgSlider'
 
 const avatars = [
 	{
@@ -45,6 +53,13 @@ const avatars = [
 ]
 
 const MainHero = () => {
+	// useEffect(() => {
+	// 	AOS.init({
+	// 		duration: 1200,
+	// 		once: true
+	// 	})
+	// }, [])
+
 	return (
 		<Box>
 			<Box bg='#2B2B2B'>
@@ -62,6 +77,7 @@ const MainHero = () => {
 						>
 							<Box>
 								<Text
+									data-aos='fade-right'
 									fontWeight='500'
 									lineHeight={{ md: '21.6px', base: '16px' }}
 									fontSize={{ md: '18px', base: '14px' }}
@@ -76,12 +92,12 @@ const MainHero = () => {
 									fontSize={{ md: '80px', base: '36px' }}
 									lineHeight={{ md: '96px', base: '43.2px' }}
 									color='#FFFFFF'
-									fontWeight={{ md: '400', base: '700' }}
-									maxW='90%'
+									fontWeight={{ md: '700', base: '700' }}
+									maxW='100%'
 								>
 									<Highlight
 										query='Agrico Group'
-										styles={{ color: '#E8C547' }}
+										styles={{ color: '#7BBA39' }}
 									>
 										Agrico Group – ВМЕСТЕ К УСПЕХУ
 									</Highlight>
@@ -117,7 +133,7 @@ const MainHero = () => {
 					px='0'
 					w='100%'
 				>
-					<Box
+					{/* <Box
 						w='100%'
 						h={{ md: '460px', base: '256px' }}
 						rounded='12px'
@@ -129,7 +145,8 @@ const MainHero = () => {
 							alt='Image'
 							className='full-image'
 						/>
-					</Box>
+					</Box> */}
+					<ImgSlider />
 				</Container>
 				<Box
 					bg='#FFFDF6'
@@ -151,6 +168,7 @@ const MainHero = () => {
 }
 
 function RightSide() {
+	const t = useTranslations('MainHero')
 	return (
 		<Box w='100%'>
 			<Flex
@@ -176,7 +194,7 @@ function RightSide() {
 				</AvatarGroup>
 				<Text
 					// maxW='126px'
-					color={{ md: '#E8C547', base: '#2B2B2B' }}
+					color={{ md: '#7BBA39', base: '#2B2B2B' }}
 					fontSize={{ md: '12px', base: '15px' }}
 					lineHeight={{ md: '14.4px', base: '18px' }}
 				>
@@ -194,11 +212,12 @@ function RightSide() {
 				Качество, доверие и инновации для вашего успеха
 			</Text>
 			<DefButton
+				bg='#7BBA39'
 				mt={{ md: '46px', base: '52px' }}
 				maxW={{ sm: '213px', base: '100%' }}
 				isArrowDown={true}
 			>
-				Наши услуги
+				{t('button')}
 			</DefButton>
 		</Box>
 	)

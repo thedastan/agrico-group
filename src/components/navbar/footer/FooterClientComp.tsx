@@ -86,7 +86,7 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 								>
 									<Highlight
 										query='свяжемся'
-										styles={{ color: '#E8C547' }}
+										styles={{ color: '#7BBA39' }}
 									>
 										и мы свяжемся с вами в ближайшее время
 									</Highlight>

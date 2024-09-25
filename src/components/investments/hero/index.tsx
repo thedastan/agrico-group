@@ -22,7 +22,7 @@ const InvestHero = () => {
 				>
 					<GiantText
 						display={{ md: 'block', base: 'none' }}
-						maxW='633px'
+						maxW='673px'
 						lineHeight={{ md: '112px', base: '43.2px' }}
 						color='#273F2B'
 					>
@@ -97,6 +97,7 @@ const InvestHero = () => {
 							mt='60px'
 							maxW={{ sm: '194px', base: '100%' }}
 							isArrowDown={true}
+							bg='#7BBA39'
 						>
 							Подробнее
 						</DefButton>

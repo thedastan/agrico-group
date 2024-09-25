@@ -49,6 +49,7 @@ const Guarantee = () => {
 					</Description>
 
 					<DefButton
+						bg='#7BBA39'
 						maxW={{ md: '186px', base: '100%' }}
 						mt='64px'
 						isArrowDown={true}

@@ -38,6 +38,7 @@ const AboutUs = () => {
 									fontSize='16px'
 									lineHeight='19.2px'
 									color='#212121'
+									_hover={{ bg: '#7BBA39', transition: '0.3s', color: 'white' }}
 								>
 									{item}
 								</Flex>

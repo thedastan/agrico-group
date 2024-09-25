@@ -103,6 +103,7 @@ const FeedbackForm = () => {
 					mt='6'
 					mb='2'
 					type='submit'
+					bg='#7BBA39'
 				>
 					Отправить
 				</DefButton>
