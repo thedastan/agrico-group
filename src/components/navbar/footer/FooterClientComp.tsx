@@ -16,8 +16,8 @@ import BgLines from '@/components/ui/other/BgLines'
 
 import {
 	EMAIL_ADDRESS_LINK,
-	MOTION_WEB_LINK,
-	PHONE_NUMBER
+	MOTION_WEB_LINK, EMAIL_ADDRESS,
+	PHONE_NUMBER,LOCATION_LINK,
 } from '@/constants/admin'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
@@ -126,8 +126,8 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 								color='#FFFFFFE5'
 								fontWeight='400'
 							>
-								<Link href=''>г. Бишкек, ул. Манаса, д. 45</Link>
-								<Link href={EMAIL_ADDRESS_LINK}>info@agreco.kg</Link>
+								<Link href={LOCATION_LINK}>{LOCATION}</Link>
+								<Link href={EMAIL_ADDRESS_LINK}>{EMAIL_ADDRESS}</Link>
 								<Link href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</Link>
 							</Stack>
 
