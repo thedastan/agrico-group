@@ -126,7 +126,7 @@ const BurgerMenu = ({ header_nav }: BurgerMenuProps) => {
 									textAlign='center'
 								>
 									<Link href={LOCATION_LINK}>{LOCATION}</Link>
-									<Link href={EMAIL_ADDRESS_LINK}>{EMAIL_ADDRESS}</Link>
+									<Link href={`mailto:{EMAIL_ADDRESS_LINK}`}>{EMAIL_ADDRESS}</Link>
 									<Link href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</Link>
 								</Stack>
 							</Flex>
