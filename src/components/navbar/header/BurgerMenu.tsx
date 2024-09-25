@@ -16,7 +16,7 @@ import Link from 'next/link'
 
 import BgLines from '@/components/ui/other/BgLines'
 
-import { EMAIL_ADDRESS_LINK, PHONE_NUMBER } from '@/constants/admin'
+import { EMAIL_ADDRESS_LINK, PHONE_NUMBER, EMAIL_ADDRESS, LOCATION, LOCATION_LINK } from '@/constants/admin'
 
 import { IHeaderNav } from '../data'
 
@@ -125,8 +125,8 @@ const BurgerMenu = ({ header_nav }: BurgerMenuProps) => {
 									fontWeight='400'
 									textAlign='center'
 								>
-									<Link href=''>г. Бишкек, ул. Манаса, д. 45</Link>
-									<Link href={EMAIL_ADDRESS_LINK}>info@agreco.kg</Link>
+									<Link href={LOCATION_LINK}>{LOCATION}</Link>
+									<Link href={EMAIL_ADDRESS_LINK}>{EMAIL_ADDRESS}</Link>
 									<Link href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</Link>
 								</Stack>
 							</Flex>
