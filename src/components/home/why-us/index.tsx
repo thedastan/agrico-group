@@ -1,4 +1,5 @@
 import { Box, Container, Flex, Text } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 import Description from '@/components/ui/texts/Description'
@@ -8,22 +9,9 @@ import MapImage from '@/assets/img/map 1.png'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
-const statics = [
-	{
-		num: '98%',
-		desc: 'Удовлетворенность клиентов '
-	},
-	{
-		num: '7+',
-		desc: 'Лет опыта на международных рынках'
-	},
-	{
-		num: '100+',
-		desc: 'Партнеров в различных странах'
-	}
-]
-
 const WhyUs = () => {
+	const t = useTranslations('WhyUs')
+
 	return (
 		<Box
 			mt={{ md: '200px', base: '120px' }}
@@ -38,10 +26,8 @@ const WhyUs = () => {
 					gap='4'
 				>
 					<Box maxW='403px'>
-						<TitleComponent>Почему мы</TitleComponent>
-						<Description mt='2'>
-							Многолетний опыт работы на международных рынках
-						</Description>
+						<TitleComponent>{t('why')}</TitleComponent>
+						<Description mt='2'>{t('description')}</Description>
 					</Box>
 					<Box display={{ md: 'block', base: 'none' }}>
 						<Statics />
@@ -77,12 +63,75 @@ const WhyUs = () => {
 	)
 }
 
+// const statics = [
+// 	{
+// 		num: '98%',
+// 		desc: 'Удовлетворенность клиентов '
+// 	},
+// 	{
+// 		num: '7+',
+// 		desc: 'Лет опыта на международных рынках'
+// 	},
+// 	{
+// 		num: '100+',
+// 		desc: 'Партнеров в различных странах'
+// 	}
+// ]
+
+// function Statics() {
+// 	return (
+// 		<Flex
+// 			gap={{ md: '48px', base: '14px' }}
+// 			// flexWrap={{ md: 'nowrap', base: 'wrap' }}
+// 		>
+// 			{statics.map((el, idx) => (
+// 				<Box
+// 					key={idx}
+// 					color='#212121'
+// 					maxW={{ sm: '30%', base: '128px' }}
+// 					p={2}
+// 				>
+// 					<Text
+// 						fontWeight='500'
+// 						fontSize='36px'
+// 						lineHeight='48px'
+// 					>
+// 						{el.num}
+// 					</Text>
+// 					<Text
+// 						mt='9px'
+// 						fontWeight='400'
+// 						fontSize='14px'
+// 						lineHeight='19.2px'
+// 					>
+// 						{el.desc}
+// 					</Text>
+// 				</Box>
+// 			))}
+// 		</Flex>
+// 	)
+// }
+
+const statics = [
+	{
+		num: '98%',
+		descKey: 'satisfaction' // Translation key for description
+	},
+	{
+		num: '7+',
+		descKey: 'experience' // Translation key for description
+	},
+	{
+		num: '100+',
+		descKey: 'partners' // Translation key for description
+	}
+]
+
 function Statics() {
+	const t = useTranslations('Statics') // Use the translation hook here
+
 	return (
-		<Flex
-			gap={{ md: '48px', base: '14px' }}
-			// flexWrap={{ md: 'nowrap', base: 'wrap' }}
-		>
+		<Flex gap={{ md: '48px', base: '14px' }}>
 			{statics.map((el, idx) => (
 				<Box
 					key={idx}
@@ -103,7 +152,7 @@ function Statics() {
 						fontSize='14px'
 						lineHeight='19.2px'
 					>
-						{el.desc}
+						{t(el.descKey)} {/* Use translation key here */}
 					</Text>
 				</Box>
 			))}

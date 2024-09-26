@@ -21,10 +21,14 @@ import { inter } from '@/constants/fonts/fonts'
 
 import useTypedLocale from '@/hooks/useLocale'
 
-import { about_accordion } from './data'
+import { IAccardion } from './data'
 
-const AccordionComponent = () => {
+// import { about_accordion } from './data'
+// import { useAccardionData } from './data'
+
+const AccordionComponent = ({ data }: { data: IAccardion[] }) => {
 	const localActive = useTypedLocale()
+	// const about_accordion = useAccardionData()
 	return (
 		<Accordion
 			allowToggle
@@ -32,7 +36,7 @@ const AccordionComponent = () => {
 			gap='0'
 			id='services'
 		>
-			{about_accordion.map((el, idx) => (
+			{data.map((el, idx) => (
 				<AccordionItem
 					key={idx}
 					borderBottom='none'
@@ -95,7 +99,7 @@ const AccordionComponent = () => {
 													padding='2'
 													rounded='50%'
 												>
-													<Link href={el.path(localActive)}>
+													<Link href={el.path}>
 														<Flex
 															justifyContent='center'
 															align='center'
@@ -175,7 +179,7 @@ const AccordionComponent = () => {
 											padding='2'
 											rounded='50%'
 										>
-											<Link href={el.path(localActive)}>
+											<Link href={el.path}>
 												<Flex
 													justifyContent='center'
 													align='center'

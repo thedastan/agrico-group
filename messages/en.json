@@ -9,6 +9,40 @@
 		"Button": "Call"
 	},
 	"MainHero": {
-		"button": "Our services"
+		"button": "Our services",
+		"text": "new opportunities",
+		"title": "Agrico Group – TOGETHER TO SUCCESS",
+		"partner": "partners in various countries",
+		"doverie": "Quality, trust and innovation for your success"
+	},
+	"AboutUs": {
+		"about": "About Us",
+		"title": "Agrico Group",
+		"discription": "Leading company in Kyrgyzstan, specializing in the export and import of goods, investment opportunities and the textile industry. We strive to be a bridge between Kyrgyzstan and the world market, providing high quality services to our clients and partners",
+		"button": "Contact us",
+		"about_0": "Reliability",
+		"about_1": "Partnership",
+		"about_2": "Quality",
+		"about_3": "Experience",
+		"about_4": "Globality"
+	},
+	"Data": {
+		"0_title": "Import and Export",
+		"0_description": "Stable and reliable supplies",
+		"1_title": "Investments",
+		"1_description": "For foreign investors",
+		"2_title": "Textile Industry",
+		"2_description": "Custom textile products",
+		"3_title": "Tourism",
+		"3_description": "Culture and nature of Kyrgyzstan"
+	},
+	"WhyUs": {
+		"why": "Why Us",
+		"description": "Many years of experience in international markets"
+	},
+	"Statics": {
+		"satisfaction": "Customer Satisfaction",
+		"experience": "Years of Experience in International Markets",
+		"partners": "Partners in Various Countries"
 	}
 }

@@ -1,4 +1,5 @@
 import { Box, Container, Flex, Text, Wrap } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 
 import DefButton from '@/components/ui/buttons/DefButton'
 import TitleComponent from '@/components/ui/texts/TitleComponent'
@@ -6,10 +7,15 @@ import TitleComponent from '@/components/ui/texts/TitleComponent'
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
 import AccordionComponent from './Accordion'
+import useAccardionData from './data'
 
-const about = ['Надежность', 'Партнерство', 'Качество', 'Опыт', 'Глобальность']
+// You no longer need the about array here
+// const about = ['Надежность', 'Партнерство', 'Качество', 'Опыт', 'Глобальность']
 
 const AboutUs = () => {
+	const t = useTranslations('AboutUs')
+	const about_accordion = useAccardionData()
+
 	return (
 		<Box id='about'>
 			<Container
@@ -21,13 +27,13 @@ const AboutUs = () => {
 					flexDirection={{ md: 'row', base: 'column' }}
 				>
 					<Box>
-						<TitleComponent>О нас</TitleComponent>
+						<TitleComponent>{t('about')}</TitleComponent>
 
 						<Wrap
 							spacing='2'
 							mt={{ md: '6', base: '30px' }}
 						>
-							{about.map((item, idx) => (
+							{[0, 1, 2, 3, 4].map(idx => (
 								<Flex
 									key={idx}
 									py='3'
@@ -40,7 +46,7 @@ const AboutUs = () => {
 									color='#212121'
 									_hover={{ bg: '#7BBA39', transition: '0.3s', color: 'white' }}
 								>
-									{item}
+									{t(`about_${idx}`)}
 								</Flex>
 							))}
 						</Wrap>
@@ -54,7 +60,7 @@ const AboutUs = () => {
 							fontSize='32px'
 							lineHeight='38.4px'
 						>
-							Agrico Group
+							{t('title')}
 						</TitleComponent>
 						<Text
 							fontSize='22px'
@@ -62,11 +68,7 @@ const AboutUs = () => {
 							color='#212121'
 							mt={{ md: '6', base: '30px' }}
 						>
-							Ведущая компания Кыргызстана, специализирующаяся на экспорте и
-							импорте товаров, инвестиционных возможностях и текстильной
-							промышленности. Мы стремимся быть мостом между Кыргызстаном и
-							мировым рынком, предоставляя высококачественные услуги нашим
-							клиентам и партнерам.
+							{t('discription')}
 						</Text>
 
 						<DefButton
@@ -75,7 +77,7 @@ const AboutUs = () => {
 							isDark={true}
 							maxW={{ sm: '251px', base: '100%' }}
 						>
-							Связаться с нами
+							{t('button')}
 						</DefButton>
 					</Box>
 				</Flex>
@@ -84,7 +86,7 @@ const AboutUs = () => {
 				maxW={CONTAINER_WIDTH}
 				px={{ md: '4', base: '0' }}
 			>
-				<AccordionComponent />
+				<AccordionComponent data={about_accordion} />
 			</Container>
 		</Box>
 	)

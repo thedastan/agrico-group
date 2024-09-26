@@ -199,7 +199,7 @@ function RightSide() {
 					fontSize={{ md: '12px', base: '15px' }}
 					lineHeight={{ md: '14.4px', base: '18px' }}
 				>
-					партнеров в различных странах
+					{t('partner')}
 				</Text>
 			</Flex>
 
@@ -210,7 +210,7 @@ function RightSide() {
 				lineHeight='28.8px'
 				letterSpacing={{ md: '-1px', base: '.3px' }}
 			>
-				Качество, доверие и инновации для вашего успеха
+				{t('doverie')}
 			</Text>
 			<DefButton
 				bg='#7BBA39'
