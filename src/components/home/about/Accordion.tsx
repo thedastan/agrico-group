@@ -78,9 +78,13 @@ const AccordionComponent = ({ data }: { data: IAccardion[] }) => {
 												{el.description}
 											</Text>
 										) : (
-											<Box position='relative'>
+											<Box
+												display='flex'
+												justifyContent='center'
+												position='relative'
+											>
 												<Box
-													w='341px'
+													w='600px'
 													h='220px'
 													rounded='8px'
 													overflow='hidden'
@@ -93,7 +97,7 @@ const AccordionComponent = ({ data }: { data: IAccardion[] }) => {
 												</Box>
 												<Box
 													position='absolute'
-													right='-11%'
+													right='-4%'
 													bottom='5'
 													bg='#FFFDF6'
 													padding='2'
@@ -157,7 +161,7 @@ const AccordionComponent = ({ data }: { data: IAccardion[] }) => {
 								>
 									<Box
 										position='relative'
-										maxW='381px'
+										// maxW='381px'
 									>
 										<Box
 											w='100%'
