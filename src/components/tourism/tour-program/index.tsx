@@ -11,29 +11,34 @@ import {
 	Tabs,
 	Text
 } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { IoMdCheckmark } from 'react-icons/io'
 
+// Import useTranslations
 import { inter } from '@/constants/fonts/fonts'
 
-import ProgramImage1 from '@/assets/img/tour-program-1.png'
+// import ProgramImage1 from '@/assets/img/tour-program-1.png'
 import ProgramImage2 from '@/assets/img/tour-program-2.png'
 import ProgramImage3 from '@/assets/img/tour-program-3.png'
 import ProgramImage4 from '@/assets/img/tour-program-4.png'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
-const images = [ProgramImage4, ProgramImage2, ProgramImage3]
-
 const TourProgram = () => {
+	const t = useTranslations() // Get the translation function
+
 	const program = [
-		'1 ночь в Art Hotel (Бишкек)',
-		'1 ночь в KÜH (Ала-Арча)',
-		'1 ночь в Rahat 🏕 (Нахр аль-Барид)',
-		'1 ночь в Art Hotel (Бишкек)',
-		'2 ночи в Hotel Olimp (Иссык-Куль) (Кырчын)',
-		'1 ночь в Art Hotel (Бишкек)'
+		t('tourProgram.night1'), // Use translation keys
+		t('tourProgram.night2'),
+		t('tourProgram.night3'),
+		t('tourProgram.night4'),
+		t('tourProgram.night5'),
+		t('tourProgram.night6')
 	]
+
+	const images = [ProgramImage4, ProgramImage2, ProgramImage3]
+
 	return (
 		<Box
 			mt={{ md: '160px', base: '130px' }}
@@ -60,30 +65,15 @@ const TourProgram = () => {
 								justifyContent={{ md: 'start', base: 'center' }}
 								alignItems='center'
 							>
-								<TabPanel>
-									<Image
-										className='tours1'
-										// style={{ width: '285px' }}
-										src={ProgramImage1}
-										alt='img'
-									/>
-								</TabPanel>
-								<TabPanel>
-									<Image
-										className='tours'
-										// style={{ width: '285px' }}
-										src={ProgramImage2}
-										alt='img'
-									/>
-								</TabPanel>
-								<TabPanel>
-									<Image
-										className='tours'
-										// style={{ maxWidth: '500px' }}
-										src={ProgramImage3}
-										alt='img'
-									/>
-								</TabPanel>
+								{images.map((image, index) => (
+									<TabPanel key={index}>
+										<Image
+											className='tours'
+											src={image}
+											alt={`Tour Program Image ${index + 1}`}
+										/>
+									</TabPanel>
+								))}
 							</TabPanels>
 
 							<TabList>
@@ -91,41 +81,20 @@ const TourProgram = () => {
 									display='flex'
 									flexDirection={{ md: 'column', base: 'row' }}
 								>
-									<Tab
-										w={{ md: 155, base: 100 }}
-										h={{ md: 150, base: 100 }}
-										p={{ md: 2, base: 1 }}
-										_selected={{ color: 'black', bg: '#F4F5F6' }}
-									>
-										<Image
-											src={ProgramImage1}
-											alt='img'
-										/>
-									</Tab>
-
-									<Tab
-										w={{ md: 150, base: 100 }}
-										h={{ md: 150, base: 100 }}
-										p={1}
-										_selected={{ color: 'black', bg: '#F4F5F6' }}
-									>
-										<Image
-											src={ProgramImage2}
-											alt='img'
-										/>
-									</Tab>
-
-									<Tab
-										w={{ md: 150, base: 100 }}
-										h={{ md: 150, base: 100 }}
-										p={1}
-										_selected={{ color: 'black', bg: '#F4F5F6' }}
-									>
-										<Image
-											src={ProgramImage3}
-											alt='img'
-										/>
-									</Tab>
+									{images.map((image, index) => (
+										<Tab
+											key={index}
+											w={{ md: 155, base: 100 }}
+											h={{ md: 150, base: 100 }}
+											p={1}
+											_selected={{ color: 'black', bg: '#F4F5F6' }}
+										>
+											<Image
+												src={image}
+												alt={`Thumbnail ${index + 1}`}
+											/>
+										</Tab>
+									))}
 								</Box>
 							</TabList>
 						</Tabs>
@@ -142,7 +111,7 @@ const TourProgram = () => {
 							color='#26422B'
 							lineHeight='43.54px'
 						>
-							Программа тура
+							{t('tourProgram.header')} {/* Use translation key for header */}
 						</Text>
 						<Text
 							mt='26px'
@@ -152,7 +121,8 @@ const TourProgram = () => {
 							color='#7BBA39'
 							lineHeight='32px'
 						>
-							$1650
+							$1650{' '}
+							{/* You might want to use a translation key for price as well */}
 						</Text>
 						<Stack
 							spacing='3'
@@ -188,5 +158,3 @@ const TourProgram = () => {
 }
 
 export default TourProgram
-
-//////////////

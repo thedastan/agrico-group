@@ -1,4 +1,5 @@
 import { Box, Button, Container, Flex, Text } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -12,6 +13,7 @@ import JamalTour from '@/assets/img/Снимок_экрана_от_2024-09-25_21
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
 const TourismHero = () => {
+	const t = useTranslations('TourismHero')
 	return (
 		<Box mt={{ md: '105px', base: '79px' }}>
 			<Container maxW={CONTAINER_WIDTH}>
@@ -58,8 +60,14 @@ const TourismHero = () => {
 						alignItems='center'
 						gap='100px'
 					>
-						<GiantText maxW='650px'>Туризм в Кыргызстане</GiantText>
+						<GiantText
+							data-aos='fade-right'
+							maxW='650px'
+						>
+							{t('title')}
+						</GiantText>
 						<Box
+							data-aos='fade-left'
 							maxW='499px'
 							display={{ md: 'block', base: 'none' }}
 						>
@@ -68,13 +76,9 @@ const TourismHero = () => {
 								fontSize='30px'
 								lineHeight='36px'
 							>
-								О Кыргызстане
+								{t('text')}
 							</Title>
-							<Description mt='6'>
-								Кыргызстан – это страна величественных гор, древних культур и
-								гостеприимного народа. Предлагает путешественникам уникальные
-								впечатления, знакомства с кочевой культурой.
-							</Description>
+							<Description mt='6'>{t('dis')}</Description>
 						</Box>
 					</Flex>
 				</Box>
@@ -111,7 +115,7 @@ const TourismHero = () => {
 						fontWeight='700'
 						maxW='418px'
 					>
-						Здесь природа осталась в своем первозданном виде
+						{t('title1')}
 					</Text>
 				</Flex>
 				<Box
@@ -123,15 +127,13 @@ const TourismHero = () => {
 						fontSize='30px'
 						lineHeight='36px'
 					>
-						О Кыргызстане
+						{t('text')}
 					</Title>
 					<Description
 						mt='6'
 						fontSize='22px'
 					>
-						Кыргызстан – это страна величественных гор, древних культур и
-						гостеприимного народа. Предлагает путешественникам уникальные
-						впечатления, знакомства с кочевой культурой.
+						{t('dis')}
 					</Description>
 				</Box>
 			</Container>

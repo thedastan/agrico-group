@@ -1,4 +1,5 @@
 import { Box, Container, Flex, Text } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 import TitleComponent from '@/components/ui/texts/TitleComponent'
@@ -9,11 +10,13 @@ import AgricultureImage2 from '@/assets/img/Agriculture-2.png'
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
 const Agriculture = () => {
+	const t = useTranslations('Agriculture')
+
 	return (
 		<Box mt={{ md: '140px', base: '118px' }}>
 			<Container maxW={CONTAINER_WIDTH}>
 				<TitleComponent textAlign={{ md: 'center', base: 'start' }}>
-					Сельское хозяйство
+					{t('title')}
 				</TitleComponent>
 
 				<Flex
@@ -33,7 +36,7 @@ const Agriculture = () => {
 							fontSize='30px'
 							color='#000000'
 						>
-							Экологически чистые продукты
+							{t('text1')}
 						</Text>
 						<Text
 							fontWeight='400'
@@ -41,8 +44,7 @@ const Agriculture = () => {
 							fontSize='18px'
 							color='#212121'
 						>
-							Сельское хозяйство – одна из ключевых отраслей экономики
-							Кыргызстана, предлагающая уникальные возможности для инвесторов.
+							{t('dis1')}
 						</Text>
 					</Flex>
 					<Box
@@ -51,6 +53,7 @@ const Agriculture = () => {
 						h={{ md: '440px', base: '296px' }}
 						overflow='hidden'
 						rounded='12px'
+						data-aos='zoom-in-left'
 					>
 						<Image
 							src={AgricultureImage1}
@@ -71,6 +74,7 @@ const Agriculture = () => {
 						h={{ md: '440px', base: '296px' }}
 						overflow='hidden'
 						rounded='12px'
+						data-aos='zoom-in-right'
 					>
 						<Image
 							src={AgricultureImage2}
@@ -85,7 +89,7 @@ const Agriculture = () => {
 							fontSize='30px'
 							color='#000000'
 						>
-							Благоприятный климат
+							{t('text1')}
 						</Text>
 						<Text
 							mt={{ md: '6', base: '5' }}
@@ -94,9 +98,7 @@ const Agriculture = () => {
 							fontSize='18px'
 							color='#212121'
 						>
-							Agreco Group поможет вам открыть новые перспективы в этом секторе,
-							обеспечив доступ к экологически чистым продуктам, востребованным
-							на международных рынках.
+							{t('dis2')}
 						</Text>
 					</Box>
 				</Flex>

@@ -105,7 +105,7 @@ const ImgSlider = () => {
 							rounded='12px'
 							border='8px solid #212121'
 							overflow='hidden'
-							data-aos='zoom-in' // Анимация при появлении слайда
+							data-aos='fade-up' // Анимация при появлении слайда
 						>
 							<Image
 								src={HeroImage}
@@ -119,7 +119,7 @@ const ImgSlider = () => {
 							rounded='12px'
 							border='8px solid #212121'
 							overflow='hidden'
-							data-aos='zoom-in'
+							data-aos='fade-up'
 						>
 							<Image
 								src={HeroImage1}
@@ -133,7 +133,7 @@ const ImgSlider = () => {
 							rounded='12px'
 							border='8px solid #212121'
 							overflow='hidden'
-							data-aos='zoom-in'
+							data-aos='fade-up'
 						>
 							<Image
 								src={HeroImage2}

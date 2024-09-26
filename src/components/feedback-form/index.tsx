@@ -14,6 +14,7 @@ import {
 	Textarea
 } from '@chakra-ui/react'
 import axios from 'axios'
+import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { FaChevronDown } from 'react-icons/fa6'
@@ -44,6 +45,7 @@ interface IFormTelegram {
 
 const FeedbackForm = () => {
 	const { register, handleSubmit, reset } = useForm<IFormTelegram>()
+	// const t = useTranslations('FeedbackForm')
 
 	const TOKEN = process.env.NEXT_PUBLIC_TG_TOKEN
 	const CHAT_ID = process.env.NEXT_PUBLIC_TG_CHAT_ID

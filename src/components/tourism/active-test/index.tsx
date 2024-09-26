@@ -1,4 +1,5 @@
 import { Box, Container, Flex } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 
 import Description from '@/components/ui/texts/Description'
 import TitleComponent from '@/components/ui/texts/TitleComponent'
@@ -8,6 +9,7 @@ import { CONTAINER_WIDTH } from '@/config/_variables.config'
 import RestSlide from './resetSlide'
 
 const ActiveRest = () => {
+	const t = useTranslations('ActiveRest')
 	return (
 		<Box
 			mt={{ md: '172px', base: '87px' }}
@@ -47,18 +49,15 @@ const ActiveRest = () => {
 							rounded='100px'
 							w='208px'
 						>
-							Туры на иссык-куль
+							{t('text')}
 						</Box>
 						<TitleComponent
 							color='#26402B'
 							mt='18px'
 						>
-							Активный отдых и приключения
+							{t('title')}
 						</TitleComponent>
-						<Description mt='3'>
-							Для любителей активного отдыха Кыргызстан – это настоящий рай. Мы
-							предлагаем разнообразные приключенческие туры
-						</Description>
+						<Description mt='3'>{t('dis')}</Description>
 					</Box>
 					<Box px={{ md: '0', base: '4' }}>
 						<RestSlide />

@@ -1,21 +1,30 @@
 import { Box, Container, Flex, SimpleGrid, Text } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import { GoCheck } from 'react-icons/go'
 
+// Import useTranslations
 import { inter } from '@/constants/fonts/fonts'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
 const ProgramIncludes = () => {
+	const t = useTranslations() // Get the t function from useTranslations hook
+
+	// Use translation keys for the list items
 	const list = [
-		'Проживание в отелях и коттеджах, завтрак',
-		'Встреча и проводы (трансфер)',
-		'Водитель и гид, включая топливо',
-		'Интернет-карта для каждого путешественника',
-		'Оплата дорожных налогов и входных билетов',
-		'Кухонные принадлежности'
+		t('programIncludes.accommodation'), // Use translation keys
+		t('programIncludes.transfer'),
+		t('programIncludes.driverGuide'),
+		t('programIncludes.internetMap'),
+		t('programIncludes.roadTax'),
+		t('programIncludes.kitchenUtensils')
 	]
+
 	return (
-		<Box mt={{ md: '85px', base: '120px' }}>
+		<Box
+			mt={{ md: '85px', base: '120px' }}
+			data-aos='zoom-in'
+		>
 			<Container maxW={CONTAINER_WIDTH}>
 				<Text
 					className={inter.className}
@@ -26,7 +35,7 @@ const ProgramIncludes = () => {
 					color='#26422B'
 					lineHeight='43.54px'
 				>
-					Программа тура
+					{t('programIncludes.header')} {/* Translation for the header */}
 				</Text>
 
 				<SimpleGrid
@@ -47,7 +56,9 @@ const ProgramIncludes = () => {
 								fontWeight='500'
 								fontSize='24px'
 								lineHeight='32.4px'
-							>{`0${idx + 1}`}</Text>
+							>
+								{`0${idx + 1}`} {/* Corrected display of index */}
+							</Text>
 							<Flex
 								justifyContent='space-between'
 								alignItems='center'
@@ -59,7 +70,7 @@ const ProgramIncludes = () => {
 									fontSize='18px'
 									lineHeight='24.3px'
 								>
-									{el}
+									{el} {/* Translated list item */}
 								</Text>
 								<Flex
 									justifyContent='center'

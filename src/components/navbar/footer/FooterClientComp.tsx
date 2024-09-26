@@ -1,5 +1,4 @@
-'use client'
-
+// 'use client'
 import {
 	Box,
 	ChakraProps,
@@ -9,6 +8,7 @@ import {
 	Stack,
 	Text
 } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
 import FeedbackForm from '@/components/feedback-form'
@@ -31,6 +31,7 @@ interface FooterClientCompProps {
 	header_nav: IHeaderNav[]
 }
 const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
+	const t = useTranslations('FooterClientComp')
 	return (
 		<Box
 			mt={{ md: '200px', base: '0' }}
@@ -81,7 +82,7 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 									as='h1'
 									color='#212121'
 								>
-									Отправьте нам сообщение,
+									{t('title1')}
 								</Text>
 								<Text
 									as='h1'
@@ -91,7 +92,7 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 										query='свяжемся'
 										styles={{ color: '#7BBA39' }}
 									>
-										и мы свяжемся с вами в ближайшее время
+										{t('title2')}
 									</Highlight>
 								</Text>
 							</Box>
@@ -175,10 +176,8 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 							rounded='30px'
 							px={{ md: '71px', base: '4' }}
 						>
-							<Text>Все права защищены. Авторские права © 2024</Text>
-							<Link href={MOTION_WEB_LINK}>
-								Разработан студией Motion Web LLC
-							</Link>
+							<Text>{t('text1')}</Text>
+							<Link href={MOTION_WEB_LINK}>{t('text2')}</Link>
 						</Flex>
 					</Box>
 					<BgLines />

@@ -1,4 +1,5 @@
-import { Box, Container, Flex, SimpleGrid, Text } from '@chakra-ui/react'
+import { Box, Container, Flex, Text } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 import Title from '@/components/ui/texts/Title'
@@ -11,33 +12,37 @@ import SlideImage3 from '@/assets/img/tourism-slide-3.png'
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
 const NatureSlide = () => {
+	const t = useTranslations('NatureSlide') // Get the translation function
+
 	const data = [
 		{
-			title: 'Древние города и маршруты',
-			desc: 'Путешествуйте по древним торговым путям Шелкового пути, посещая исторические города и археологические памятники',
+			title: t('NatureSlide.title1'),
+			desc: t('NatureSlide.desc1'),
 			image: SlideImage1,
 			height: '443px'
 		},
 		{
-			title: 'Озеро Иссык-Куль',
-			desc: 'Окунитесь в чистые воды "жемчужины Кыргызстана" – высокогорного озера',
+			title: t('NatureSlide.title2'),
+			desc: t('NatureSlide.desc2'),
 			image: SlideImage2,
 			height: '620px'
 		},
 		{
-			title: 'Национальные парки',
-			desc: 'Откройте для себя разнообразие флоры и фауны, наслаждаясь природными красотами на территории охраняемых зон',
+			title: t('NatureSlide.title3'),
+			desc: t('NatureSlide.desc3'),
 			image: SlideImage3,
 			height: '443px'
 		}
 	]
+
 	return (
 		<Box mt={{ md: '263px', base: '100px' }}>
 			<TitleComponent
+				data-aos='zoom-in'
 				textAlign={{ md: 'center', base: 'start' }}
 				px='4'
 			>
-				Что посмотреть
+				{t('title')}
 			</TitleComponent>
 			<Container
 				maxW={CONTAINER_WIDTH}
@@ -74,6 +79,7 @@ const NatureSlide = () => {
 								</Box>
 
 								<Box
+									data-aos='fade-up'
 									borderLeft='2px solid #254B45'
 									mt='33px'
 									pl='14px'

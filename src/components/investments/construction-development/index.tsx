@@ -1,4 +1,5 @@
 import { Box, Container, Flex, Stack, Text } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import { IoMdCheckmark } from 'react-icons/io'
 
 import Description from '@/components/ui/texts/Description'
@@ -9,13 +10,16 @@ import { inter } from '@/constants/fonts/fonts'
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
 const ConstructionDevelopment = () => {
+	const t = useTranslations('ConstructionDevelopment')
+
 	const program = [
-		'Растущий рынок',
-		'Инфраструктурные проекты',
-		'Экологически чистое строительство',
-		'Перспективы роста',
-		'Низкие издержки'
+		'growingMarket', // Key for growing market
+		'infrastructureProjects', // Key for infrastructure projects
+		'ecoFriendlyConstruction', // Key for eco-friendly construction
+		'growthProspects', // Key for growth prospects
+		'lowCosts' // Key for low costs
 	]
+
 	return (
 		<Box mt={{ md: '170px', base: '120px' }}>
 			<Container
@@ -45,24 +49,21 @@ const ConstructionDevelopment = () => {
 							rounded='100px'
 							w='173px'
 						>
-							Строительство
+							{t('text')}
 						</Box>
 						<TitleComponent
 							color='#26402B'
 							mt='15px'
 						>
-							Развитие строительства
+							{t('title')}
 						</TitleComponent>
-						<Description mt='3'>
-							Cпрос на современное жилье, коммерческие объекты и
-							инфраструктурные проекты постоянно растет.
-						</Description>
+						<Description mt='3'>{t('dis')}</Description>
 					</Box>
 					<Stack
 						spacing='5'
 						maxW='422px'
 					>
-						{program.map((pr, idx) => (
+						{program.map((key, idx) => (
 							<Flex
 								key={idx}
 								alignItems='center'
@@ -79,7 +80,7 @@ const ConstructionDevelopment = () => {
 									color='#12141D'
 									lineHeight='26px'
 								>
-									{pr}
+									{t(`program.${key}`)} {/* Use the translation key */}
 								</Text>
 							</Flex>
 						))}

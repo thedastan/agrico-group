@@ -1,4 +1,5 @@
-import { Box, Container, Flex, SimpleGrid, Text } from '@chakra-ui/react'
+import { Box, Container, Flex, Text } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 
 import BgLines from '@/components/ui/other/BgLines'
 import TitleComponent from '@/components/ui/texts/TitleComponent'
@@ -6,10 +7,12 @@ import TitleComponent from '@/components/ui/texts/TitleComponent'
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
 const TrustedPartner = () => {
+	const t = useTranslations('TrustedPartner')
+
 	const data = [
-		{ num: '100%', desc: 'Удовлетворенность клиентов' },
-		{ num: '7+', desc: 'Лет опыта на международных рынках' },
-		{ num: '100+', desc: 'Партнеров в различных странах' }
+		{ num: '100%', desc: t('customerSatisfaction') },
+		{ num: '7+', desc: t('yearsExperience') },
+		{ num: '100+', desc: t('partnersWorldwide') }
 	]
 
 	return (
@@ -38,7 +41,7 @@ const TrustedPartner = () => {
 						lineHeight={{ md: '48px', base: '28.8px' }}
 						color='#FFFFFF'
 					>
-						Доверенный партнер в области международной торговли
+						{t('title')}
 					</TitleComponent>
 				</Flex>
 

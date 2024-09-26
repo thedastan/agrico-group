@@ -1,30 +1,34 @@
 import { Box, SimpleGrid, Text } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 
 import Title from '@/components/ui/texts/Title'
 import TitleComponent from '@/components/ui/texts/TitleComponent'
 
 const OurOffers = () => {
+	const t = useTranslations() // Get the t function from useTranslation hook
+
 	const data = [
 		{
-			title: 'Пошив изделий любой сложности',
-			desc: 'Мы специализируемся на пошиве изделий любого типа и сложности, от простой одежды до сложных дизайнерских решений.'
+			title: t('offers.title1'), // Use translation keys
+			desc: t('offers.desc1')
 		},
 		{
-			title: 'Индивидуальные заказы',
-			desc: 'Предлагаем индивидуальный подход к каждому клиенту, обеспечивая точное соответствие вашим требованиям и пожеланиям.'
+			title: t('offers.title2'),
+			desc: t('offers.desc2')
 		},
 		{
-			title: 'Скорость и надежность',
-			desc: 'Наши производственные мощности позволяют выполнять заказы в сжатые сроки без потери качества, обеспечивая стабильные поставки.'
+			title: t('offers.title3'),
+			desc: t('offers.desc3')
 		},
 		{
-			title: 'Контроль качества',
-			desc: 'На каждом этапе мы осуществляем строгий контроль качества, чтобы каждая единица продукта соответствовала ожиданиям.'
+			title: t('offers.title4'),
+			desc: t('offers.desc4')
 		}
 	]
+
 	return (
 		<Box mt={{ md: '120px', base: '150px' }}>
-			<TitleComponent maxW='601px'>Что мы предлагаем</TitleComponent>
+			<TitleComponent maxW='601px'>{t('offers.header')}</TitleComponent>
 
 			<SimpleGrid
 				mt='40px'

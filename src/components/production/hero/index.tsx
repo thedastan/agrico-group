@@ -1,4 +1,5 @@
 import { Box, Divider, Flex, Text } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 import GiantText from '@/components/ui/texts/GiantText'
@@ -7,10 +8,11 @@ import HeroImageMobile from '@/assets/img/product-hero-mobail.png'
 import HeroImage from '@/assets/img/production-hero.png'
 
 const ProductionHero = () => {
+	const t = useTranslations('ProductionHero')
 	return (
 		<Box pt={{ md: '6', base: '60px' }}>
 			<GiantText display={{ md: 'none', base: 'block' }}>
-				Швейное Производство
+				{t('title')}
 			</GiantText>
 			<Box
 				w='100%'
@@ -19,7 +21,10 @@ const ProductionHero = () => {
 				rounded='20px'
 				overflow='hidden'
 			>
-				<Box display={{ md: 'flex', base: 'none' }}>
+				<Box
+					display={{ md: 'flex', base: 'none' }}
+					data-aos='fade-right'
+				>
 					<Image
 						src={HeroImage}
 						alt='Image'
@@ -27,7 +32,10 @@ const ProductionHero = () => {
 					/>
 				</Box>
 
-				<Box display={{ md: 'none', base: 'block' }}>
+				<Box
+					display={{ md: 'none', base: 'block' }}
+					data-aos='fade-right'
+				>
 					<Image
 						src={HeroImageMobile}
 						alt='Image'
@@ -42,12 +50,13 @@ const ProductionHero = () => {
 				alignItems='end'
 				gap='151px'
 				w={{ sm: 'auto', base: '100%' }}
+				data-aos='fade-left'
 			>
 				<GiantText
 					display={{ md: 'block', base: 'none' }}
 					maxW='70%'
 				>
-					Швейное Производство
+					{t('title')}
 				</GiantText>
 				<Flex
 					justifyContent={{ sm: 'start', base: 'space-between' }}
@@ -66,13 +75,14 @@ const ProductionHero = () => {
 							>
 								+100
 							</Text>
+
 							<Text
 								pb='2'
 								fontWeight='400'
 								fontSize='20px'
 								lineHeight='24px'
 							>
-								тыс.
+								{t('num')}
 							</Text>
 						</Flex>
 						<Text
@@ -81,7 +91,7 @@ const ProductionHero = () => {
 							fontSize='16px'
 							lineHeight='19.2px'
 						>
-							Единиц продукции ежемесячно
+							{t('text1')}
 						</Text>
 					</Box>
 					<Box w='142px'>
@@ -98,7 +108,7 @@ const ProductionHero = () => {
 							fontSize='16px'
 							lineHeight='19.2px'
 						>
-							Лет опыта в швейной отрасли
+							{t('text2')}
 						</Text>
 					</Box>
 				</Flex>

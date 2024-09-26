@@ -1,4 +1,5 @@
 import { Box, Container, Flex, SimpleGrid, Text } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 
 import DefButton from '@/components/ui/buttons/DefButton'
 import BgLines from '@/components/ui/other/BgLines'
@@ -8,6 +9,8 @@ import TitleComponent from '@/components/ui/texts/TitleComponent'
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
 const Guarantee = () => {
+	const t = useTranslations('Guarantee')
+
 	return (
 		<Container
 			maxW={CONTAINER_WIDTH}
@@ -16,6 +19,7 @@ const Guarantee = () => {
 		>
 			<Box
 				position='relative'
+				data-aos='zoom-in'
 				bg='#2B2B2B'
 				rounded='20px'
 				pt={{ md: '86px', base: '45px' }}
@@ -35,7 +39,7 @@ const Guarantee = () => {
 						lineHeight={{ md: '48px', base: '28.8px' }}
 						color='#FFFFFF'
 					>
-						Закажите пошив с Agrico Group
+						{t('title')}
 					</TitleComponent>
 					<Description
 						lineHeight='22px'
@@ -44,8 +48,7 @@ const Guarantee = () => {
 						color='#FFFFFF'
 						letterSpacing='.6px'
 					>
-						Гарантируем качество, скорость и индивидуальный подход к каждому
-						заказу!
+						{t('dis')}
 					</Description>
 
 					<DefButton
@@ -54,7 +57,7 @@ const Guarantee = () => {
 						mt='64px'
 						isArrowDown={true}
 					>
-						Связаться
+						{t('button')}
 					</DefButton>
 				</Flex>
 			</Box>

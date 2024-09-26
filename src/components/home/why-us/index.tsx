@@ -9,6 +9,8 @@ import MapImage from '@/assets/img/map 1.png'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
+import Count from './count'
+
 const WhyUs = () => {
 	const t = useTranslations('WhyUs')
 
@@ -51,6 +53,7 @@ const WhyUs = () => {
 						className='full-image'
 						style={{ width: 'auto', height: '100%', minWidth: '1200px' }} // Задаем minWidth для предотвращения сжатия
 					/>
+					<Count />
 				</Box>
 			</Container>
 			<Box
@@ -145,6 +148,7 @@ function Statics() {
 						lineHeight='48px'
 					>
 						{el.num}
+						{/* <Count /> */}
 					</Text>
 					<Text
 						mt='9px'

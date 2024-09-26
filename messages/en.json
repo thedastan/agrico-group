@@ -44,5 +44,150 @@
 		"satisfaction": "Customer Satisfaction",
 		"experience": "Years of Experience in International Markets",
 		"partners": "Partners in Various Countries"
+	},
+	"ExportHero": {
+		"title": "Import and Export from Kyrgyzstan",
+		"button": "Our Services"
+	},
+	"HowWeWork": {
+		"title": "How We Work",
+		"description": "Agreco Group supplies goods from Kyrgyzstan to more than 30 countries worldwide. We actively collaborate with partners in Europe, Asia, America, and other regions, expanding the geography of our business and strengthening international connections."
+	},
+	"TrustedPartner": {
+		"title": "Trusted Partner in International Trade",
+		"customerSatisfaction": "Customer Satisfaction",
+		"yearsExperience": "Years of Experience in International Markets",
+		"partnersWorldwide": "Partners in Various Countries"
+	},
+	"ourExports": {
+		"title": "What We Export",
+		"agriculturalProducts": {
+			"title": "Agricultural Products",
+			"desc": "Export of fruits, vegetables, grains, and nuts from the environmentally clean regions of Kyrgyzstan."
+		},
+		"textileProducts": {
+			"title": "Textile Products",
+			"desc": "We supply textile products, including fabrics, clothing, and accessories, custom-made to high-quality standards."
+		},
+		"mineralResources": {
+			"title": "Mineral Resources",
+			"desc": "Export of minerals and other natural resources extracted from the territory of Kyrgyzstan."
+		},
+		"souvenirProducts": {
+			"title": "Souvenir Products",
+			"desc": "Creative items and souvenirs reflecting the unique culture of Kyrgyzstan."
+		}
+	},
+	"InvestHero": {
+		"title": "Investments in Kyrgyzstan",
+		"description": "Invest in the future of Kyrgyzstan with Agrico Group. Opportunities in construction, agriculture, and light industry.",
+		"button": "Learn More",
+		"title2": "Explore new horizons with us",
+		"text1": "Customer Satisfaction",
+		"text2": "Annual growth in the construction sector"
+	},
+	"Agriculture": {
+		"title": "Agriculture",
+		"text1": "Eco-friendly Products",
+		"dis1": "Agriculture is one of the key sectors of Kyrgyzstan's economy, offering unique opportunities for investors.",
+		"text2": "Favorable Climate",
+		"dis2": "Agreco Group will help you explore new opportunities in this sector by providing access to eco-friendly products that are in demand in international markets."
+	},
+	"ConstructionDevelopment": {
+		"text": "Construction",
+		"title": "Development of Construction",
+		"dis": "The demand for modern housing, commercial properties, and infrastructure projects is constantly growing.",
+		"program": {
+			"growingMarket": "Growing Market",
+			"infrastructureProjects": "Infrastructure Projects",
+			"ecoFriendlyConstruction": "Eco-Friendly Construction",
+			"growthProspects": "Growth Prospects",
+			"lowCosts": "Low Costs"
+		}
+	},
+	"InvestExport": {
+		"text": "Light Industry",
+		"title": "Innovation and Export",
+		"dis": "The light industry of Kyrgyzstan is actively developing, offering attractive conditions for investors.",
+		"program": {
+			"qualifiedWorkforce": "Qualified Workforce",
+			"increasedDomesticDemand": "Increased Domestic Demand",
+			"governmentSupport": "Government Support"
+		},
+		"textone": "Products for Export",
+		"texttwo": "Annual Growth in the Construction Sector"
+	},
+	"ProductionHero": {
+		"title": "Sewing Production",
+		"text1": "Units of production per month",
+		"text2": "Years of experience in the sewing industry",
+		"num": "thousands"
+	},
+	"Guarantee": {
+		"title": "Order tailoring with Agrico Group",
+		"dis": "We guarantee quality, speed, and an individual approach to each order!",
+		"button": "Contact"
+	},
+	"offers": {
+		"header": "What We Offer",
+		"title1": "Tailoring of products of any complexity",
+		"desc1": "We specialize in tailoring products of all types and complexities, from simple clothing to complex design solutions.",
+		"title2": "Custom Orders",
+		"desc2": "We offer an individual approach to each client, ensuring precise compliance with your requirements and wishes.",
+		"title3": "Speed and Reliability",
+		"desc3": "Our production capacities allow us to complete orders in a short time without compromising quality, ensuring stable deliveries.",
+		"title4": "Quality Control",
+		"desc4": "At every stage, we implement strict quality control to ensure that each unit of product meets expectations."
+	},
+	"TourismHero": {
+		"title": "Tourism in Kyrgyzstan",
+		"dis": "Kyrgyzstan is a country of majestic mountains, ancient cultures, and hospitable people. It offers travelers unique experiences and an introduction to nomadic culture.",
+		"text": "About Kyrgyzstan",
+		"title1": "Here, nature remains in its pristine form"
+	},
+
+	"programIncludes": {
+		"header": "Tour Program",
+		"accommodation": "Accommodation in hotels and cottages, breakfast",
+		"transfer": "Meet and greet (transfer)",
+		"driverGuide": "Driver and guide, including fuel",
+		"internetMap": "Internet map for each traveler",
+		"roadTax": "Payment of road taxes and entry tickets",
+		"kitchenUtensils": "Kitchen utensils"
+	},
+	"tourProgram": {
+		"header": "Tour Program",
+		"night1": "1 night at Art Hotel (Bishkek)",
+		"night2": "1 night at KÜH (Ala-Archa)",
+		"night3": "1 night at Rahat 🏕 (Nahr al-Barid)",
+		"night4": "1 night at Art Hotel (Bishkek)",
+		"night5": "2 nights at Hotel Olimp (Issyk-Kul) (Kyrchyn)",
+		"night6": "1 night at Art Hotel (Bishkek)"
+	},
+	"ActiveRest": {
+		"text": "Tours to Issyk-Kul",
+		"title": "Active Recreation and Adventures",
+		"dis": "For lovers of active recreation, Kyrgyzstan is a true paradise. We offer a variety of adventure tours."
+	},
+	"RestSlide": {
+		"text1": "Grigorievsky Gorge",
+		"text2": "Kyrchyn",
+		"text3": "Jeti-Oguz",
+		"text4": "Karakol"
+	},
+	"NatureSlide": {
+		"title": "What to See",
+		"title1": "Ancient Cities and Routes",
+		"desc1": "Travel along the ancient trade routes of the Silk Road, visiting historical cities and archaeological monuments",
+		"title2": "Issyk-Kul Lake",
+		"desc2": "Dive into the clear waters of the 'pearl of Kyrgyzstan' – a high-altitude lake",
+		"title3": "National Parks",
+		"desc3": "Discover the diversity of flora and fauna while enjoying the natural beauty of protected areas"
+	},
+	"FooterClientComp": {
+		"title1": "Send us a message, ",
+		"title2": "and we will contact you shortly",
+		"text1": "All rights reserved. Copyright © 2024",
+		"text2": "Developed by Motion Web LLC"
 	}
 }

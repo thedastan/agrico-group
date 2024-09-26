@@ -59,6 +59,7 @@ const MainHero = () => {
 	// 		once: true
 	// 	})
 	// }, [])
+
 	const t = useTranslations('MainHero')
 
 	return (
@@ -88,6 +89,7 @@ const MainHero = () => {
 									{t('text')}
 								</Text>
 								<Heading
+									data-aos='fade-right'
 									mt='2'
 									textTransform='uppercase'
 									fontSize={{ md: '80px', base: '36px' }}

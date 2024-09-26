@@ -1,4 +1,5 @@
 import { Box, Flex } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 import Description from '@/components/ui/texts/Description'
@@ -8,6 +9,8 @@ import TitleComponent from '@/components/ui/texts/TitleComponent'
 import WorkImage from '@/assets/img/how-we-work.png'
 
 const HowWeWork = () => {
+	const t = useTranslations('HowWeWork')
+
 	return (
 		<Box mt={{ md: '182px', base: '120px' }}>
 			<Flex
@@ -17,21 +20,17 @@ const HowWeWork = () => {
 				justifyContent='space-between'
 			>
 				<GiantText
+					data-aos='fade-right'
 					maxW='477px'
 					w='100%'
 				>
-					Как мы работаем
+					{t('title')}
 				</GiantText>
 
-				<Description>
-					Agreco Group осуществляет поставки товаров из Кыргызстана в более чем
-					30 стран по всему миру. Мы активно сотрудничаем с партнерами в Европе,
-					Азии, Америке и других регионах, расширяя географию нашего бизнеса и
-					укрепляя международные связи.
-				</Description>
+				<Description data-aos='fade-left'>{t('description')}</Description>
 			</Flex>
 			<TitleComponent display={{ md: 'none', base: 'block' }}>
-				Как мы работаем
+				{t('title')}
 			</TitleComponent>
 			<Box
 				mt={{ md: '26px', base: '30px' }}
@@ -50,10 +49,7 @@ const HowWeWork = () => {
 				display={{ md: 'none', base: 'block' }}
 				mt='30px'
 			>
-				Agreco Group осуществляет поставки товаров из Кыргызстана в более чем 30
-				стран по всему миру. Мы активно сотрудничаем с партнерами в Европе,
-				Азии, Америке и других регионах, расширяя географию нашего бизнеса и
-				укрепляя международные связи.
+				{t('description')}
 			</Description>
 		</Box>
 	)

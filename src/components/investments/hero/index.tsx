@@ -1,4 +1,5 @@
 import { Box, Container, Flex, Text } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 import DefButton from '@/components/ui/buttons/DefButton'
@@ -12,6 +13,8 @@ import HeroImage2 from '@/assets/img/invest-hero-2.png'
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
 const InvestHero = () => {
+	const t = useTranslations('InvestHero')
+
 	return (
 		<Box pt={{ md: '95px', base: '65px' }}>
 			<Container maxW={CONTAINER_WIDTH}>
@@ -21,24 +24,26 @@ const InvestHero = () => {
 					flexDirection={{ lg: 'row', base: 'column' }}
 				>
 					<GiantText
+						data-aos='fade-down-right'
 						display={{ md: 'block', base: 'none' }}
 						maxW='673px'
 						lineHeight={{ md: '112px', base: '43.2px' }}
 						color='#273F2B'
 					>
-						Инвестиции в Кыргызстан
+						{t('title')}
 					</GiantText>
 					<TitleComponent
+						data-aos='fade-down-right'
 						display={{ md: 'none', base: 'block' }}
 						color='#273F2B'
 					>
-						Инвестиции в Кыргызстан
+						{t('title')}
 					</TitleComponent>
-					<Box maxW='560px'>
-						<Description>
-							Инвестируйте в будущее Кыргызстана с Agrico Group. Возможности в
-							строительстве, сельском хозяйстве и легкой промышленности.
-						</Description>
+					<Box
+						maxW='560px'
+						data-aos='fade-down-left'
+					>
+						<Description>{t('description')}</Description>
 
 						<Flex
 							mt='41px'
@@ -59,7 +64,7 @@ const InvestHero = () => {
 									fontSize='16px'
 									lineHeight='19.2px'
 								>
-									Удовлетворенность клиентов
+									{t('text1')}
 								</Text>
 							</Box>
 							<Box maxW='194px'>
@@ -76,7 +81,7 @@ const InvestHero = () => {
 									fontSize='16px'
 									lineHeight='19.2px'
 								>
-									Ежегодный рост в строительном секторе
+									{t('text2')}
 								</Text>
 							</Box>
 						</Flex>
@@ -94,12 +99,13 @@ const InvestHero = () => {
 						w='100%'
 					>
 						<DefButton
+							data-aos='fade-down-right'
 							mt='60px'
 							maxW={{ sm: '194px', base: '100%' }}
 							isArrowDown={true}
 							bg='#7BBA39'
 						>
-							Подробнее
+							{t('button')}
 						</DefButton>
 						<Box
 							mt='101px'
@@ -108,6 +114,7 @@ const InvestHero = () => {
 							overflow='hidden'
 							w='100%'
 							h='741px'
+							data-aos='fade-up-right'
 						>
 							<Image
 								src={HeroImage1}
@@ -128,6 +135,7 @@ const InvestHero = () => {
 							overflow='hidden'
 							w='100%'
 							h='375px'
+							data-aos='fade-up-left'
 						>
 							<Image
 								src={HeroImage2}
@@ -135,7 +143,7 @@ const InvestHero = () => {
 								className='full-image'
 							/>
 						</Box>
-						<TitleComponent>Откройте новые горизонты с нами</TitleComponent>
+						<TitleComponent>{t('title2')}</TitleComponent>
 					</Flex>
 				</Flex>
 			</Container>

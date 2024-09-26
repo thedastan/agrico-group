@@ -26,7 +26,7 @@ const AboutUs = () => {
 					gap={{ lg: '100px', base: '80px' }}
 					flexDirection={{ md: 'row', base: 'column' }}
 				>
-					<Box>
+					<Box data-aos='fade-right'>
 						<TitleComponent>{t('about')}</TitleComponent>
 
 						<Wrap
@@ -52,6 +52,7 @@ const AboutUs = () => {
 						</Wrap>
 					</Box>
 					<Box
+						data-aos='fade-left'
 						maxW={{ md: '60%', base: '100%' }}
 						w='100%'
 					>

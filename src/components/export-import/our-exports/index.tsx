@@ -1,31 +1,36 @@
 import { Box, SimpleGrid, Text } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 
 import Title from '@/components/ui/texts/Title'
 import TitleComponent from '@/components/ui/texts/TitleComponent'
 
+// import { useTranslation } from 'react-i18next'
+
 const OurExports = () => {
+	const t = useTranslations()
+
 	const data = [
 		{
-			title: 'Сельскохозяйственная продукция',
-			desc: 'Экспорт фруктов, овощей, зерновых и орехов из экологически чистых регионов Кыргызстана.'
+			title: t('ourExports.agriculturalProducts.title'),
+			desc: t('ourExports.agriculturalProducts.desc')
 		},
 		{
-			title: 'Текстильные изделия',
-			desc: 'Мы поставляем текстильную продукцию, включая ткани, одежду и аксессуары, изготовленные на заказ по высоким стандартам качества.'
+			title: t('ourExports.textileProducts.title'),
+			desc: t('ourExports.textileProducts.desc')
 		},
 		{
-			title: 'Минеральные ресурсы',
-			desc: 'Экспорт полезных ископаемых и других природных ресурсов, добываемых на территории Кыргызстана.'
+			title: t('ourExports.mineralResources.title'),
+			desc: t('ourExports.mineralResources.desc')
 		},
 		{
-			title: 'Сувенирная продукция',
-			desc: 'Креативные изделия и сувениры, отражающие уникальную культуру Кыргызстана.'
+			title: t('ourExports.souvenirProducts.title'),
+			desc: t('ourExports.souvenirProducts.desc')
 		}
 	]
+
 	return (
 		<Box mt='100px'>
-			<TitleComponent maxW='601px'>Что мы экспортируем</TitleComponent>
-
+			<TitleComponent maxW='601px'>{t('ourExports.title')}</TitleComponent>
 			<SimpleGrid
 				mt={{ md: '40px', base: '50px' }}
 				columns={{ lg: 4, md: 2, base: 1 }}
