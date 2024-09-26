@@ -115,20 +115,20 @@ const WhyUs = () => {
 const statics = [
 	{
 		num: '98%',
-		descKey: 'satisfaction' // Translation key for description
+		descKey: 'satisfaction'
 	},
 	{
 		num: '7+',
-		descKey: 'experience' // Translation key for description
+		descKey: 'experience'
 	},
 	{
 		num: '100+',
-		descKey: 'partners' // Translation key for description
+		descKey: 'partners'
 	}
 ]
 
 function Statics() {
-	const t = useTranslations('Statics') // Use the translation hook here
+	const t = useTranslations('Statics')
 
 	return (
 		<Flex gap={{ md: '48px', base: '14px' }}>
@@ -152,7 +152,7 @@ function Statics() {
 						fontSize='14px'
 						lineHeight='19.2px'
 					>
-						{t(el.descKey)} {/* Use translation key here */}
+						{t(el.descKey)}
 					</Text>
 				</Box>
 			))}
