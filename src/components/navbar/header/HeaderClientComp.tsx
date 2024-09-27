@@ -6,6 +6,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { LuPhone } from 'react-icons/lu'
 
+import { IAccardion } from '@/components/home/about/data'
+
 import { PHONE_NUMBER } from '@/constants/admin'
 
 import {
@@ -27,11 +29,13 @@ import Services from './Services'
 interface HeaderClientCompProps {
 	header_nav: IHeaderNav[]
 	call_button: string
+	accardionData: IAccardion[]
 }
 
 const HeaderClientComp = ({
 	call_button,
-	header_nav
+	header_nav,
+	accardionData
 }: HeaderClientCompProps) => {
 	const localActive = useTypedLocale()
 
@@ -75,7 +79,7 @@ const HeaderClientComp = ({
 								</Text>
 							</Link>
 						))}
-						<Services />
+						<Services accardionData={accardionData} />
 						<LanguageSelect />
 					</Flex>
 
@@ -85,7 +89,10 @@ const HeaderClientComp = ({
 						justifyContent='space-between'
 						alignItems='center'
 					>
-						<BurgerMenu header_nav={header_nav} />
+						<BurgerMenu
+							header_nav={header_nav}
+							accardionData={accardionData}
+						/>
 						<Link href={DASHBOARD_PAGES.HOME(localActive)}>
 							<Image
 								src={'/logo.svg'}

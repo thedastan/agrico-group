@@ -1,471 +1,387 @@
-// 'use client'
-// import { Text } from '@chakra-ui/react'
-// import dynamic from 'next/dynamic'
-// import { useState } from 'react'
-// import ScrollTrigger from 'react-scroll-trigger'
-// const CountUp = dynamic(() => import('react-countup'), { ssr: false })
-// const Count = () => {
-// 	const [counts, setCounts] = useState(false)
-// 	return (
-// 		<div>
-// 			<ScrollTrigger
-// 				onEnter={() => setCounts(true)}
-// 				onExit={() => setCounts(false)}
-// 			>
-// 				<Text>
-// 					{counts && (
-// 						<CountUp
-// 							start={0}
-// 							end={100}
-// 							delay={0}
-// 							duration={6}
-// 						/>
-// 					)}
-// 				</Text>
-// 			</ScrollTrigger>
-// 		</div>
-// 	)
-// }
-// export default Count
-// import { Box, Text } from '@chakra-ui/react'
-// import React from 'react'
-// const Count = () => {
-// 	return (
-// 		<Box
-// 			w={200}
-// 			ml={-600}
-// 			display='flex'
-// 		>
-// 			<Box
-// 				ml={-550}
-// 				mt={10}
-// 			>
-// 				<Box
-// 					display='flex'
-// 					alignItems='center'
-// 					justifyContent='center'
-// 					gap={1}
-// 					bg='white'
-// 					width='100px'
-// 					height='80px'
-// 					p={2}
-// 					transition='0.1s'
-// 					_hover={{
-// 						// border: 'solid 1px red'
-// 						width: '110px',
-// 						height: '90px',
-// 						padding: '0px',
-// 						transition: '0.1s'
-// 					}}
-// 					sx={{
-// 						clipPath:
-// 							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
-// 					}}
-// 				>
-// 					<Box
-// 						w={8}
-// 						mt={-2}
-// 					>
-// 						<img
-// 							style={{ borderRadius: '4px' }}
-// 							src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg'
-// 							alt=''
-// 						/>
-// 					</Box>
-// 					<Text
-// 						mt={-2}
-// 						fontSize={10}
-// 					>
-// 						kyrgyzstan
-// 					</Text>
-// 				</Box>
-// 			</Box>
-// 			<Box
-// 				ml={200}
-// 				mt={8}
-// 			>
-// 				<Box
-// 					display='flex'
-// 					alignItems='center'
-// 					justifyContent='center'
-// 					gap={1}
-// 					bg='white'
-// 					width='100px'
-// 					height='80px'
-// 					p={2}
-// 					transition='0.1s'
-// 					_hover={{
-// 						// border: 'solid 1px red'
-// 						width: '110px',
-// 						height: '90px',
-// 						padding: '0px',
-// 						transition: '0.1s'
-// 					}}
-// 					sx={{
-// 						clipPath:
-// 							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
-// 					}}
-// 				>
-// 					<Box
-// 						w={8}
-// 						mt={-2}
-// 					>
-// 						<img
-// 							style={{ borderRadius: '4px' }}
-// 							src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg'
-// 							alt=''
-// 						/>
-// 					</Box>
-// 					<Text
-// 						mt={-2}
-// 						fontSize={10}
-// 					>
-// 						kyrgyzstan
-// 					</Text>
-// 				</Box>
-// 			</Box>
-// 			<Box
-// 				ml={10}
-// 				mt={40}
-// 			>
-// 				<Box
-// 					display='flex'
-// 					alignItems='center'
-// 					justifyContent='center'
-// 					gap={1}
-// 					bg='white'
-// 					width='100px'
-// 					height='80px'
-// 					p={2}
-// 					transition='0.1s'
-// 					_hover={{
-// 						// border: 'solid 1px red'
-// 						width: '110px',
-// 						height: '90px',
-// 						padding: '0px',
-// 						transition: '0.1s'
-// 					}}
-// 					sx={{
-// 						clipPath:
-// 							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
-// 					}}
-// 				>
-// 					<Box
-// 						w={8}
-// 						mt={-2}
-// 					>
-// 						<img
-// 							style={{ borderRadius: '4px' }}
-// 							src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg'
-// 							alt=''
-// 						/>
-// 					</Box>
-// 					<Text
-// 						mt={-2}
-// 						fontSize={10}
-// 					>
-// 						kyrgyzstan
-// 					</Text>
-// 				</Box>
-// 			</Box>
-// 			<Box
-// 				ml={0}
-// 				mt={20}
-// 			>
-// 				<Box
-// 					display='flex'
-// 					alignItems='center'
-// 					justifyContent='center'
-// 					gap={1}
-// 					bg='white'
-// 					width='100px'
-// 					height='80px'
-// 					p={2}
-// 					transition='0.1s'
-// 					_hover={{
-// 						// border: 'solid 1px red'
-// 						width: '110px',
-// 						height: '90px',
-// 						padding: '0px',
-// 						transition: '0.1s'
-// 					}}
-// 					sx={{
-// 						clipPath:
-// 							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
-// 					}}
-// 				>
-// 					<Box
-// 						w={8}
-// 						mt={-2}
-// 					>
-// 						<img
-// 							style={{ borderRadius: '4px' }}
-// 							src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg'
-// 							alt=''
-// 						/>
-// 					</Box>
-// 					<Text
-// 						mt={-2}
-// 						fontSize={10}
-// 					>
-// 						kyrgyzstan
-// 					</Text>
-// 				</Box>
-// 			</Box>
-// 			<Box mt={4}>
-// 				<Box
-// 					display='flex'
-// 					alignItems='center'
-// 					justifyContent='center'
-// 					gap={1}
-// 					bg='white'
-// 					width='100px'
-// 					height='80px'
-// 					p={2}
-// 					transition='0.1s'
-// 					_hover={{
-// 						// border: 'solid 1px red'
-// 						width: '110px',
-// 						height: '90px',
-// 						padding: '0px',
-// 						transition: '0.1s'
-// 					}}
-// 					sx={{
-// 						clipPath:
-// 							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
-// 					}}
-// 				>
-// 					<Box
-// 						w={8}
-// 						mt={-2}
-// 					>
-// 						<img
-// 							style={{ borderRadius: '4px' }}
-// 							src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg'
-// 							alt=''
-// 						/>
-// 					</Box>
-// 					<Text
-// 						mt={-2}
-// 						fontSize={10}
-// 					>
-// 						kyrgyzstan
-// 					</Text>
-// 				</Box>
-// 			</Box>
-// 			<Box mt={4}>
-// 				<Box
-// 					display='flex'
-// 					alignItems='center'
-// 					justifyContent='center'
-// 					gap={1}
-// 					bg='white'
-// 					width='100px'
-// 					height='80px'
-// 					p={2}
-// 					transition='0.1s'
-// 					_hover={{
-// 						// border: 'solid 1px red'
-// 						width: '110px',
-// 						height: '90px',
-// 						padding: '0px',
-// 						transition: '0.1s'
-// 					}}
-// 					sx={{
-// 						clipPath:
-// 							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
-// 					}}
-// 				>
-// 					<Box
-// 						w={8}
-// 						mt={-2}
-// 					>
-// 						<img
-// 							style={{ borderRadius: '4px' }}
-// 							src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg'
-// 							alt=''
-// 						/>
-// 					</Box>
-// 					<Text
-// 						mt={-2}
-// 						fontSize={10}
-// 					>
-// 						kyrgyzstan
-// 					</Text>
-// 				</Box>
-// 			</Box>
-// 			<Box mt={4}>
-// 				<Box
-// 					display='flex'
-// 					alignItems='center'
-// 					justifyContent='center'
-// 					gap={1}
-// 					bg='white'
-// 					width='100px'
-// 					height='80px'
-// 					p={2}
-// 					transition='0.1s'
-// 					_hover={{
-// 						// border: 'solid 1px red'
-// 						width: '110px',
-// 						height: '90px',
-// 						padding: '0px',
-// 						transition: '0.1s'
-// 					}}
-// 					sx={{
-// 						clipPath:
-// 							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
-// 					}}
-// 				>
-// 					<Box
-// 						w={8}
-// 						mt={-2}
-// 					>
-// 						<img
-// 							style={{ borderRadius: '4px' }}
-// 							src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg'
-// 							alt=''
-// 						/>
-// 					</Box>
-// 					<Text
-// 						mt={-2}
-// 						fontSize={10}
-// 					>
-// 						kyrgyzstan
-// 					</Text>
-// 				</Box>
-// 			</Box>
-// 			<Box mt={4}>
-// 				<Box
-// 					display='flex'
-// 					alignItems='center'
-// 					justifyContent='center'
-// 					gap={1}
-// 					bg='white'
-// 					width='100px'
-// 					height='80px'
-// 					p={2}
-// 					transition='0.1s'
-// 					_hover={{
-// 						// border: 'solid 1px red'
-// 						width: '110px',
-// 						height: '90px',
-// 						padding: '0px',
-// 						transition: '0.1s'
-// 					}}
-// 					sx={{
-// 						clipPath:
-// 							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
-// 					}}
-// 				>
-// 					<Box
-// 						w={8}
-// 						mt={-2}
-// 					>
-// 						<img
-// 							style={{ borderRadius: '4px' }}
-// 							src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg'
-// 							alt=''
-// 						/>
-// 					</Box>
-// 					<Text
-// 						mt={-2}
-// 						fontSize={10}
-// 					>
-// 						kyrgyzstan
-// 					</Text>
-// 				</Box>
-// 			</Box>
-// 			<Box mt={4}>
-// 				<Box
-// 					display='flex'
-// 					alignItems='center'
-// 					justifyContent='center'
-// 					gap={1}
-// 					bg='white'
-// 					width='100px'
-// 					height='80px'
-// 					p={2}
-// 					transition='0.1s'
-// 					_hover={{
-// 						// border: 'solid 1px red'
-// 						width: '110px',
-// 						height: '90px',
-// 						padding: '0px',
-// 						transition: '0.1s'
-// 					}}
-// 					sx={{
-// 						clipPath:
-// 							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
-// 					}}
-// 				>
-// 					<Box
-// 						w={8}
-// 						mt={-2}
-// 					>
-// 						<img
-// 							style={{ borderRadius: '4px' }}
-// 							src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg'
-// 							alt=''
-// 						/>
-// 					</Box>
-// 					<Text
-// 						mt={-2}
-// 						fontSize={10}
-// 					>
-// 						kyrgyzstan
-// 					</Text>
-// 				</Box>
-// 			</Box>
-// 			<Box mt={4}>
-// 				<Box
-// 					display='flex'
-// 					alignItems='center'
-// 					justifyContent='center'
-// 					gap={1}
-// 					bg='white'
-// 					width='100px'
-// 					height='80px'
-// 					p={2}
-// 					transition='0.1s'
-// 					_hover={{
-// 						// border: 'solid 1px red'
-// 						width: '110px',
-// 						height: '90px',
-// 						padding: '0px',
-// 						transition: '0.1s'
-// 					}}
-// 					sx={{
-// 						clipPath:
-// 							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
-// 					}}
-// 				>
-// 					<Box
-// 						w={8}
-// 						mt={-2}
-// 					>
-// 						<img
-// 							style={{ borderRadius: '4px' }}
-// 							src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg'
-// 							alt=''
-// 						/>
-// 					</Box>
-// 					<Text
-// 						mt={-2}
-// 						fontSize={10}
-// 					>
-// 						kyrgyzstan
-// 					</Text>
-// 				</Box>
-// 			</Box>
-// 		</Box>
-// 	)
-// }
-// export default Count
+import { Box, Text } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import React from 'react'
 
-const index = () => {
-	return <div></div>
+const Count = () => {
+	const t = useTranslations('Count')
+
+	return (
+		<Box
+			display='flex'
+			gap={2}
+		>
+			<Box
+				ml={-1100}
+				mt={10}
+			>
+				<Box
+					display='flex'
+					alignItems='center'
+					justifyContent='center'
+					gap={1}
+					bg='white'
+					width='100px'
+					height='80px'
+					p={2}
+					transition='0.1s'
+					sx={{
+						clipPath:
+							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					}}
+				>
+					<Box
+						w={8}
+						mt={-2}
+					>
+						<img
+							style={{ borderRadius: '4px' }}
+							src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/800px-Flag_of_the_United_States_%28Pantone%29.svg.png'
+							alt=''
+						/>
+					</Box>
+					<Text
+						mt={-2}
+						fontSize={10}
+					>
+						{t('title1')}
+					</Text>
+				</Box>
+			</Box>
+			<Box
+				ml={300}
+				mt={4}
+			>
+				<Box
+					display='flex'
+					alignItems='center'
+					justifyContent='center'
+					gap={1}
+					bg='white'
+					width='100px'
+					height='80px'
+					p={2}
+					transition='0.1s'
+					sx={{
+						clipPath:
+							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					}}
+				>
+					<Box
+						w={8}
+						mt={-2}
+					>
+						<img
+							style={{ borderRadius: '4px' }}
+							src='https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg'
+							alt=''
+						/>
+					</Box>
+					<Text
+						mt={-2}
+						fontSize={10}
+					>
+						{t('title2')}
+					</Text>
+				</Box>
+			</Box>
+			<Box
+				ml={-10}
+				mt='90px'
+			>
+				<Box
+					display='flex'
+					alignItems='center'
+					justifyContent='center'
+					gap={1}
+					bg='white'
+					width='100px'
+					height='80px'
+					p={2}
+					transition='0.1s'
+					sx={{
+						clipPath:
+							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					}}
+				>
+					<Box
+						w={8}
+						mt={-2}
+					>
+						<img
+							style={{ borderRadius: '4px' }}
+							src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Flag_of_Kuwait.svg/1200px-Flag_of_Kuwait.svg.png'
+							alt=''
+						/>
+					</Box>
+					<Text
+						mt={-2}
+						fontSize={10}
+					>
+						{t('title3')}
+					</Text>
+				</Box>
+			</Box>
+			<Box
+				ml={-20}
+				mt='130px'
+			>
+				<Box
+					display='flex'
+					alignItems='center'
+					justifyContent='center'
+					gap={1}
+					bg='white'
+					width='100px'
+					height='80px'
+					p={2}
+					transition='0.1s'
+					sx={{
+						clipPath:
+							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					}}
+				>
+					<Box
+						w={8}
+						mt={-2}
+					>
+						<img
+							style={{ borderRadius: '4px' }}
+							src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/800px-Flag_of_Saudi_Arabia.svg.png'
+							alt=''
+						/>
+					</Box>
+					<Text
+						mt={-2}
+						fontSize={10}
+					>
+						{t('title4')}
+					</Text>
+				</Box>
+			</Box>
+			<Box
+				ml={-20}
+				mt={14}
+			>
+				<Box
+					display='flex'
+					alignItems='center'
+					justifyContent='center'
+					gap={1}
+					bg='white'
+					width='100px'
+					height='80px'
+					p={2}
+					transition='0.1s'
+					sx={{
+						clipPath:
+							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					}}
+				>
+					<Box
+						w={8}
+						mt={-2}
+					>
+						<img
+							style={{ borderRadius: '4px' }}
+							src='https://media.istockphoto.com/id/838747300/ru/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F/%D0%BD%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%84%D0%BB%D0%B0%D0%B3-%D1%82%D0%B0%D0%B4%D0%B6%D0%B8%D0%BA%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%B0.jpg?s=612x612&w=0&k=20&c=Nde-H3HO7k8xaF80MBcmOiGEUqJ-v1jsmwvyGtF5VzQ='
+							alt=''
+						/>
+					</Box>
+					<Text
+						mt={-2}
+						fontSize={10}
+					>
+						{t('title5')}
+					</Text>
+				</Box>
+			</Box>
+			<Box
+				ml={-20}
+				mt={10}
+			>
+				<Box
+					display='flex'
+					alignItems='center'
+					justifyContent='center'
+					gap={1}
+					bg='white'
+					width='100px'
+					height='80px'
+					p={2}
+					transition='0.1s'
+					sx={{
+						clipPath:
+							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					}}
+				>
+					<Box
+						w={8}
+						mt={-2}
+					>
+						<img
+							style={{ borderRadius: '4px' }}
+							src='https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Uzbekistan.svg'
+							alt=''
+						/>
+					</Box>
+					<Text
+						mt={-2}
+						fontSize={10}
+					>
+						{t('title6')}
+					</Text>
+				</Box>
+			</Box>
+			<Box
+				ml={-20}
+				mt={20}
+			>
+				<Box
+					display='flex'
+					alignItems='center'
+					justifyContent='center'
+					gap={1}
+					bg='white'
+					width='100px'
+					height='80px'
+					p={2}
+					transition='0.1s'
+					sx={{
+						clipPath:
+							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					}}
+				>
+					<Box
+						w={8}
+						mt={-2}
+					>
+						<img
+							style={{ borderRadius: '4px' }}
+							src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg'
+							alt=''
+						/>
+					</Box>
+					<Text
+						mt={-2}
+						fontSize={10}
+					>
+						{t('title7')}
+					</Text>
+				</Box>
+			</Box>
+			<Box
+				ml={-20}
+				mt='50px'
+			>
+				<Box
+					display='flex'
+					alignItems='center'
+					justifyContent='center'
+					gap={1}
+					bg='white'
+					width='100px'
+					height='80px'
+					p={2}
+					transition='0.1s'
+					sx={{
+						clipPath:
+							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					}}
+				>
+					<Box
+						w={8}
+						mt={-2}
+					>
+						<img
+							style={{ borderRadius: '4px' }}
+							src='https://akorda.kz/assets/media/flag_mediumThumb.jpg'
+							alt=''
+						/>
+					</Box>
+					<Text
+						mt={-2}
+						fontSize={10}
+					>
+						{t('title8')}
+					</Text>
+				</Box>
+			</Box>
+			<Box
+				ml={-20}
+				mt={2}
+			>
+				<Box
+					display='flex'
+					alignItems='center'
+					justifyContent='center'
+					gap={1}
+					bg='white'
+					width='100px'
+					height='80px'
+					p={2}
+					transition='0.1s'
+					sx={{
+						clipPath:
+							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					}}
+				>
+					<Box
+						w={8}
+						mt={-2}
+					>
+						<img
+							style={{ borderRadius: '4px' }}
+							src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs3Nv1dUHgTVa6Ic6VI-NH3BTQixaZmoLItQ&s'
+							alt=''
+						/>
+					</Box>
+					<Text
+						mt={-2}
+						fontSize={10}
+					>
+						{t('title9')}
+					</Text>
+				</Box>
+			</Box>
+			<Box
+				ml={-16}
+				mt={24}
+			>
+				<Box
+					display='flex'
+					alignItems='center'
+					justifyContent='center'
+					gap={1}
+					bg='white'
+					width='100px'
+					height='80px'
+					p={2}
+					transition='0.1s'
+					sx={{
+						clipPath:
+							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					}}
+				>
+					<Box
+						w={8}
+						mt={-2}
+					>
+						<img
+							style={{ borderRadius: '4px' }}
+							src='https://masterflag.ru/img/info-flagi/world/kitay.png'
+							alt=''
+						/>
+					</Box>
+					<Text
+						mt={-2}
+						fontSize={10}
+					>
+						{t('title10')}
+					</Text>
+				</Box>
+			</Box>
+		</Box>
+	)
 }
 
-export default index
+export default Count

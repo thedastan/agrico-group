@@ -189,5 +189,43 @@
 		"title2": "and we will contact you shortly",
 		"text1": "All rights reserved. Copyright © 2024",
 		"text2": "Developed by Motion Web"
+	},
+	"ImportProducts": {
+		"name": "Imported Goods",
+		"title1": "Machinery and Equipment",
+		"desc1": "Import of modern machinery and equipment for various industries and agriculture.",
+
+		"title2": "Food Products",
+		"desc2": "Import of food, beverages, and other goods to meet the needs of the population of Kyrgyzstan.",
+
+		"title3": "Electronics and Home Appliances",
+		"desc3": "Supply of modern electronic devices and home appliances for the domestic market.",
+
+		"title4": "Building Materials",
+		"desc4": "Ensuring the domestic market is supplied with high-quality building materials and tools."
+	},
+	"About": {
+		"startText": "Advantages",
+		"name": "Why Choose Us",
+		"title1": "Modern Equipment",
+		"desc1": "Our production is equipped with advanced technology, allowing us to fulfill orders of any complexity.",
+
+		"title2": "Experienced Team",
+		"desc2": "Our employees are highly qualified specialists with many years of experience in the sewing industry.",
+
+		"title3": "Flexibility and Scalability",
+		"desc3": "We are ready to adapt to your needs and offer both large-scale and small-scale production."
+	},
+	"Count": {
+		"title1": "USA",
+		"title2": "Europe",
+		"title3": "Kuwait",
+		"title4": "Saudi Arabia",
+		"title5": "Tajikistan",
+		"title7": "Kyrgyzstan",
+		"title6": "Uzbekistan",
+		"title8": "Kazakhstan",
+		"title9": "Russia",
+		"title10": "China"
 	}
 }

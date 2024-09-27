@@ -14,9 +14,16 @@ import {
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { IAccardion } from '@/components/home/about/data'
 import BgLines from '@/components/ui/other/BgLines'
 
-import { EMAIL_ADDRESS_LINK, PHONE_NUMBER, EMAIL_ADDRESS, LOCATION, LOCATION_LINK } from '@/constants/admin'
+import {
+	EMAIL_ADDRESS,
+	EMAIL_ADDRESS_LINK,
+	LOCATION,
+	LOCATION_LINK,
+	PHONE_NUMBER
+} from '@/constants/admin'
 
 import { IHeaderNav } from '../data'
 
@@ -25,9 +32,11 @@ import Services from './Services'
 
 interface BurgerMenuProps {
 	header_nav: IHeaderNav[]
+	accardionData: IAccardion[]
+
 	// call_button: string
 }
-const BurgerMenu = ({ header_nav }: BurgerMenuProps) => {
+const BurgerMenu = ({ header_nav, accardionData }: BurgerMenuProps) => {
 	const { isOpen, onClose, onOpen } = useDisclosure()
 	return (
 		<Box display={{ md: 'none', base: 'block' }}>
@@ -115,7 +124,7 @@ const BurgerMenu = ({ header_nav }: BurgerMenuProps) => {
 												</Text>
 											</Link>
 										))}
-										<Services />
+										<Services accardionData={accardionData} />
 										<LanguageSelect />
 									</Stack>
 								</Box>
@@ -128,7 +137,9 @@ const BurgerMenu = ({ header_nav }: BurgerMenuProps) => {
 									textAlign='center'
 								>
 									<Link href={LOCATION_LINK}>{LOCATION}</Link>
-									<Link href={`mailto:{EMAIL_ADDRESS_LINK}`}>{EMAIL_ADDRESS}</Link>
+									<Link href={`mailto:{EMAIL_ADDRESS_LINK}`}>
+										{EMAIL_ADDRESS}
+									</Link>
 									<Link href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</Link>
 								</Stack>
 							</Flex>

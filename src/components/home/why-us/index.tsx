@@ -10,6 +10,101 @@ import MapImage from '@/assets/img/map 1.png'
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
 import Count from './count'
+// const statics = [
+// 	{
+// 		num: '98%',
+// 		desc: 'Удовлетворенность клиентов '
+// 	},
+// 	{
+// 		num: '7+',
+// 		desc: 'Лет опыта на международных рынках'
+// 	},
+// 	{
+// 		num: '100+',
+// 		desc: 'Партнеров в различных странах'
+// 	}
+// ]
+// function Statics() {
+// 	return (
+// 		<Flex
+// 			gap={{ md: '48px', base: '14px' }}
+// 			// flexWrap={{ md: 'nowrap', base: 'wrap' }}
+// 		>
+// 			{statics.map((el, idx) => (
+// 				<Box
+// 					key={idx}
+// 					color='#212121'
+// 					maxW={{ sm: '30%', base: '128px' }}
+// 					p={2}
+// 				>
+// 					<Text
+// 						fontWeight='500'
+// 						fontSize='36px'
+// 						lineHeight='48px'
+// 					>
+// 						{el.num}
+// 					</Text>
+// 					<Text
+// 						mt='9px'
+// 						fontWeight='400'
+// 						fontSize='14px'
+// 						lineHeight='19.2px'
+// 					>
+// 						{el.desc}
+// 					</Text>
+// 				</Box>
+// 			))}
+// 		</Flex>
+// 	)
+// }
+// const statics = [
+// 	{
+// 		num: '98%',
+// 		descKey: 'satisfaction'
+// 	},
+// 	{
+// 		num: '7+',
+// 		descKey: 'experience'
+// 	},
+// 	{
+// 		num: '100+',
+// 		descKey: 'partners'
+// 	}
+// ]
+// function Statics() {
+// 	const t = useTranslations('Statics')
+// 	return (
+// 		<Flex gap={{ md: '48px', base: '14px' }}>
+// 			{statics.map((el, idx) => (
+// 				<Box
+// 					key={idx}
+// 					color='#212121'
+// 					maxW={{ sm: '30%', base: '128px' }}
+// 					p={2}
+// 				>
+// 					<Text
+// 						fontWeight='500'
+// 						fontSize='36px'
+// 						lineHeight='48px'
+// 					>
+// 						{el.num}
+// 						{/* <Count /> */}
+// 					</Text>
+// 					<Text
+// 						mt='9px'
+// 						fontWeight='400'
+// 						fontSize='14px'
+// 						lineHeight='19.2px'
+// 					>
+// 						{t(el.descKey)}
+// 					</Text>
+// 				</Box>
+// 			))}
+// 		</Flex>
+// 	)
+// }
+// Statics.js
+import CountNumber from './countNumber/CountNumber'
 
 const WhyUs = () => {
 	const t = useTranslations('WhyUs')
@@ -45,7 +140,8 @@ const WhyUs = () => {
 					display='flex'
 					h={{ md: '420px', base: '456px' }}
 					w='100%'
-					overflowX='auto'
+					overflowX='scroll'
+					objectFit='cover'
 				>
 					<Image
 						src={MapImage}
@@ -53,6 +149,7 @@ const WhyUs = () => {
 						className='full-image'
 						style={{ width: 'auto', height: '100%', minWidth: '1200px' }} // Задаем minWidth для предотвращения сжатия
 					/>
+
 					<Count />
 				</Box>
 			</Container>
@@ -66,66 +163,17 @@ const WhyUs = () => {
 	)
 }
 
-// const statics = [
-// 	{
-// 		num: '98%',
-// 		desc: 'Удовлетворенность клиентов '
-// 	},
-// 	{
-// 		num: '7+',
-// 		desc: 'Лет опыта на международных рынках'
-// 	},
-// 	{
-// 		num: '100+',
-// 		desc: 'Партнеров в различных странах'
-// 	}
-// ]
-
-// function Statics() {
-// 	return (
-// 		<Flex
-// 			gap={{ md: '48px', base: '14px' }}
-// 			// flexWrap={{ md: 'nowrap', base: 'wrap' }}
-// 		>
-// 			{statics.map((el, idx) => (
-// 				<Box
-// 					key={idx}
-// 					color='#212121'
-// 					maxW={{ sm: '30%', base: '128px' }}
-// 					p={2}
-// 				>
-// 					<Text
-// 						fontWeight='500'
-// 						fontSize='36px'
-// 						lineHeight='48px'
-// 					>
-// 						{el.num}
-// 					</Text>
-// 					<Text
-// 						mt='9px'
-// 						fontWeight='400'
-// 						fontSize='14px'
-// 						lineHeight='19.2px'
-// 					>
-// 						{el.desc}
-// 					</Text>
-// 				</Box>
-// 			))}
-// 		</Flex>
-// 	)
-// }
-
 const statics = [
 	{
-		num: '98%',
+		num: 98,
 		descKey: 'satisfaction'
 	},
 	{
-		num: '7+',
+		num: 7,
 		descKey: 'experience'
 	},
 	{
-		num: '100+',
+		num: 100,
 		descKey: 'partners'
 	}
 ]
@@ -142,14 +190,7 @@ function Statics() {
 					maxW={{ sm: '30%', base: '128px' }}
 					p={2}
 				>
-					<Text
-						fontWeight='500'
-						fontSize='36px'
-						lineHeight='48px'
-					>
-						{el.num}
-						{/* <Count /> */}
-					</Text>
+					<CountNumber num={el.num} />
 					<Text
 						mt='9px'
 						fontWeight='400'

@@ -1,23 +1,9 @@
 'use client'
 
-import {
-	Box,
-	Flex,
-	Input,
-	Menu,
-	MenuButton,
-	MenuItemOption,
-	MenuList,
-	MenuOptionGroup,
-	Select,
-	Stack,
-	Textarea
-} from '@chakra-ui/react'
+import { Box, Input, Stack, Textarea } from '@chakra-ui/react'
 import axios from 'axios'
-import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { FaChevronDown } from 'react-icons/fa6'
 import {
 	PhoneInput,
 	defaultCountries,
@@ -26,8 +12,9 @@ import {
 import 'react-international-phone/style.css'
 
 import DefButton from '../ui/buttons/DefButton'
-import InputComponent from '../ui/inputs/InputComponent'
 import PhoneInputComponent from '../ui/inputs/PhoneInputComponent'
+
+import SelectComponent from './selectComponent/SelectComponent'
 
 export interface IInputComponentProps {
 	name?: string
@@ -45,32 +32,28 @@ interface IFormTelegram {
 
 const FeedbackForm = () => {
 	const { register, handleSubmit, reset } = useForm<IFormTelegram>()
-	// const t = useTranslations('FeedbackForm')
 
 	const TOKEN = process.env.NEXT_PUBLIC_TG_TOKEN
 	const CHAT_ID = process.env.NEXT_PUBLIC_TG_CHAT_ID
 
 	const messageModel = (data: IFormTelegram) => {
-		let messageTG = ` Number:  <b>${data.number} </b>\n`
-		messageTG += `Message: <b>${data.message}</b>\n`
-		messageTG += `Section: <b>${data.section}</b>\n`
+		let messageTG = `Section: <b>${data.section}</b>\n`
+		messageTG += `Message:  <b>${data.message} </b>\n`
+		messageTG += `Number: <b>${data.number}</b>\n`
 		return messageTG
 	}
 
 	const onSubmit: SubmitHandler<IFormTelegram> = async data => {
-		await axios.post(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
-			chat_id: process.env.NEXT_PUBLIC_TG_CHAT_ID,
-			parse_mode: 'html',
-			text: messageModel(data)
-		})
+		await axios.post(
+			` https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TG_TOKEN}/sendMessage`,
+			{
+				chat_id: process.env.NEXT_PUBLIC_TG_CHAT_ID,
+				parse_mode: 'html',
+				text: messageModel(data)
+			}
+		)
 		reset()
 	}
-
-	const [value, setValue] = useState({
-		section: '',
-		phone: '',
-		message: ''
-	})
 
 	const PhoneInputComponent = ({
 		name = 'phone',
@@ -88,7 +71,7 @@ const FeedbackForm = () => {
 				value={value}
 				required={required}
 				onChange={handleChange}
-				className={'phone-input'}
+				className='phone-input'
 				placeholder={placeholder}
 				autoFocus={false}
 			/>
@@ -107,17 +90,10 @@ const FeedbackForm = () => {
 		>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<Stack spacing='6px'>
-					<Select
-						placeholder='Выберите раздел'
-						{...register('section', { required: true })}
-					>
-						<option value='Импорт и Экспорт'>Импорт и Экспорт</option>
-						<option value='Инвестиции'>Инвестиции</option>
-						<option value='Текстильная промышленность'>
-							Текстильная промышленность
-						</option>
-						<option value='Туризм'>Туризм</option>
-					</Select>
+					<SelectComponent
+						register={register}
+						required={true}
+					/>
 
 					<PhoneInputComponent
 						{...register('number', { required: true })}
