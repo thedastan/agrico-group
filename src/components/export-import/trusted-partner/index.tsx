@@ -1,10 +1,14 @@
 import { Box, Container, Flex, Text } from '@chakra-ui/react'
 import { useTranslations } from 'next-intl'
 
+import Count from '@/components/home/why-us/count'
+import CountNumber from '@/components/home/why-us/countNumber/CountNumber'
 import BgLines from '@/components/ui/other/BgLines'
 import TitleComponent from '@/components/ui/texts/TitleComponent'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
+
+import CountNumberEx from './countNumberEx/CountNumberEx'
 
 const TrustedPartner = () => {
 	const t = useTranslations('TrustedPartner')
@@ -64,7 +68,7 @@ const TrustedPartner = () => {
 								color='#7BBA39'
 								fontWeight='700'
 							>
-								{el.num}
+								<CountNumberEx num={el.num} />
 							</Text>
 							<Text
 								mt='9px'

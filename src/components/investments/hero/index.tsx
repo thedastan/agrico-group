@@ -2,6 +2,7 @@ import { Box, Container, Flex, Text } from '@chakra-ui/react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
+import CountNumberEx from '@/components/export-import/trusted-partner/countNumberEx/CountNumberEx'
 import DefButton from '@/components/ui/buttons/DefButton'
 import Description from '@/components/ui/texts/Description'
 import GiantText from '@/components/ui/texts/GiantText'
@@ -56,7 +57,7 @@ const InvestHero = () => {
 									fontSize='40px'
 									lineHeight='48px'
 								>
-									95%
+									<CountNumberEx num='95%' />
 								</Text>
 								<Text
 									mt='9px'
@@ -73,7 +74,7 @@ const InvestHero = () => {
 									fontSize='40px'
 									lineHeight='48px'
 								>
-									20%
+									<CountNumberEx num='20%' />
 								</Text>
 								<Text
 									mt='9px'

@@ -5,7 +5,6 @@ interface SelectComponentProps {
 	register: UseFormRegister<any> // To use react-hook-form register
 	required?: boolean
 }
-
 const SelectComponent: React.FC<SelectComponentProps> = ({
 	register,
 	required = false
@@ -21,6 +20,7 @@ const SelectComponent: React.FC<SelectComponentProps> = ({
 				Текстильная промышленность
 			</option>
 			<option value='Туризм'>Туризм</option>
+			<option value='Туризм'>Строительство</option>
 		</Select>
 	)
 }

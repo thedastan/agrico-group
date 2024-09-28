@@ -133,6 +133,7 @@ import { Box, Container, Flex, Stack, Text } from '@chakra-ui/react'
 import { useTranslations } from 'next-intl'
 import { IoMdCheckmark } from 'react-icons/io'
 
+import CountNumberEx from '@/components/export-import/trusted-partner/countNumberEx/CountNumberEx'
 import Description from '@/components/ui/texts/Description'
 import TitleComponent from '@/components/ui/texts/TitleComponent'
 
@@ -181,7 +182,7 @@ const InvestExport = () => {
 									fontSize='40px'
 									lineHeight='48px'
 								>
-									50%
+									<CountNumberEx num='50%' />
 								</Text>
 								<Text
 									mt='9px'
@@ -198,7 +199,7 @@ const InvestExport = () => {
 									fontSize='40px'
 									lineHeight='48px'
 								>
-									20%
+									<CountNumberEx num='20%' />
 								</Text>
 								<Text
 									mt='9px'

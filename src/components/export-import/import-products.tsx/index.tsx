@@ -48,6 +48,7 @@ const ImportProducts = () => {
 			<Box
 				mt={40}
 				display={{ md: 'flex', base: 'none' }}
+				justifyContent='center'
 			>
 				<Tabs
 					display='flex'
@@ -136,6 +137,7 @@ const ImportProducts = () => {
 			<Box
 				mt={40}
 				display={{ md: 'none', base: 'block' }}
+				justifyContent='center'
 			>
 				<Box>
 					{products.map((item, index) => (

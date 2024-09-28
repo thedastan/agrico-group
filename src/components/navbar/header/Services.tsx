@@ -29,7 +29,7 @@ const Services = ({ accardionData }: { accardionData: IAccardion[] }) => {
 					fontWeight={{ md: '400', base: '500' }}
 					color='#FFFFFF'
 				>
-					select
+					sectors
 					<IoChevronDown />
 				</Flex>
 			</MenuButton>

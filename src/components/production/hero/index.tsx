@@ -2,6 +2,7 @@ import { Box, Divider, Flex, Text } from '@chakra-ui/react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
+import CountNumberEx from '@/components/export-import/trusted-partner/countNumberEx/CountNumberEx'
 import GiantText from '@/components/ui/texts/GiantText'
 
 import HeroImageMobile from '@/assets/img/product-hero-mobail.png'
@@ -9,6 +10,7 @@ import HeroImage from '@/assets/img/production-hero.png'
 
 const ProductionHero = () => {
 	const t = useTranslations('ProductionHero')
+
 	return (
 		<Box pt={{ md: '6', base: '60px' }}>
 			<GiantText display={{ md: 'none', base: 'block' }}>
@@ -17,7 +19,6 @@ const ProductionHero = () => {
 			<Box
 				w='100%'
 				mt={{ md: '0', base: '10' }}
-				// h={{ md: '421px', base: '338px' }}
 				rounded='20px'
 				overflow='hidden'
 			>
@@ -68,12 +69,13 @@ const ProductionHero = () => {
 				>
 					<Box w='155px'>
 						<Flex alignItems='end'>
+							{/* Используем CountNumberEx для анимации 100+ */}
 							<Text
 								fontWeight='500'
 								fontSize='40px'
 								lineHeight='48px'
 							>
-								+100
+								<CountNumberEx num='100+' /> {/* Передаем строку 100+ */}
 							</Text>
 
 							<Text
@@ -95,12 +97,13 @@ const ProductionHero = () => {
 						</Text>
 					</Box>
 					<Box w='142px'>
+						{/* Используем CountNumberEx для анимации 10+ */}
 						<Text
 							fontWeight='500'
 							fontSize='40px'
 							lineHeight='48px'
 						>
-							10+
+							<CountNumberEx num='10+' /> {/* Передаем строку 10+ */}
 						</Text>
 						<Text
 							mt='9px'

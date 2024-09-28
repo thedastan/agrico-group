@@ -2,9 +2,36 @@
 @import 'swiper';
 @import 'aos/dist/aos.css';
 
+// .phone-input {
+// 	border-radius: 8px;
+// 	overflow: hidden;
+// 	border: solid 1px #d6d8d2;
+// 	input {
+// 		// padding: 0 16px !important;
+// 		width: 100%;
+// 		font-size: 16px !important;
+// 		line-height: 20px !important;
+// 		font-weight: 400 !important;
+// 		color: #212121 !important;
+// 		background: #21212114 !important;
+// 		height: 54px !important;
+// 		border: none !important;
+// 		background: white !important;
+// 	}
+// 	.react-international-phone-country-selector {
+// 		button {
+// 			height: 100%;
+// 			width: 60px;
+// 			background: #ffffff14 !important;
+// 			border: none;
+// 		}
+// 	}
+// }
+
 .phone-input {
 	border-radius: 8px;
 	overflow: hidden;
+	border: solid 1px #d6d8d2;
 	input {
 		// padding: 0 16px !important;
 		width: 100%;
@@ -15,12 +42,13 @@
 		background: #21212114 !important;
 		height: 54px !important;
 		border: none !important;
+		background: white !important;
 	}
 	.react-international-phone-country-selector {
 		button {
 			height: 100%;
 			width: 60px;
-			background: #21212114 !important;
+			background: #ffffff14 !important;
 			border: none;
 		}
 	}

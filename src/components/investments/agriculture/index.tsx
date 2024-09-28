@@ -23,7 +23,7 @@ const Agriculture = () => {
 					mt={{ md: '70px', base: '30px' }}
 					gap='20px'
 					justifyContent='space-between'
-					flexDirection={{ md: 'row', base: 'column' }}
+					flexDirection={{ md: 'row', base: 'column-reverse' }}
 				>
 					<Flex
 						flexDirection={{ md: 'column', base: 'column-reverse' }}

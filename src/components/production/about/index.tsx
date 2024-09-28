@@ -44,6 +44,8 @@ const About = () => {
 			flexDirection='column'
 			textAlign='center'
 			alignItems='center'
+			justifyContent='center'
+			mt={10}
 		>
 			<Text
 				bg='#F2F5EB'
