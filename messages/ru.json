@@ -194,7 +194,19 @@
 		"text1": "Все права защищены. Авторские права © 2024",
 		"text2": "Разработан IT студией Motion Web LLC",
 
-		"LOCATION": "Бишкек, Улица Раззакова 32"
+		"LOCATION": "Бишкек, Улица Раззакова 32",
+
+		"button": "отправить",
+		"message_plaseholder": "сообщение",
+		"message_plaseholderSelect": "Сектор",
+
+		"selectOptions": {
+			"iportEx": "Импорт и Экспорт",
+			"invest": "Инвестици",
+			"textpro": "Текстильная промышленность",
+			"tours": "Туризм",
+			"craft": "Строительство"
+		}
 	},
 
 	"ImportProducts": {

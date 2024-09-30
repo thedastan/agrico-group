@@ -8,23 +8,17 @@ import {
 	Stack,
 	Text
 } from '@chakra-ui/react'
-import { useTranslations } from 'next-intl'
+import { NextIntlClientProvider, useTranslations } from 'next-intl'
 import Link from 'next/link'
 
 import FeedbackForm from '@/components/feedback-form'
 import BgLines from '@/components/ui/other/BgLines'
 
 import {
-	EMAIL_ADDRESS,
-	EMAIL_ADDRESS_LINK,
 	INSTAGRAM,
-	INSTAGRAM_LINK,
 	LOCATION,
-	LOCATION_LINK,
 	MOTION_WEB_LINK,
-	PHONE_NUMBER,
-	TELEGRAM_LINK,
-	WHATSAPP_LINK
+	PHONE_NUMBER
 } from '@/constants/admin'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
@@ -34,8 +28,16 @@ import { IHeaderNav, social_contact } from '../data'
 interface FooterClientCompProps {
 	header_nav: IHeaderNav[]
 }
+
 const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 	const t = useTranslations('FooterClientComp')
+	const selectOptions = [
+		t('selectOptions.iportEx'),
+		t('selectOptions.invest'),
+		t('selectOptions.textpro'),
+		t('selectOptions.tours'),
+		t('selectOptions.craft')
+	]
 	return (
 		<Box
 			mt={{ md: '200px', base: '0' }}
@@ -101,7 +103,12 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 								</Text>
 							</Box>
 						</Box>
-						<FeedbackForm />
+						<FeedbackForm
+							button_name={t('button')}
+							message_plaseholder={t('message_plaseholder')}
+							options={selectOptions}
+							message_plaseholderSelect={t('message_plaseholderSelect')}
+						/>
 					</Flex>
 				</Container>
 				<Box
@@ -134,12 +141,6 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 								color='#FFFFFFE5'
 								fontWeight='400'
 							>
-								{/* <Link href={LOCATION_LINK}>{LOCATION}</Link>
-								<Link href={`mailto:${EMAIL_ADDRESS_LINK}`}>
-									{EMAIL_ADDRESS}
-								</Link>
-								<Link href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</Link> */}
-
 								<Box
 									display='flex'
 									flexDirection='column'

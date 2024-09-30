@@ -2,6 +2,7 @@
 
 import { Box, Input, Stack, Textarea } from '@chakra-ui/react'
 import axios from 'axios'
+import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import {
@@ -30,8 +31,21 @@ interface IFormTelegram {
 	section: string
 }
 
-const FeedbackForm = () => {
+interface IFormProps {
+	button_name: string
+	message_plaseholder: string
+	options: string[]
+	message_plaseholderSelect: string
+}
+
+const FeedbackForm = ({
+	button_name,
+	message_plaseholder,
+	message_plaseholderSelect,
+	options
+}: IFormProps) => {
 	const { register, handleSubmit, reset } = useForm<IFormTelegram>()
+	// const t = useTranslations('Form')
 
 	const TOKEN = process.env.NEXT_PUBLIC_TG_TOKEN
 	const CHAT_ID = process.env.NEXT_PUBLIC_TG_CHAT_ID
@@ -93,15 +107,17 @@ const FeedbackForm = () => {
 					<SelectComponent
 						register={register}
 						required={true}
+						options={options}
+						message_plaseholderSelect={message_plaseholderSelect}
 					/>
 
 					<PhoneInputComponent
 						{...register('number', { required: true })}
-						placeholder='Номер телефона'
+						placeholder='phone'
 					/>
 
 					<Textarea
-						placeholder='Сообщение'
+						placeholder={message_plaseholder}
 						{...register('message', { required: true })}
 					/>
 				</Stack>
@@ -112,7 +128,7 @@ const FeedbackForm = () => {
 					type='submit'
 					bg='#7BBA39'
 				>
-					Отправить
+					{button_name}
 				</DefButton>
 			</form>
 		</Box>

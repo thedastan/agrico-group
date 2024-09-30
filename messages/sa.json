@@ -191,7 +191,18 @@
 		"text1": "جميع الحقوق محفوظة. حقوق النشر © 2024",
 		"text2": "تم تطويره بواسطة Motion Web LLC",
 
-		"LOCATION": "بيشكيك، شارع رزاقوفا 32"
+		"LOCATION": "بيشكيك، شارع رزاقوفا 32",
+
+		"button": "إرسال",
+		"message_plaseholder": "رسالة",
+		"message_plaseholderSelect": "القطاع",
+		"selectOptions": {
+			"iportEx": "استيراد وتصدير",
+			"invest": "استثمارات",
+			"textpro": "صناعة النسيج",
+			"tours": "السياحة",
+			"craft": "البناء"
+		}
 	},
 	"ImportProducts": {
 		"name": "السلع المستوردة",

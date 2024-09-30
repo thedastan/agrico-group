@@ -1,26 +1,34 @@
 import { Select } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import { UseFormRegister } from 'react-hook-form'
 
 interface SelectComponentProps {
-	register: UseFormRegister<any> // To use react-hook-form register
+	register: UseFormRegister<any>
 	required?: boolean
+	options: string[]
+	message_plaseholderSelect: string
 }
 const SelectComponent: React.FC<SelectComponentProps> = ({
 	register,
-	required = false
+	required = false,
+	options,
+	message_plaseholderSelect
 }) => {
+	// const t = useTranslations('SelectComponent')
+
 	return (
 		<Select
-			placeholder='Выберите раздел'
+			placeholder={message_plaseholderSelect}
 			{...register('section', { required })}
 		>
-			<option value='Импорт и Экспорт'>Импорт и Экспорт</option>
-			<option value='Инвестиции'>Инвестиции</option>
-			<option value='Текстильная промышленность'>
-				Текстильная промышленность
-			</option>
-			<option value='Туризм'>Туризм</option>
-			<option value='Туризм'>Строительство</option>
+			{options.map((el, index) => (
+				<option
+					key={index}
+					value={el}
+				>
+					{el}
+				</option>
+			))}
 		</Select>
 	)
 }
