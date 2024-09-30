@@ -12,9 +12,7 @@ const ExportHero = () => {
 
 	return (
 		<Box pt={{ md: '6', base: '102px' }}>
-			<GiantText display={{ md: 'none', base: 'block' }}>
-				Импорт и Экспорт из Кыргызстана
-			</GiantText>
+			<GiantText display={{ md: 'none', base: 'block' }}>{t('expo')}</GiantText>
 			<Box
 				data-aos='fade-right'
 				w='100%'

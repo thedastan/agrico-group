@@ -19,9 +19,12 @@ import { IoMdCheckmark } from 'react-icons/io'
 import { inter } from '@/constants/fonts/fonts'
 
 // import ProgramImage1 from '@/assets/img/tour-program-1.png'
-import ProgramImage2 from '@/assets/img/tour-program-2.png'
-import ProgramImage3 from '@/assets/img/tour-program-3.png'
-import ProgramImage4 from '@/assets/img/tour-program-4.png'
+// import ProgramImage2 from '@/assets/img/tour-program-2.png'
+// import ProgramImage3 from '@/assets/img/tour-program-3.png'
+// import ProgramImage4 from '@/assets/img/tour-program-4.png'
+import ProgramImage4 from '@/assets/img/thumb 01.png'
+import ProgramImage2 from '@/assets/img/thumb 02 (style).png'
+import ProgramImage3 from '@/assets/img/thumb 03 (style).png'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
@@ -80,16 +83,18 @@ const TourProgram = () => {
 								<Box
 									display='flex'
 									flexDirection={{ md: 'column', base: 'row' }}
+									gap={2}
 								>
 									{images.map((image, index) => (
 										<Tab
 											key={index}
-											w={{ md: 155, base: 100 }}
-											h={{ md: 150, base: 100 }}
+											w={{ md: 145, base: 100 }}
+											h={{ md: 140, base: 100 }}
 											p={1}
 											_selected={{ color: 'black', bg: '#F4F5F6' }}
 										>
 											<Image
+												style={{ width: '100%' }}
 												src={image}
 												alt={`Thumbnail ${index + 1}`}
 											/>

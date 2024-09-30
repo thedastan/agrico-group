@@ -47,7 +47,8 @@
 	},
 	"ExportHero": {
 		"title": "Import and Export from Kyrgyzstan",
-		"button": "Our Services"
+		"button": "Our Services",
+		"expo": "Import and Export from Kyrgyzstan"
 	},
 	"HowWeWork": {
 		"title": "How We Work",

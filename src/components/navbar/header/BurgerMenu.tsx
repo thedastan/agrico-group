@@ -124,7 +124,10 @@ const BurgerMenu = ({ header_nav, accardionData }: BurgerMenuProps) => {
 												</Text>
 											</Link>
 										))}
-										<Services accardionData={accardionData} />
+										<Services
+											accardionData={accardionData}
+											onClose={onClose}
+										/>
 										<LanguageSelect />
 									</Stack>
 								</Box>
