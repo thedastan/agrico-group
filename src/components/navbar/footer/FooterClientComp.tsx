@@ -17,10 +17,14 @@ import BgLines from '@/components/ui/other/BgLines'
 import {
 	EMAIL_ADDRESS,
 	EMAIL_ADDRESS_LINK,
+	INSTAGRAM,
+	INSTAGRAM_LINK,
 	LOCATION,
 	LOCATION_LINK,
 	MOTION_WEB_LINK,
-	PHONE_NUMBER
+	PHONE_NUMBER,
+	TELEGRAM_LINK,
+	WHATSAPP_LINK
 } from '@/constants/admin'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
@@ -130,12 +134,26 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 								color='#FFFFFFE5'
 								fontWeight='400'
 							>
-								<Link href={LOCATION_LINK}>{LOCATION}</Link>
+								{/* <Link href={LOCATION_LINK}>{LOCATION}</Link>
 								<Link href={`mailto:${EMAIL_ADDRESS_LINK}`}>
 									{EMAIL_ADDRESS}
 								</Link>
-								<Link href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</Link>
+								<Link href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</Link> */}
+
+								<Box
+									display='flex'
+									flexDirection='column'
+									gap={2}
+								>
+									<a href={LOCATION}>{t('LOCATION')}</a>
+									<a href={INSTAGRAM}>{INSTAGRAM}</a>
+									<a href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</a>
+								</Box>
 							</Stack>
+
+							{/* //////////////////// */}
+
+							{/* ////////////////// */}
 
 							<Flex
 								gap='48px'
