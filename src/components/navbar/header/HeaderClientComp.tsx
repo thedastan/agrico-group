@@ -4,6 +4,7 @@ import { Button, Container, Flex, IconButton, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 import { LuPhone } from 'react-icons/lu'
 
 import { IAccardion } from '@/components/home/about/data'
@@ -38,6 +39,12 @@ const HeaderClientComp = ({
 	accardionData
 }: HeaderClientCompProps) => {
 	const localActive = useTypedLocale()
+
+	const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+	const handleCloseMenu = () => {
+		setIsMenuOpen(false)
+	}
 
 	return (
 		<Flex
@@ -79,7 +86,10 @@ const HeaderClientComp = ({
 								</Text>
 							</Link>
 						))}
-						<Services accardionData={accardionData} />
+						<Services
+							accardionData={accardionData}
+							onClose={handleCloseMenu}
+						/>
 						<LanguageSelect />
 					</Flex>
 
