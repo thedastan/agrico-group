@@ -18,9 +18,9 @@ import { IoMdCheckmark } from 'react-icons/io'
 // Import useTranslations
 import { inter } from '@/constants/fonts/fonts'
 
-import ProgramImage4 from '@/assets/img/tour1.png'
-import ProgramImage2 from '@/assets/img/tour2.png'
-import ProgramImage3 from '@/assets/img/tour3.png'
+import ProgramImage4 from '@/assets/img/Olimphotel.jpg'
+import ProgramImage2 from '@/assets/img/arthotel.jpg'
+import ProgramImage3 from '@/assets/img/atrhotelroom.jpg'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
@@ -96,35 +96,58 @@ const TourProgram = () => {
 									<Tab
 										w={{ md: 145, base: 100 }}
 										h={{ md: 140, base: 100 }}
+										objectFit='cover'
+										overflow='hidden'
 										p={1}
 										_selected={{ color: 'black', bg: '#F4F5F6' }}
 									>
 										<Image
-											style={{ width: '100%' }}
+											style={{
+												width: '200px',
+												height: '100%',
+												objectFit: 'cover',
+												borderRadius: '10px'
+											}}
 											src={ProgramImage2}
 											alt='img'
 										/>
 									</Tab>
+
 									<Tab
 										w={{ md: 145, base: 100 }}
 										h={{ md: 140, base: 100 }}
+										objectFit='cover'
+										overflow='hidden'
 										p={1}
 										_selected={{ color: 'black', bg: '#F4F5F6' }}
 									>
 										<Image
-											style={{ width: '100%' }}
+											style={{
+												width: '100%',
+												height: '100%',
+												objectFit: 'cover',
+												borderRadius: '10px'
+											}}
 											src={ProgramImage4}
 											alt='img'
 										/>
 									</Tab>
+
 									<Tab
 										w={{ md: 145, base: 100 }}
 										h={{ md: 140, base: 100 }}
+										objectFit='cover'
+										overflow='hidden'
 										p={1}
 										_selected={{ color: 'black', bg: '#F4F5F6' }}
 									>
 										<Image
-											style={{ width: '100%' }}
+											style={{
+												width: '100%',
+												height: '100%',
+												objectFit: 'cover',
+												borderRadius: '10px'
+											}}
 											src={ProgramImage3}
 											alt='img'
 										/>
