@@ -16,6 +16,7 @@ import BgLines from '@/components/ui/other/BgLines'
 
 import {
 	EMAIL_ADDRESS,
+	EMAIL_ADDRESS_LINK,
 	INSTAGRAM,
 	LOCATION,
 	MOTION_WEB_LINK,
@@ -154,7 +155,7 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 										{t('LOCATION')}
 									</a>
 									<a
-										href={`mailto:{EMAIL_ADDRESS_LINK}`}
+										href={EMAIL_ADDRESS_LINK}
 										target='_blank'
 									>
 										{EMAIL_ADDRESS}

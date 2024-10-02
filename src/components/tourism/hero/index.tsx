@@ -28,11 +28,6 @@ const TourismHero = () => {
 						w='200px'
 						alignItems='center'
 						justifyContent='center'
-
-						// h='200px'
-						// overflow='hidden'
-						// rounded='50%'
-						// mt={-8}
 					>
 						<Image
 							width={400}

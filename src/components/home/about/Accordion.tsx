@@ -23,12 +23,8 @@ import useTypedLocale from '@/hooks/useLocale'
 
 import { IAccardion } from './data'
 
-// import { about_accordion } from './data'
-// import { useAccardionData } from './data'
-
 const AccordionComponent = ({ data }: { data: IAccardion[] }) => {
 	const localActive = useTypedLocale()
-	// const about_accordion = useAccardionData()
 	return (
 		<Accordion
 			allowToggle
@@ -159,10 +155,7 @@ const AccordionComponent = ({ data }: { data: IAccardion[] }) => {
 									display={{ md: 'none', base: 'block' }}
 									mt='3'
 								>
-									<Box
-										position='relative'
-										// maxW='381px'
-									>
+									<Box position='relative'>
 										<Box
 											w='100%'
 											h='220px'

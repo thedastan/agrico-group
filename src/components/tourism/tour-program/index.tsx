@@ -18,18 +18,14 @@ import { IoMdCheckmark } from 'react-icons/io'
 // Import useTranslations
 import { inter } from '@/constants/fonts/fonts'
 
-// import ProgramImage1 from '@/assets/img/tour-program-1.png'
-// import ProgramImage2 from '@/assets/img/tour-program-2.png'
-// import ProgramImage3 from '@/assets/img/tour-program-3.png'
-// import ProgramImage4 from '@/assets/img/tour-program-4.png'
-import ProgramImage4 from '@/assets/img/thumb 01.png'
-import ProgramImage2 from '@/assets/img/thumb 02 (style).png'
-import ProgramImage3 from '@/assets/img/thumb 03 (style).png'
+import ProgramImage4 from '@/assets/img/tour1.png'
+import ProgramImage2 from '@/assets/img/tour2.png'
+import ProgramImage3 from '@/assets/img/tour3.png'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
 const TourProgram = () => {
-	const t = useTranslations() // Get the translation function
+	const t = useTranslations()
 
 	const program = [
 		t('tourProgram.night1'),
@@ -40,7 +36,7 @@ const TourProgram = () => {
 		t('tourProgram.night6')
 	]
 
-	const images = [ProgramImage4, ProgramImage2, ProgramImage3]
+	// const images = [ProgramImage4, ProgramImage2, ProgramImage3]
 
 	return (
 		<Box
@@ -68,15 +64,27 @@ const TourProgram = () => {
 								justifyContent={{ md: 'start', base: 'center' }}
 								alignItems='center'
 							>
-								{images.map((image, index) => (
-									<TabPanel key={index}>
-										<Image
-											className='tours'
-											src={image}
-											alt={`Tour Program Image ${index + 1}`}
-										/>
-									</TabPanel>
-								))}
+								<TabPanel>
+									<Image
+										className='tours'
+										src={ProgramImage2}
+										alt='img'
+									/>
+								</TabPanel>
+								<TabPanel>
+									<Image
+										className='tours'
+										src={ProgramImage4}
+										alt='img'
+									/>
+								</TabPanel>
+								<TabPanel>
+									<Image
+										className='tours'
+										src={ProgramImage3}
+										alt='img'
+									/>
+								</TabPanel>
 							</TabPanels>
 
 							<TabList>
@@ -85,9 +93,7 @@ const TourProgram = () => {
 									flexDirection={{ md: 'column', base: 'row' }}
 									gap={2}
 								>
-									{/* {images.map((image, index) => ( */}
 									<Tab
-										// key={index}
 										w={{ md: 145, base: 100 }}
 										h={{ md: 140, base: 100 }}
 										p={1}
@@ -100,7 +106,6 @@ const TourProgram = () => {
 										/>
 									</Tab>
 									<Tab
-										// key={index}
 										w={{ md: 145, base: 100 }}
 										h={{ md: 140, base: 100 }}
 										p={1}
@@ -113,7 +118,6 @@ const TourProgram = () => {
 										/>
 									</Tab>
 									<Tab
-										// key={index}
 										w={{ md: 145, base: 100 }}
 										h={{ md: 140, base: 100 }}
 										p={1}
