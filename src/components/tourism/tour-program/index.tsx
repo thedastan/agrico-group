@@ -32,7 +32,7 @@ const TourProgram = () => {
 	const t = useTranslations() // Get the translation function
 
 	const program = [
-		t('tourProgram.night1'), // Use translation keys
+		t('tourProgram.night1'),
 		t('tourProgram.night2'),
 		t('tourProgram.night3'),
 		t('tourProgram.night4'),
@@ -85,21 +85,47 @@ const TourProgram = () => {
 									flexDirection={{ md: 'column', base: 'row' }}
 									gap={2}
 								>
-									{images.map((image, index) => (
-										<Tab
-											key={index}
-											w={{ md: 145, base: 100 }}
-											h={{ md: 140, base: 100 }}
-											p={1}
-											_selected={{ color: 'black', bg: '#F4F5F6' }}
-										>
-											<Image
-												style={{ width: '100%' }}
-												src={image}
-												alt={`Thumbnail ${index + 1}`}
-											/>
-										</Tab>
-									))}
+									{/* {images.map((image, index) => ( */}
+									<Tab
+										// key={index}
+										w={{ md: 145, base: 100 }}
+										h={{ md: 140, base: 100 }}
+										p={1}
+										_selected={{ color: 'black', bg: '#F4F5F6' }}
+									>
+										<Image
+											style={{ width: '100%' }}
+											src={ProgramImage2}
+											alt='img'
+										/>
+									</Tab>
+									<Tab
+										// key={index}
+										w={{ md: 145, base: 100 }}
+										h={{ md: 140, base: 100 }}
+										p={1}
+										_selected={{ color: 'black', bg: '#F4F5F6' }}
+									>
+										<Image
+											style={{ width: '100%' }}
+											src={ProgramImage4}
+											alt='img'
+										/>
+									</Tab>
+									<Tab
+										// key={index}
+										w={{ md: 145, base: 100 }}
+										h={{ md: 140, base: 100 }}
+										p={1}
+										_selected={{ color: 'black', bg: '#F4F5F6' }}
+									>
+										<Image
+											style={{ width: '100%' }}
+											src={ProgramImage3}
+											alt='img'
+										/>
+									</Tab>
+									{/* ))} */}
 								</Box>
 							</TabList>
 						</Tabs>
@@ -116,7 +142,7 @@ const TourProgram = () => {
 							color='#26422B'
 							lineHeight='43.54px'
 						>
-							{t('tourProgram.header')} {/* Use translation key for header */}
+							{t('tourProgram.header')}
 						</Text>
 						<Text
 							mt='26px'
@@ -127,7 +153,6 @@ const TourProgram = () => {
 							lineHeight='32px'
 						>
 							$1650{' '}
-							{/* You might want to use a translation key for price as well */}
 						</Text>
 						<Stack
 							spacing='3'

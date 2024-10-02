@@ -15,6 +15,7 @@ import FeedbackForm from '@/components/feedback-form'
 import BgLines from '@/components/ui/other/BgLines'
 
 import {
+	EMAIL_ADDRESS,
 	INSTAGRAM,
 	LOCATION,
 	MOTION_WEB_LINK,
@@ -147,7 +148,7 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 									gap={2}
 								>
 									<a href={LOCATION}>{t('LOCATION')}</a>
-									<a href={INSTAGRAM}>{INSTAGRAM}</a>
+									<a href={`mailto:{EMAIL_ADDRESS_LINK}`}>{EMAIL_ADDRESS}</a>
 									<a href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</a>
 								</Box>
 							</Stack>

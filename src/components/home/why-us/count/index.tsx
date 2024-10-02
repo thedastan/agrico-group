@@ -16,35 +16,48 @@ const Count = () => {
 			>
 				<Box
 					display='flex'
+					flexDirection='column'
 					alignItems='center'
 					justifyContent='center'
-					gap={1}
-					bg='white'
-					width='100px'
-					height='80px'
-					p={2}
-					transition='0.1s'
-					sx={{
-						clipPath:
-							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					_hover={{
+						'.box1': {
+							bg: 'gray.200',
+							transform: 'scale(1.05)'
+						},
+						'.box2': {
+							bg: 'gray.200'
+						}
 					}}
 				>
 					<Box
-						w={8}
-						mt={-2}
+						display='flex'
+						alignItems='center'
+						justifyContent='center'
+						gap={1}
+						bg='white'
+						borderRadius={5}
+						p={2}
+						className='box1'
+						transition='all 0.3s ease'
 					>
-						<img
-							style={{ borderRadius: '4px' }}
-							src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/800px-Flag_of_the_United_States_%28Pantone%29.svg.png'
-							alt=''
-						/>
+						<Box w={8}>
+							<img
+								style={{ borderRadius: '4px' }}
+								src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/800px-Flag_of_the_United_States_%28Pantone%29.svg.png'
+								alt=''
+							/>
+						</Box>
+						<Text fontSize={8}>{t('title1')}</Text>
 					</Box>
-					<Text
-						mt={-2}
-						fontSize={10}
-					>
-						{t('title1')}
-					</Text>
+					<Box
+						className='box2'
+						transform='rotate(45deg)'
+						bg='white'
+						w={3}
+						h={3}
+						mt='-6px'
+						transition='all 0.3s ease'
+					/>
 				</Box>
 			</Box>
 			<Box
@@ -53,294 +66,398 @@ const Count = () => {
 			>
 				<Box
 					display='flex'
+					flexDirection='column'
 					alignItems='center'
 					justifyContent='center'
-					gap={1}
-					bg='white'
-					width='100px'
-					height='80px'
-					p={2}
-					transition='0.1s'
-					sx={{
-						clipPath:
-							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					_hover={{
+						'.box1': {
+							bg: 'gray.200',
+							transform: 'scale(1.05)'
+						},
+						'.box2': {
+							bg: 'gray.200'
+						}
 					}}
 				>
 					<Box
-						w={8}
-						mt={-2}
+						display='flex'
+						alignItems='center'
+						justifyContent='center'
+						gap={1}
+						bg='white'
+						borderRadius={5}
+						p={2}
+						className='box1'
+						transition='all 0.3s ease'
 					>
-						<img
-							style={{ borderRadius: '4px' }}
-							src='https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg'
-							alt=''
-						/>
+						<Box w={8}>
+							<img
+								style={{ borderRadius: '4px' }}
+								src='https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg'
+								alt=''
+							/>
+						</Box>
+						<Text fontSize={8}>{t('title2')}</Text>
 					</Box>
-					<Text
-						mt={-2}
-						fontSize={10}
+					<Box
+						className='box2'
+						transform='rotate(45deg)'
+						bg='white'
+						w={3}
+						h={3}
+						mt='-6px'
+						transition='all 0.3s ease'
+					/>
+				</Box>
+			</Box>
+			<Box
+				ml={-4}
+				mt='110px'
+			>
+				<Box
+					display='flex'
+					flexDirection='column'
+					alignItems='center'
+					justifyContent='center'
+					_hover={{
+						'.box1': {
+							bg: 'gray.200',
+							transform: 'scale(1.05)'
+						},
+						'.box2': {
+							bg: 'gray.200'
+						}
+					}}
+				>
+					<Box
+						display='flex'
+						alignItems='center'
+						justifyContent='center'
+						gap={1}
+						bg='white'
+						borderRadius={5}
+						p={2}
+						className='box1'
+						transition='all 0.3s ease'
 					>
-						{t('title2')}
-					</Text>
+						<Box w={8}>
+							<img
+								style={{ borderRadius: '4px' }}
+								src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Flag_of_Kuwait.svg/250px-Flag_of_Kuwait.svg.png'
+								alt=''
+							/>
+						</Box>
+						<Text fontSize={8}>{t('title3')}</Text>
+					</Box>
+					<Box
+						className='box2'
+						transform='rotate(45deg)'
+						bg='white'
+						w={3}
+						h={3}
+						mt='-6px'
+						transition='all 0.3s ease'
+					/>
 				</Box>
 			</Box>
 			<Box
 				ml={-10}
-				mt='90px'
+				mt='140px'
 			>
 				<Box
 					display='flex'
+					flexDirection='column'
 					alignItems='center'
 					justifyContent='center'
-					gap={1}
-					bg='white'
-					width='100px'
-					height='80px'
-					p={2}
-					transition='0.1s'
-					sx={{
-						clipPath:
-							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					_hover={{
+						'.box1': {
+							bg: 'gray.200',
+							transform: 'scale(1.05)'
+						},
+						'.box2': {
+							bg: 'gray.200'
+						}
 					}}
 				>
 					<Box
-						w={8}
-						mt={-2}
+						display='flex'
+						alignItems='center'
+						justifyContent='center'
+						gap={1}
+						bg='white'
+						borderRadius={5}
+						p={2}
+						className='box1'
+						transition='all 0.3s ease'
 					>
-						<img
-							style={{ borderRadius: '4px' }}
-							src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Flag_of_Kuwait.svg/1200px-Flag_of_Kuwait.svg.png'
-							alt=''
-						/>
+						<Box w={8}>
+							<img
+								style={{ borderRadius: '4px' }}
+								src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/800px-Flag_of_Saudi_Arabia.svg.png'
+								alt=''
+							/>
+						</Box>
+						<Text fontSize={8}>{t('title4')}</Text>
 					</Box>
-					<Text
-						mt={-2}
-						fontSize={10}
-					>
-						{t('title3')}
-					</Text>
+					<Box
+						className='box2'
+						transform='rotate(45deg)'
+						bg='white'
+						w={3}
+						h={3}
+						mt='-6px'
+						transition='all 0.3s ease'
+					/>
 				</Box>
 			</Box>
 			<Box
-				ml={-20}
-				mt='130px'
+				ml='-120px'
+				mt='100px'
 			>
 				<Box
 					display='flex'
+					flexDirection='column'
 					alignItems='center'
 					justifyContent='center'
-					gap={1}
-					bg='white'
-					width='100px'
-					height='80px'
-					p={2}
-					transition='0.1s'
-					sx={{
-						clipPath:
-							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					_hover={{
+						'.box1': {
+							bg: 'gray.200',
+							transform: 'scale(1.05)'
+						},
+						'.box2': {
+							bg: 'gray.200'
+						}
 					}}
 				>
 					<Box
-						w={8}
-						mt={-2}
+						display='flex'
+						alignItems='center'
+						justifyContent='center'
+						gap={1}
+						bg='white'
+						borderRadius={5}
+						p={2}
+						className='box1'
+						transition='all 0.3s ease'
 					>
-						<img
-							style={{ borderRadius: '4px' }}
-							src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/800px-Flag_of_Saudi_Arabia.svg.png'
-							alt=''
-						/>
+						<Box w={8}>
+							<img
+								style={{ borderRadius: '4px' }}
+								src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Tajikistan.svg/800px-Flag_of_Tajikistan.svg.png'
+								alt=''
+							/>
+						</Box>
+						<Text fontSize={8}>{t('title5')}</Text>
 					</Box>
-					<Text
-						mt={-2}
-						fontSize={10}
-					>
-						{t('title4')}
-					</Text>
+					<Box
+						className='box2'
+						transform='rotate(45deg)'
+						bg='white'
+						w={3}
+						h={3}
+						mt='-6px'
+						transition='all 0.3s ease'
+					/>
 				</Box>
 			</Box>
 			<Box
-				ml={-20}
-				mt={14}
+				ml='-50px'
+				mt={28}
 			>
 				<Box
 					display='flex'
+					flexDirection='column'
 					alignItems='center'
 					justifyContent='center'
-					gap={1}
-					bg='white'
-					width='100px'
-					height='80px'
-					p={2}
-					transition='0.1s'
-					sx={{
-						clipPath:
-							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					_hover={{
+						'.box1': {
+							bg: 'gray.200',
+							transform: 'scale(1.05)'
+						},
+						'.box2': {
+							bg: 'gray.200'
+						}
 					}}
 				>
 					<Box
-						w={8}
-						mt={-2}
+						display='flex'
+						alignItems='center'
+						justifyContent='center'
+						gap={1}
+						bg='white'
+						borderRadius={5}
+						p={2}
+						className='box1'
+						transition='all 0.3s ease'
 					>
-						<img
-							style={{ borderRadius: '4px' }}
-							src='https://media.istockphoto.com/id/838747300/ru/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F/%D0%BD%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%84%D0%BB%D0%B0%D0%B3-%D1%82%D0%B0%D0%B4%D0%B6%D0%B8%D0%BA%D0%B8%D1%81%D1%82%D0%B0%D0%BD%D0%B0.jpg?s=612x612&w=0&k=20&c=Nde-H3HO7k8xaF80MBcmOiGEUqJ-v1jsmwvyGtF5VzQ='
-							alt=''
-						/>
+						<Box w={8}>
+							<img
+								style={{ borderRadius: '4px' }}
+								src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg'
+								alt=''
+							/>
+						</Box>
+						<Text fontSize={8}>{t('title6')}</Text>
 					</Box>
-					<Text
-						mt={-2}
-						fontSize={10}
-					>
-						{t('title5')}
-					</Text>
+					<Box
+						className='box2'
+						transform='rotate(45deg)'
+						bg='white'
+						w={3}
+						h={3}
+						mt='-6px'
+						transition='all 0.3s ease'
+					/>
 				</Box>
 			</Box>
 			<Box
-				ml={-20}
-				mt={10}
+				ml={-32}
+				mt={16}
 			>
 				<Box
 					display='flex'
+					flexDirection='column'
 					alignItems='center'
 					justifyContent='center'
-					gap={1}
-					bg='white'
-					width='100px'
-					height='80px'
-					p={2}
-					transition='0.1s'
-					sx={{
-						clipPath:
-							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					_hover={{
+						'.box1': {
+							bg: 'gray.200',
+							transform: 'scale(1.05)'
+						},
+						'.box2': {
+							bg: 'gray.200'
+						}
 					}}
 				>
 					<Box
-						w={8}
-						mt={-2}
+						display='flex'
+						alignItems='center'
+						justifyContent='center'
+						gap={1}
+						bg='white'
+						borderRadius={5}
+						p={2}
+						className='box1'
+						transition='all 0.3s ease'
 					>
-						<img
-							style={{ borderRadius: '4px' }}
-							src='https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Uzbekistan.svg'
-							alt=''
-						/>
+						<Box w={8}>
+							<img
+								style={{ borderRadius: '4px' }}
+								src='https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Uzbekistan.svg'
+								alt=''
+							/>
+						</Box>
+						<Text fontSize={8}>{t('title7')}</Text>
 					</Box>
-					<Text
-						mt={-2}
-						fontSize={10}
-					>
-						{t('title6')}
-					</Text>
+					<Box
+						className='box2'
+						transform='rotate(45deg)'
+						bg='white'
+						w={3}
+						h={3}
+						mt='-6px'
+						transition='all 0.3s ease'
+					/>
 				</Box>
 			</Box>
 			<Box
-				ml={-20}
-				mt={20}
+				ml={-10}
+				mt='70px'
 			>
 				<Box
 					display='flex'
+					flexDirection='column'
 					alignItems='center'
 					justifyContent='center'
-					gap={1}
-					bg='white'
-					width='100px'
-					height='80px'
-					p={2}
-					transition='0.1s'
-					sx={{
-						clipPath:
-							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					_hover={{
+						'.box1': {
+							bg: 'gray.200',
+							transform: 'scale(1.05)'
+						},
+						'.box2': {
+							bg: 'gray.200'
+						}
 					}}
 				>
 					<Box
-						w={8}
-						mt={-2}
+						display='flex'
+						alignItems='center'
+						justifyContent='center'
+						gap={1}
+						bg='white'
+						borderRadius={5}
+						p={2}
+						className='box1'
+						transition='all 0.3s ease'
 					>
-						<img
-							style={{ borderRadius: '4px' }}
-							src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg'
-							alt=''
-						/>
+						<Box w={8}>
+							<img
+								style={{ borderRadius: '4px' }}
+								src='https://akorda.kz/assets/media/flag_mediumThumb.jpg'
+								alt=''
+							/>
+						</Box>
+						<Text fontSize={8}>{t('title8')}</Text>
 					</Box>
-					<Text
-						mt={-2}
-						fontSize={10}
-					>
-						{t('title7')}
-					</Text>
+					<Box
+						className='box2'
+						transform='rotate(45deg)'
+						bg='white'
+						w={3}
+						h={3}
+						mt='-6px'
+						transition='all 0.3s ease'
+					/>
 				</Box>
 			</Box>
 			<Box
-				ml={-20}
-				mt='50px'
+				ml={4}
+				mt={6}
 			>
 				<Box
 					display='flex'
+					flexDirection='column'
 					alignItems='center'
 					justifyContent='center'
-					gap={1}
-					bg='white'
-					width='100px'
-					height='80px'
-					p={2}
-					transition='0.1s'
-					sx={{
-						clipPath:
-							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					_hover={{
+						'.box1': {
+							bg: 'gray.200',
+							transform: 'scale(1.05)'
+						},
+						'.box2': {
+							bg: 'gray.200'
+						}
 					}}
 				>
 					<Box
-						w={8}
-						mt={-2}
+						display='flex'
+						alignItems='center'
+						justifyContent='center'
+						gap={1}
+						bg='white'
+						borderRadius={5}
+						p={2}
+						className='box1'
+						transition='all 0.3s ease'
 					>
-						<img
-							style={{ borderRadius: '4px' }}
-							src='https://akorda.kz/assets/media/flag_mediumThumb.jpg'
-							alt=''
-						/>
+						<Box w={8}>
+							<img
+								style={{ borderRadius: '4px' }}
+								src='https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Russia.svg'
+								alt=''
+							/>
+						</Box>
+						<Text fontSize={8}>{t('title9')}</Text>
 					</Box>
-					<Text
-						mt={-2}
-						fontSize={10}
-					>
-						{t('title8')}
-					</Text>
-				</Box>
-			</Box>
-			<Box
-				ml={-20}
-				mt={2}
-			>
-				<Box
-					display='flex'
-					alignItems='center'
-					justifyContent='center'
-					gap={1}
-					bg='white'
-					width='100px'
-					height='80px'
-					p={2}
-					transition='0.1s'
-					sx={{
-						clipPath:
-							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
-					}}
-				>
 					<Box
-						w={8}
-						mt={-2}
-					>
-						<img
-							style={{ borderRadius: '4px' }}
-							src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs3Nv1dUHgTVa6Ic6VI-NH3BTQixaZmoLItQ&s'
-							alt=''
-						/>
-					</Box>
-					<Text
-						mt={-2}
-						fontSize={10}
-					>
-						{t('title9')}
-					</Text>
+						className='box2'
+						transform='rotate(45deg)'
+						bg='white'
+						w={3}
+						h={3}
+						mt='-6px'
+						transition='all 0.3s ease'
+					/>
 				</Box>
 			</Box>
 			<Box
@@ -349,35 +466,48 @@ const Count = () => {
 			>
 				<Box
 					display='flex'
+					flexDirection='column'
 					alignItems='center'
 					justifyContent='center'
-					gap={1}
-					bg='white'
-					width='100px'
-					height='80px'
-					p={2}
-					transition='0.1s'
-					sx={{
-						clipPath:
-							'polygon(0 24%, 100% 22%, 100% 61%, 56% 63%, 48% 75%, 40% 64%, 0 63%)'
+					_hover={{
+						'.box1': {
+							bg: 'gray.200',
+							transform: 'scale(1.05)'
+						},
+						'.box2': {
+							bg: 'gray.200'
+						}
 					}}
 				>
 					<Box
-						w={8}
-						mt={-2}
+						display='flex'
+						alignItems='center'
+						justifyContent='center'
+						gap={1}
+						bg='white'
+						borderRadius={5}
+						p={2}
+						className='box1'
+						transition='all 0.3s ease'
 					>
-						<img
-							style={{ borderRadius: '4px' }}
-							src='https://masterflag.ru/img/info-flagi/world/kitay.png'
-							alt=''
-						/>
+						<Box w={8}>
+							<img
+								style={{ borderRadius: '4px' }}
+								src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png'
+								alt=''
+							/>
+						</Box>
+						<Text fontSize={8}>{t('title10')}</Text>
 					</Box>
-					<Text
-						mt={-2}
-						fontSize={10}
-					>
-						{t('title10')}
-					</Text>
+					<Box
+						className='box2'
+						transform='rotate(45deg)'
+						bg='white'
+						w={3}
+						h={3}
+						mt='-6px'
+						transition='all 0.3s ease'
+					/>
 				</Box>
 			</Box>
 		</Box>

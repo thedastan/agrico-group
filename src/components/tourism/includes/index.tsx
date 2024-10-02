@@ -8,11 +8,10 @@ import { inter } from '@/constants/fonts/fonts'
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
 const ProgramIncludes = () => {
-	const t = useTranslations() // Get the t function from useTranslations hook
+	const t = useTranslations()
 
-	// Use translation keys for the list items
 	const list = [
-		t('programIncludes.accommodation'), // Use translation keys
+		t('programIncludes.accommodation'),
 		t('programIncludes.transfer'),
 		t('programIncludes.driverGuide'),
 		t('programIncludes.internetMap'),
@@ -21,10 +20,7 @@ const ProgramIncludes = () => {
 	]
 
 	return (
-		<Box
-			mt={{ md: '85px', base: '120px' }}
-			data-aos='zoom-in'
-		>
+		<Box mt={{ md: '85px', base: '120px' }}>
 			<Container maxW={CONTAINER_WIDTH}>
 				<Text
 					className={inter.className}

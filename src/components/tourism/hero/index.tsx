@@ -61,13 +61,13 @@ const TourismHero = () => {
 						gap='100px'
 					>
 						<GiantText
-							data-aos='fade-right'
+							// data-aos='fade-right'
 							maxW='650px'
 						>
 							{t('title')}
 						</GiantText>
 						<Box
-							data-aos='fade-left'
+							// data-aos='fade-left'
 							maxW='499px'
 							display={{ md: 'block', base: 'none' }}
 						>
