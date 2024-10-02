@@ -40,7 +40,10 @@ const TourismHero = () => {
 							alt='Tour-Logo'
 							className='full-image'
 						/>
-						<Link href='https://www.instagram.com/jamal_travel_kg'>
+						<Link
+							href='https://www.instagram.com/jamal_travel_kg'
+							target='_blank'
+						>
 							<Button
 								w='100%'
 								mt={6}

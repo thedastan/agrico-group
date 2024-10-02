@@ -147,9 +147,24 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 									flexDirection='column'
 									gap={2}
 								>
-									<a href={LOCATION}>{t('LOCATION')}</a>
-									<a href={`mailto:{EMAIL_ADDRESS_LINK}`}>{EMAIL_ADDRESS}</a>
-									<a href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</a>
+									<a
+										href={LOCATION}
+										target='_blank'
+									>
+										{t('LOCATION')}
+									</a>
+									<a
+										href={`mailto:{EMAIL_ADDRESS_LINK}`}
+										target='_blank'
+									>
+										{EMAIL_ADDRESS}
+									</a>
+									<a
+										href={`tel:${PHONE_NUMBER}`}
+										target='_blank'
+									>
+										{PHONE_NUMBER}
+									</a>
 								</Box>
 							</Stack>
 
@@ -197,7 +212,12 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 							px={{ md: '71px', base: '4' }}
 						>
 							<Text>{t('text1')}</Text>
-							<Link href={MOTION_WEB_LINK}>{t('text2')}</Link>
+							<Link
+								href={MOTION_WEB_LINK}
+								target='_blank'
+							>
+								{t('text2')}
+							</Link>
 						</Flex>
 					</Box>
 					<BgLines />
