@@ -2,7 +2,6 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 WWW.AGRICO-GROUP.ORG WEBSITE
-веб-сайт
 
 First, run the development server:
 
