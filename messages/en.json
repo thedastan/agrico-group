@@ -240,5 +240,11 @@
 		"title8": "Kazakhstan",
 		"title9": "Russia",
 		"title10": "China"
+	},
+	"useServices": {
+		"sectors": "Sectors"
+	},
+	"useAdress": {
+		"LOCATION": "Bishkek, Razzakov Street 32"
 	}
 }

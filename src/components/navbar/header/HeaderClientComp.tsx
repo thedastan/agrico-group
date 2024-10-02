@@ -26,17 +26,22 @@ import BurgerMenu from './BurgerMenu'
 import LanguageSelect from './LanguageSelect'
 import NavbarSelect from './NavbarSelect'
 import Services from './Services'
+import { IAdressNav, IServicesNav } from './useServices'
 
 interface HeaderClientCompProps {
 	header_nav: IHeaderNav[]
 	call_button: string
 	accardionData: IAccardion[]
+	sectorsOp: IServicesNav[]
+	adressBur: IAdressNav[]
 }
 
 const HeaderClientComp = ({
 	call_button,
 	header_nav,
-	accardionData
+	accardionData,
+	sectorsOp,
+	adressBur
 }: HeaderClientCompProps) => {
 	const localActive = useTypedLocale()
 
@@ -89,6 +94,7 @@ const HeaderClientComp = ({
 						<Services
 							accardionData={accardionData}
 							onClose={handleCloseMenu}
+							sectorsOp={sectorsOp}
 						/>
 						<LanguageSelect />
 					</Flex>
@@ -102,6 +108,8 @@ const HeaderClientComp = ({
 						<BurgerMenu
 							header_nav={header_nav}
 							accardionData={accardionData}
+							sectorsOp={sectorsOp}
+							adressBur={adressBur}
 						/>
 						<Link href={DASHBOARD_PAGES.HOME(localActive)}>
 							<Image

@@ -241,5 +241,11 @@
 		"title8": "كازاخستان",
 		"title9": "روسيا",
 		"title10": "الصين"
+	},
+	"useServices": {
+		"sectors": "قطاعات"
+	},
+	"useAdress": {
+		"LOCATION": "بيشكيك، شارع رزاقوفا 32"
 	}
 }

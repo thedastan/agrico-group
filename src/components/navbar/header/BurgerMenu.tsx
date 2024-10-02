@@ -11,6 +11,7 @@ import {
 	Text,
 	useDisclosure
 } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -29,14 +30,23 @@ import { IHeaderNav } from '../data'
 
 import LanguageSelect from './LanguageSelect'
 import Services from './Services'
+import Adress from './adress'
+import { IAdressNav, IServicesNav } from './useServices'
 
 interface BurgerMenuProps {
 	header_nav: IHeaderNav[]
 	accardionData: IAccardion[]
+	sectorsOp: IServicesNav[]
+	adressBur: IAdressNav[]
 
 	// call_button: string
 }
-const BurgerMenu = ({ header_nav, accardionData }: BurgerMenuProps) => {
+const BurgerMenu = ({
+	header_nav,
+	accardionData,
+	sectorsOp,
+	adressBur
+}: BurgerMenuProps) => {
 	const { isOpen, onClose, onOpen } = useDisclosure()
 	return (
 		<Box display={{ md: 'none', base: 'block' }}>
@@ -127,6 +137,7 @@ const BurgerMenu = ({ header_nav, accardionData }: BurgerMenuProps) => {
 										<Services
 											accardionData={accardionData}
 											onClose={onClose}
+											sectorsOp={sectorsOp}
 										/>
 										<LanguageSelect />
 									</Stack>
@@ -139,7 +150,10 @@ const BurgerMenu = ({ header_nav, accardionData }: BurgerMenuProps) => {
 									fontWeight='400'
 									textAlign='center'
 								>
-									<Link href={LOCATION_LINK}>{LOCATION}</Link>
+									{/* <Link href={LOCATION_LINK}>{LOCATION}</Link> */}
+									{adressBur.map(el => (
+										<Link href={LOCATION_LINK}>{el.name}</Link>
+									))}
 									<Link href={`mailto:{EMAIL_ADDRESS_LINK}`}>
 										{EMAIL_ADDRESS}
 									</Link>
