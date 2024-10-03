@@ -26,10 +26,9 @@ export function useHeaderNav(): IHeaderNav[] {
 			name: t('about'),
 			path: '#about'
 		},
-
 		{
-			name: t('contacts'),
-			path: '#contact'
+			name: t('constructions'),
+			path: DASHBOARD_PAGES.CONSTRUCTIONS(localActive)
 		}
 	]
 }
