@@ -2,6 +2,7 @@
 	"Header": {
 		"Navbar": {
 			"main": "Главная",
+			"constructions": "Строительства",
 			"about": "О нас",
 			"services": "Услуги",
 			"contacts": "Контакты"

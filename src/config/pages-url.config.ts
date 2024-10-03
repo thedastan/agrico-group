@@ -18,5 +18,8 @@ class DASHBOARD {
 	TOURISM = (locale: IntlType) => {
 		return `${this.root + locale}/tourism`
 	}
+	CONSTRUCTIONS = (locale: IntlType) => {
+		return `${this.root + locale}/constructions`
+	}
 }
 export const DASHBOARD_PAGES = new DASHBOARD()

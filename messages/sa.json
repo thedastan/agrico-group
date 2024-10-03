@@ -2,6 +2,7 @@
 	"Header": {
 		"Navbar": {
 			"main": "بيت",
+			"constructions": "الإنشاءات",
 			"about": "معلومات عنا",
 			"services": "خدمات",
 			"contacts": "اتصالات"
