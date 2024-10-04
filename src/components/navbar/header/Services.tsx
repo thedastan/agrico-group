@@ -38,8 +38,8 @@ const Services = ({
 					fontWeight={{ md: '400', base: '500' }}
 					color='#FFFFFF'
 				>
-					{sectorsOp.map(el => (
-						<h1>{el.name}</h1>
+					{sectorsOp.map((el, idx) => (
+						<h1 key={idx}>{el.name}</h1>
 					))}
 					<IoChevronDown />
 				</Flex>

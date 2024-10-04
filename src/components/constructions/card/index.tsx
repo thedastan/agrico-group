@@ -96,6 +96,8 @@ const ConstructionCard = ({ el }: { el: IConstruction }) => {
 							flexDirection='column'
 							overflowY={{ md: 'auto', base: 'initial' }}
 							h='100%'
+							maxW={{ md: '600px', base: '100%' }}
+							w='100%'
 							className='unscroll'
 						>
 							<Stack
@@ -121,7 +123,7 @@ const ConstructionCard = ({ el }: { el: IConstruction }) => {
 
 						<Box
 							py={{ md: '40px', base: '0' }}
-							maxW={{ md: '400px', base: '100%' }}
+							maxW={{ lg: '400px', md: '300px', base: '100%' }}
 							overflowY={{ md: 'auto', base: 'initial' }}
 							h='100%'
 							className='unscroll'
