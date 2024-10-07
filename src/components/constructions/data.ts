@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import { StaticImageData } from 'next/image'
 
 import Image1 from '@/assets/img/construction-1.jpeg'
@@ -17,79 +18,122 @@ export interface IConstruction {
 	amount: string
 	gallery: StaticImageData[]
 	link: string
+	adress: string
+	srok: string
+	summa: string
+	end_craft: string
+	start_craft: string
+	look_video: string
 }
 
-export const construction: IConstruction[] = [
-	{
-		title: 'Солнечный берег',
-		description:
-			'Жилой комплекс бизнес-класса, расположенный в живописной части города, рядом с набережной. Комплекс включает 4 дома по 12 этажей с просторными квартирами и панорамными окнами. ',
-		image: Image1,
-		start_date: 'Январь 2023',
-		end_date: 'Июль 2025',
-		payback_period: '4 года',
-		amount: '150 млн',
-		link: '',
-		gallery: [Image1, Image2, Image3]
-	},
-	{
-		title: 'Дели люкс',
-		description:
-			'Жилой комплекс бизнес-класса, расположенный в живописной части города, рядом с набережной. Комплекс включает 4 дома по 12 этажей с просторными квартирами и панорамными окнами. ',
-		image: Image4,
-		start_date: 'Январь 2023',
-		end_date: 'Июль 2025',
-		payback_period: '4 года',
-		amount: '150 млн',
-		link: '',
-		gallery: [Image1, Image2, Image3]
-	},
-	{
-		title: 'Солнечный берег',
-		description:
-			'Жилой комплекс бизнес-класса, расположенный в живописной части города, рядом с набережной. Комплекс включает 4 дома по 12 этажей с просторными квартирами и панорамными окнами. ',
-		image: Image2,
-		start_date: 'Январь 2023',
-		end_date: 'Июль 2025',
-		payback_period: '4 года',
-		amount: '150 млн',
-		link: '',
-		gallery: [Image1, Image2, Image3]
-	},
-	{
-		title: 'Солнечный берег',
-		description:
-			'Жилой комплекс бизнес-класса, расположенный в живописной части города, рядом с набережной. Комплекс включает 4 дома по 12 этажей с просторными квартирами и панорамными окнами. ',
-		image: Image1,
-		start_date: 'Январь 2023',
-		end_date: 'Июль 2025',
-		payback_period: '4 года',
-		amount: '150 млн',
-		link: '',
-		gallery: [Image1, Image2, Image3]
-	},
-	{
-		title: 'Солнечный берег',
-		description:
-			'Жилой комплекс бизнес-класса, расположенный в живописной части города, рядом с набережной. Комплекс включает 4 дома по 12 этажей с просторными квартирами и панорамными окнами. ',
-		image: Image5,
-		start_date: 'Январь 2023',
-		end_date: 'Июль 2025',
-		payback_period: '4 года',
-		amount: '150 млн',
-		link: '',
-		gallery: [Image1, Image2, Image3]
-	},
-	{
-		title: 'Дели люкс',
-		description:
-			'Жилой комплекс бизнес-класса, расположенный в живописной части города, рядом с набережной. Комплекс включает 4 дома по 12 этажей с просторными квартирами и панорамными окнами. ',
-		image: Image6,
-		start_date: 'Январь 2023',
-		end_date: 'Июль 2025',
-		payback_period: '4 года',
-		amount: '150 млн',
-		link: '',
-		gallery: [Image1, Image2, Image3]
-	}
-]
+export const ConstructionComponent = () => {
+	const t = useTranslations('ConstructionComponent')
+	// используем хук перевода
+
+	const construction: IConstruction[] = [
+		{
+			title: t('title1'),
+			description: t('dis'),
+			image: Image1,
+			start_date: t('start_date'),
+			end_date: t('end_date'),
+			payback_period: t('payback_period'),
+			amount: t('amount'),
+			link: '',
+			gallery: [Image1, Image2, Image3],
+			adress: t('adress'),
+			srok: t('srok'),
+			summa: t('summa'),
+			end_craft: t('end_craft'),
+			start_craft: t('start_craft'),
+			look_video: t('look_video')
+		},
+		{
+			title: t('title2'),
+			description: t('dis'),
+			image: Image4,
+			start_date: t('start_date'),
+			end_date: t('end_date'),
+			payback_period: t('payback_period'),
+			amount: t('amount'),
+			link: '',
+			gallery: [Image1, Image2, Image3],
+			adress: t('adress'),
+			srok: t('srok'),
+			summa: t('summa'),
+			end_craft: t('end_craft'),
+			start_craft: t('start_craft'),
+			look_video: t('look_video')
+		},
+		{
+			title: t('title1'),
+			description: t('dis'),
+			image: Image2,
+			start_date: t('start_date'),
+			end_date: t('end_date'),
+			payback_period: t('payback_period'),
+			amount: t('amount'),
+			link: '',
+			gallery: [Image1, Image2, Image3],
+			adress: t('adress'),
+			srok: t('srok'),
+			summa: t('summa'),
+			end_craft: t('end_craft'),
+			start_craft: t('start_craft'),
+			look_video: t('look_video')
+		},
+		{
+			title: t('title1'),
+			description: t('dis'),
+			image: Image1,
+			start_date: t('start_date'),
+			end_date: t('end_date'),
+			payback_period: t('payback_period'),
+			amount: t('amount'),
+			link: '',
+			gallery: [Image1, Image2, Image3],
+			adress: t('adress'),
+			srok: t('srok'),
+			summa: t('summa'),
+			end_craft: t('end_craft'),
+			start_craft: t('start_craft'),
+			look_video: t('look_video')
+		},
+		{
+			title: t('title1'),
+			description: t('dis'),
+			image: Image5,
+			start_date: t('start_date'),
+			end_date: t('end_date'),
+			payback_period: t('payback_period'),
+			amount: t('amount'),
+			link: '',
+			gallery: [Image1, Image2, Image3],
+			adress: t('adress'),
+			srok: t('srok'),
+			summa: t('summa'),
+			end_craft: t('end_craft'),
+			start_craft: t('start_craft'),
+			look_video: t('look_video')
+		},
+		{
+			title: t('title2'),
+			description: t('dis'),
+			image: Image6,
+			start_date: t('start_date'),
+			end_date: t('end_date'),
+			payback_period: t('payback_period'),
+			amount: t('amount'),
+			link: '',
+			gallery: [Image1, Image2, Image3],
+			adress: t('adress'),
+			srok: t('srok'),
+			summa: t('summa'),
+			end_craft: t('end_craft'),
+			start_craft: t('start_craft'),
+			look_video: t('look_video')
+		}
+	]
+
+	return construction
+}

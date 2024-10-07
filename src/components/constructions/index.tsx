@@ -1,6 +1,6 @@
-'use client'
-
+// 'use client'
 import { Box, Center, Divider, SimpleGrid } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 import Logo from '@/assets/img/construction-logo.svg'
@@ -8,9 +8,12 @@ import Logo from '@/assets/img/construction-logo.svg'
 import GiantText from '../ui/texts/GiantText'
 
 import ConstructionCard from './card'
-import { construction } from './data'
+import { ConstructionComponent } from './data'
 
 const Constructions = () => {
+	const t = useTranslations('Constructions')
+	const about_accordion = ConstructionComponent()
+
 	return (
 		<Box pt='77px'>
 			<Center>
@@ -23,7 +26,7 @@ const Constructions = () => {
 				mt='18px'
 				textAlign='center'
 			>
-				Наши обЪекты
+				{t('title')}
 			</GiantText>
 
 			<Divider
@@ -42,7 +45,7 @@ const Constructions = () => {
 				w='100%'
 				mx='auto'
 			>
-				{construction.map((el, idx) => (
+				{about_accordion.map((el, idx) => (
 					<ConstructionCard
 						el={el}
 						key={idx}

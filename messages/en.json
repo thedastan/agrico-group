@@ -247,5 +247,24 @@
 	},
 	"useAdress": {
 		"LOCATION": "Bishkek, Razzakov Street 32"
+	},
+
+	"ConstructionComponent": {
+		"title1": "Sunny Beach",
+		"title2": "Delhi Lux",
+		"dis": "A business-class residential complex located in a picturesque part of the city, near the embankment. The complex includes 4 buildings of 12 floors with spacious apartments and panoramic windows.",
+		"start_date": "January 2023",
+		"end_date": "July 2025",
+		"payback_period": "4 years",
+		"amount": "150 million",
+		"srok": "Payback period:",
+		"summa": "Investment amount:",
+		"end_craft": "End of construction:",
+		"start_craft": "Start of construction:",
+		"look_video": "Watch video",
+		"adress": "Kyrgyzstan/Bishkek, Budennogo St., 134/2"
+	},
+	"Constructions": {
+		"title": "Our Projects"
 	}
 }

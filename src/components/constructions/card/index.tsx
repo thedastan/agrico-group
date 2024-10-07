@@ -1,3 +1,5 @@
+'use client'
+
 import {
 	Box,
 	Divider,
@@ -10,6 +12,7 @@ import {
 	Text,
 	useDisclosure
 } from '@chakra-ui/react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import { PropsWithChildren } from 'react'
@@ -23,6 +26,7 @@ import { IConstruction } from '../data'
 
 const ConstructionCard = ({ el }: { el: IConstruction }) => {
 	const { isOpen, onOpen, onClose } = useDisclosure()
+
 	return (
 		<Box
 			px={{ md: '18px', base: '0' }}
@@ -146,7 +150,7 @@ const ConstructionCard = ({ el }: { el: IConstruction }) => {
 										border='1px solid #E8E8E8'
 										textTransform='uppercase'
 									>
-										Смотреть видео
+										{el.look_video}
 									</Box>
 								</Link>
 							</Flex>
@@ -172,7 +176,7 @@ const ConstructionCard = ({ el }: { el: IConstruction }) => {
 								justifyContent='space-between'
 								alignItems='center'
 							>
-								<KeyText>Начало строительства:</KeyText>
+								<KeyText>{el.start_craft}</KeyText>
 								<Text
 									fontWeight='500'
 									fontSize='20px'
@@ -187,7 +191,7 @@ const ConstructionCard = ({ el }: { el: IConstruction }) => {
 								justifyContent='space-between'
 								alignItems='center'
 							>
-								<KeyText>Окончание строительства:</KeyText>
+								<KeyText>{el.end_craft}</KeyText>
 								<Text
 									fontWeight='500'
 									fontSize='20px'
@@ -209,7 +213,7 @@ const ConstructionCard = ({ el }: { el: IConstruction }) => {
 								gap='5'
 							>
 								<Box>
-									<KeyText>Сумма инвестиций:</KeyText>
+									<KeyText>{el.summa}</KeyText>
 									<Text
 										mt='9px'
 										fontWeight='500'
@@ -221,7 +225,7 @@ const ConstructionCard = ({ el }: { el: IConstruction }) => {
 									</Text>
 								</Box>
 								<Box>
-									<KeyText>Срок окупаемости:</KeyText>
+									<KeyText>{el.srok}</KeyText>
 									<Text
 										mt='9px'
 										fontWeight='500'
@@ -250,7 +254,7 @@ const ConstructionCard = ({ el }: { el: IConstruction }) => {
 											fontSize='14px'
 											lineHeight='20px'
 										>
-											Кыргызстан/Бишкек, ул.Буденного, 134/2
+											{el.adress}
 										</Text>
 									</Flex>
 								</Link>
