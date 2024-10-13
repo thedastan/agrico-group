@@ -179,7 +179,7 @@ const TourProgram = () => {
 							color='#7BBA39'
 							lineHeight='32px'
 						>
-							$1650{' '}
+							$950{' '}
 						</Text>
 						<Stack
 							spacing='3'
