@@ -7,7 +7,7 @@ import Description from '@/components/ui/texts/Description'
 import GiantText from '@/components/ui/texts/GiantText'
 import Title from '@/components/ui/texts/Title'
 
-import NatureImage from '@/assets/img/tourism-nature.png'
+import NatureImage from '@/assets/img/Supara.jpg'
 import JamalTour from '@/assets/img/Снимок_экрана_от_2024-09-25_21-16-00-removebg-preview.png'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'

@@ -5,9 +5,9 @@ import Image from 'next/image'
 import Title from '@/components/ui/texts/Title'
 import TitleComponent from '@/components/ui/texts/TitleComponent'
 
-import SlideImage1 from '@/assets/img/tourism-slide-1.png'
-import SlideImage2 from '@/assets/img/tourism-slide-2.png'
-import SlideImage3 from '@/assets/img/tourism-slide-3.png'
+import SlideImage1 from '@/assets/img/gory1.jpg'
+import SlideImage3 from '@/assets/img/gory.jpg'
+import SlideImage2 from '@/assets/img/yssyk_kyl_new.jpeg'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 

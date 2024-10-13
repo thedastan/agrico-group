@@ -18,9 +18,9 @@ import { IoMdCheckmark } from 'react-icons/io'
 // Import useTranslations
 import { inter } from '@/constants/fonts/fonts'
 
+import ProgramImage3 from '@/assets/img/Ala-Archa-home.jpg'
 import ProgramImage4 from '@/assets/img/Olimphotel.jpg'
 import ProgramImage2 from '@/assets/img/arthotel.jpg'
-import ProgramImage3 from '@/assets/img/atrhotelroom.jpg'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 

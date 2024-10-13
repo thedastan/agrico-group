@@ -9,7 +9,7 @@ import { LuPhone } from 'react-icons/lu'
 
 import { IAccardion } from '@/components/home/about/data'
 
-import { PHONE_NUMBER } from '@/constants/admin'
+import { PHONE_NUMBER, PHONE_NUMBER_CONST } from '@/constants/admin'
 
 import {
 	CONTAINER_WIDTH,
@@ -44,8 +44,11 @@ const HeaderClientComp = ({
 	adressBur
 }: HeaderClientCompProps) => {
 	const localActive = useTypedLocale()
+	const pathname = usePathname()
 
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+	const isTourismPage = pathname === DASHBOARD_PAGES.TOURISM(localActive)
 
 	const handleCloseMenu = () => {
 		setIsMenuOpen(false)
@@ -119,7 +122,10 @@ const HeaderClientComp = ({
 								height={49}
 							/>
 						</Link>
-						<Link href={`tel:${PHONE_NUMBER}`}>
+
+						<Link
+							href={`tel:${isTourismPage ? PHONE_NUMBER_CONST : PHONE_NUMBER}`}
+						>
 							<Button
 								display={{ md: 'flex', base: 'none' }}
 								variant='none'
