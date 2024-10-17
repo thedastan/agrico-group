@@ -8,37 +8,43 @@ import {
 	Stack,
 	Text
 } from '@chakra-ui/react'
-import { NextIntlClientProvider, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
 import FeedbackForm from '@/components/feedback-form'
+import { IAccardion } from '@/components/home/about/data'
 import BgLines from '@/components/ui/other/BgLines'
 
 import {
 	EMAIL_ADDRESS,
 	EMAIL_ADDRESS_LINK,
-	INSTAGRAM,
 	LOCATION,
-	MOTION_WEB_LINK,
-	PHONE_NUMBER
+	MOTION_WEB_LINK
 } from '@/constants/admin'
 
 import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
 import { IHeaderNav, social_contact } from '../data'
 
+import Number from './Number'
+
 interface FooterClientCompProps {
 	header_nav: IHeaderNav[]
+	accardionData: IAccardion[]
 }
 
-const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
+const FooterClientComp = ({
+	header_nav,
+	accardionData
+}: FooterClientCompProps) => {
 	const t = useTranslations('FooterClientComp')
+
 	const selectOptions = [
-		t('selectOptions.iportEx'),
-		t('selectOptions.invest'),
-		t('selectOptions.textpro'),
-		t('selectOptions.tours'),
-		t('selectOptions.craft')
+		{ title: t('selectOptions.iportEx'), path: '/' },
+		{ title: t('selectOptions.invest'), path: '/' },
+		{ title: t('selectOptions.textpro'), path: '/' },
+		{ title: t('selectOptions.tours'), path: '/' },
+		{ title: t('selectOptions.craft'), path: '/' }
 	]
 	return (
 		<Box
@@ -110,6 +116,8 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 							message_plaseholder={t('message_plaseholder')}
 							options={selectOptions}
 							message_plaseholderSelect={t('message_plaseholderSelect')}
+							header_nav={header_nav}
+							accardionData={accardionData}
 						/>
 					</Flex>
 				</Container>
@@ -160,12 +168,8 @@ const FooterClientComp = ({ header_nav }: FooterClientCompProps) => {
 									>
 										{EMAIL_ADDRESS}
 									</a>
-									<a
-										href={`tel:${PHONE_NUMBER}`}
-										target='_blank'
-									>
-										{PHONE_NUMBER}
-									</a>
+
+									<Number />
 								</Box>
 							</Stack>
 

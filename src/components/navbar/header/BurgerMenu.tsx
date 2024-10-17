@@ -151,8 +151,13 @@ const BurgerMenu = ({
 									textAlign='center'
 								>
 									{/* <Link href={LOCATION_LINK}>{LOCATION}</Link> */}
-									{adressBur.map(el => (
-										<Link href={LOCATION_LINK}>{el.name}</Link>
+									{adressBur.map((el, idx) => (
+										<Link
+											key={idx}
+											href={LOCATION_LINK}
+										>
+											{el.name}
+										</Link>
 									))}
 									<Link href={`mailto:{EMAIL_ADDRESS_LINK}`}>
 										{EMAIL_ADDRESS}

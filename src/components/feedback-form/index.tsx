@@ -1,32 +1,20 @@
 'use client'
 
-import { Box, Input, Stack, Textarea } from '@chakra-ui/react'
+import { Box, Stack, Textarea } from '@chakra-ui/react'
 import axios from 'axios'
-import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import {
-	PhoneInput,
-	defaultCountries,
-	parseCountry
-} from 'react-international-phone'
+import { PhoneInput, defaultCountries } from 'react-international-phone'
 import 'react-international-phone/style.css'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import DefButton from '../ui/buttons/DefButton'
-import PhoneInputComponent from '../ui/inputs/PhoneInputComponent'
 
 import SelectComponent from './selectComponent/SelectComponent'
 
-export interface IInputComponentProps {
-	name?: string
-	placeholder?: string
-	value?: string
-	handleChange?: (value: string) => void
-	required?: boolean
-}
-
 interface IFormTelegram {
-	number: number
+	number: string // Измени тип number на string
 	message: string
 	section: string
 }
@@ -34,62 +22,52 @@ interface IFormTelegram {
 interface IFormProps {
 	button_name: string
 	message_plaseholder: string
-	options: string[]
+	options: any[]
 	message_plaseholderSelect: string
+	header_nav: { path: string; name: string }[]
+	accardionData: { path: string; title: string }[]
 }
 
 const FeedbackForm = ({
 	button_name,
 	message_plaseholder,
 	message_plaseholderSelect,
-	options
+	options,
+	header_nav,
+	accardionData
 }: IFormProps) => {
-	const { register, handleSubmit, reset } = useForm<IFormTelegram>()
-	// const t = useTranslations('Form')
-
-	const TOKEN = process.env.NEXT_PUBLIC_TG_TOKEN
-	const CHAT_ID = process.env.NEXT_PUBLIC_TG_CHAT_ID
+	const { register, handleSubmit, reset, setValue } = useForm<IFormTelegram>()
+	const [phoneValue, setPhoneValue] = useState('') // Состояние для номера телефона
 
 	const messageModel = (data: IFormTelegram) => {
 		let messageTG = `Section: <b>${data.section}</b>\n`
-		messageTG += `Message:  <b>${data.message} </b>\n`
+		messageTG += `Message:  <b>${data.message}</b>\n`
 		messageTG += `Number: <b>${data.number}</b>\n`
 		return messageTG
 	}
 
 	const onSubmit: SubmitHandler<IFormTelegram> = async data => {
-		await axios.post(
-			` https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TG_TOKEN}/sendMessage`,
-			{
-				chat_id: process.env.NEXT_PUBLIC_TG_CHAT_ID,
-				parse_mode: 'html',
-				text: messageModel(data)
-			}
-		)
-		reset()
+		try {
+			await axios.post(
+				`https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TG_TOKEN}/sendMessage`,
+				{
+					chat_id: process.env.NEXT_PUBLIC_TG_CHAT_ID,
+					parse_mode: 'html',
+					text: messageModel(data)
+				}
+			)
+			reset()
+			setPhoneValue('')
+			toast.success('Сообщение успешно отправлено.')
+		} catch (err) {
+			alert('Ошибка при отправке сообщения.')
+		}
 	}
 
-	const PhoneInputComponent = ({
-		name = 'phone',
-		placeholder = 'Номер',
-		value,
-		handleChange,
-		required = true
-	}: IInputComponentProps) => {
-		return (
-			<PhoneInput
-				defaultCountry='us' // You can set a default country here, e.g., 'us'
-				countries={defaultCountries} // Use all default countries
-				{...register('number', { required: true })}
-				// name={name}
-				value={value}
-				required={required}
-				onChange={handleChange}
-				className='phone-input'
-				placeholder={placeholder}
-				autoFocus={false}
-			/>
-		)
+	const handlePhoneChange = (value: string) => {
+		setPhoneValue(value)
+		reset()
+		setValue('number', value) // Устанавливаем значение номера в форму
 	}
 
 	return (
@@ -102,18 +80,29 @@ const FeedbackForm = ({
 			position='relative'
 			zIndex='2'
 		>
-			<form onSubmit={handleSubmit(onSubmit)}>
+			<form
+				noValidate
+				onSubmit={handleSubmit(onSubmit)}
+			>
 				<Stack spacing='6px'>
 					<SelectComponent
 						register={register}
 						required={true}
+						setValue={setValue}
 						options={options}
+						header_nav={header_nav}
+						accardionData={accardionData}
 						message_plaseholderSelect={message_plaseholderSelect}
 					/>
 
-					<PhoneInputComponent
-						{...register('number', { required: true })}
-						placeholder='phone'
+					<PhoneInput
+						defaultCountry='us' // Установите страну по умолчанию
+						countries={defaultCountries}
+						value={phoneValue} // Используем phoneValue из состояния
+						onChange={handlePhoneChange} // Устанавливаем обработчик
+						placeholder='Номер телефона'
+						autoFocus={false}
+						className='phone-input'
 					/>
 
 					<Textarea
@@ -131,6 +120,19 @@ const FeedbackForm = ({
 					{button_name}
 				</DefButton>
 			</form>
+
+			<ToastContainer
+				position='bottom-right'
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+				theme='light'
+			/>
 		</Box>
 	)
 }
