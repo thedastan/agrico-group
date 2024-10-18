@@ -13,7 +13,7 @@ import Image from 'next/image'
 
 import SlideImage1 from '@/assets/img/grigor_new.jpeg'
 import SlideImage3 from '@/assets/img/jetiogyz_new.jpg'
-import SlideImage4 from '@/assets/img/kyrchyn_new.png'
+import SlideImage4 from '@/assets/img/karakol.jpg'
 import SlideImage2 from '@/assets/img/kyrchyn_new.png'
 
 const RestSlide = () => {

@@ -2,18 +2,13 @@
 
 import { Box, Stack, Textarea } from '@chakra-ui/react'
 import axios from 'axios'
-import { useTranslations } from 'next-intl'
 import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { PhoneInput, defaultCountries } from 'react-international-phone'
 import 'react-international-phone/style.css'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-
-import { IntlType } from '@/types/intl.types'
-
-import { DASHBOARD_PAGES } from '@/config/pages-url.config'
 
 import useTypedLocale from '@/hooks/useLocale'
 
