@@ -266,5 +266,8 @@
 	},
 	"Constructions": {
 		"title": "Our Projects"
+	},
+	"useMessage": {
+		"messages": "Message successfully sent."
 	}
 }

@@ -26,16 +26,19 @@ import { CONTAINER_WIDTH } from '@/config/_variables.config'
 
 import { IHeaderNav, social_contact } from '../data'
 
+import { IMessageNav } from './Message'
 import Number from './Number'
 
 interface FooterClientCompProps {
 	header_nav: IHeaderNav[]
 	accardionData: IAccardion[]
+	messages: IMessageNav[]
 }
 
 const FooterClientComp = ({
 	header_nav,
-	accardionData
+	accardionData,
+	messages
 }: FooterClientCompProps) => {
 	const t = useTranslations('FooterClientComp')
 
@@ -118,6 +121,7 @@ const FooterClientComp = ({
 							message_plaseholderSelect={t('message_plaseholderSelect')}
 							header_nav={header_nav}
 							accardionData={accardionData}
+							messages={messages}
 						/>
 					</Flex>
 				</Container>

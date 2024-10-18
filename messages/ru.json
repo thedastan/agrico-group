@@ -271,5 +271,8 @@
 	},
 	"Constructions": {
 		"title": "Наши обЪекты"
+	},
+	"useMessage": {
+		"messages": "Сообщение успешно отправлено."
 	}
 }

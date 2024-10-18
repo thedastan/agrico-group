@@ -267,5 +267,8 @@
 	},
 	"Constructions": {
 		"title": "مشاريعنا"
+	},
+	"useMessage": {
+		"messages": "تم إرسال الرسالة بنجاح."
 	}
 }

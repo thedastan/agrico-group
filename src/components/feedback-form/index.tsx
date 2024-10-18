@@ -2,12 +2,20 @@
 
 import { Box, Stack, Textarea } from '@chakra-ui/react'
 import axios from 'axios'
-import { useState } from 'react'
+import { useTranslations } from 'next-intl'
+import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { PhoneInput, defaultCountries } from 'react-international-phone'
 import 'react-international-phone/style.css'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+
+import { IntlType } from '@/types/intl.types'
+
+import { DASHBOARD_PAGES } from '@/config/pages-url.config'
+
+import useTypedLocale from '@/hooks/useLocale'
 
 import DefButton from '../ui/buttons/DefButton'
 
@@ -19,6 +27,10 @@ interface IFormTelegram {
 	section: string
 }
 
+interface IMagges {
+	name: string
+}
+
 interface IFormProps {
 	button_name: string
 	message_plaseholder: string
@@ -26,6 +38,7 @@ interface IFormProps {
 	message_plaseholderSelect: string
 	header_nav: { path: string; name: string }[]
 	accardionData: { path: string; title: string }[]
+	messages: IMagges[]
 }
 
 const FeedbackForm = ({
@@ -34,11 +47,14 @@ const FeedbackForm = ({
 	message_plaseholderSelect,
 	options,
 	header_nav,
-	accardionData
+	accardionData,
+	messages
 }: IFormProps) => {
+	// const t = useTranslations('FeedbackForm')
 	const { register, handleSubmit, reset, setValue } = useForm<IFormTelegram>()
 	const [phoneValue, setPhoneValue] = useState('') // Состояние для номера телефона
-
+	const pathname = usePathname()
+	const localActive = useTypedLocale()
 	const messageModel = (data: IFormTelegram) => {
 		let messageTG = `Section: <b>${data.section}</b>\n`
 		messageTG += `Message:  <b>${data.message}</b>\n`
@@ -58,7 +74,7 @@ const FeedbackForm = ({
 			)
 			reset()
 			setPhoneValue('')
-			toast.success('Сообщение успешно отправлено.')
+			toast.success(messages.map(el => el.name).join(', '))
 		} catch (err) {
 			alert('Ошибка при отправке сообщения.')
 		}
@@ -96,10 +112,10 @@ const FeedbackForm = ({
 					/>
 
 					<PhoneInput
-						defaultCountry='us' // Установите страну по умолчанию
+						defaultCountry={'us'}
 						countries={defaultCountries}
-						value={phoneValue} // Используем phoneValue из состояния
-						onChange={handlePhoneChange} // Устанавливаем обработчик
+						value={phoneValue}
+						onChange={handlePhoneChange}
 						placeholder='Номер телефона'
 						autoFocus={false}
 						className='phone-input'
