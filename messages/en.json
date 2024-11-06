@@ -249,21 +249,54 @@
 		"LOCATION": "Bishkek, Razzakov Street 32"
 	},
 
+
 	"ConstructionComponent": {
-		"title1": "Sunny Beach",
-		"title2": "Delhi Lux",
-		"dis": "A business-class residential complex located in a picturesque part of the city, near the embankment. The complex includes 4 buildings of 12 floors with spacious apartments and panoramic windows.",
-		"start_date": "January 2023",
-		"end_date": "July 2025",
-		"payback_period": "4 years",
-		"amount": "150 million",
-		"srok": "Payback period:",
-		"summa": "Investment amount:",
-		"end_craft": "End of construction:",
-		"start_craft": "Start of construction:",
-		"look_video": "Watch video",
-		"adress": "Kyrgyzstan/Bishkek, Budennogo St., 134/2"
-	},
+		  "title1": "Sunny Coast",
+		  "dis": "A comfort-class residential complex located in a scenic part of the city of Balykchy, near the embankment. The complex includes 1 block of 6 floors with an attic floor, commercial premises, and underground parking.",
+		  "start_date": "Q1 2025",
+		  "end_date": "Q4 2027",
+		  "payback_period": "2 years",
+		  "amount": "2,750,000 USD",
+		  "srok": "Payback period:",
+		  "summa": "Investment amount:",
+		  "end_craft": "Completion of construction:",
+		  "start_craft": "Start of construction:",
+		  "look_video": "Watch Video",
+		  "adress": "Kyrgyzstan, Issyk-Kul Region, Balykchy",
+	  
+		  "title2": "Residential Complex Kant",
+		  "dis2": "A comfort-class residential complex located in a scenic part of the city of Kant. The complex includes 5 blocks of 9 floors with commercial premises.",
+		  "start_date2": "Q1 2025",
+		  "end_date2": "Q3 2028",
+		  "payback_period2": "3 years",
+		  "amount2": "20 million USD",
+		  "adress2": "Kyrgyzstan, Chuy Region, Kant",
+	  
+		  "title3": "Avalon",
+		  "dis3": "A comfort-class residential complex located in the city of Naryn. The complex includes 1 block of 6 floors with commercial premises.",
+		  "start_date3": "Q3 2024",
+		  "end_date3": "Q1 2027",
+		  "payback_period3": "3 years",
+		  "amount3": "2,400,000 USD",
+		  "adress3": "Kyrgyzstan, Naryn Region, Naryn",
+	  
+		  "title4": "Crystal",
+		  "dis4": "An elite-class residential complex located in the city of Bishkek. The complex includes 8 blocks of 5 floors, a shopping mall.",
+		  "start_date4": "Q2 2025",
+		  "end_date4": "Q4 2028",
+		  "payback_period4": "4 years",
+		  "amount4": "28,400,000 USD",
+		  "adress4": "Kyrgyzstan, Chuy Region, Bishkek",
+	  
+		  "title5": "Phoenix Business Center",
+		  "dis5": "A business center located in the city of Bishkek. 1 block consisting of 20 floors with underground parking.",
+		  "start_date5": "Q1 2026",
+		  "end_date5": "Q3 2029",
+		  "payback_period5": "3 years",
+		  "amount5": "21 million USD",
+		  "adress5": "Kyrgyzstan, Chuy Region, Bishkek"
+		},
+	  
 	"Constructions": {
 		"title": "Our Projects"
 	},

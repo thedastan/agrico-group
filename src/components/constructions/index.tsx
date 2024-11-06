@@ -37,7 +37,7 @@ const Constructions = () => {
 
 			<SimpleGrid
 				mt='32px'
-				bg='#A1A1A1'
+				bg='#fff'
 				columns={{ lg: 3, md: 2, base: 1 }}
 				spacing='1px'
 				pb='1px'
